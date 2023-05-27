@@ -320,7 +320,7 @@
 
   <!-- Highlight Card -->
   
-  <div class="card highlight-card card-small">
+  <!--div class="card highlight-card card-small">
 
     <svg id="rocket" xmlns="http://www.w3.org/2000/svg" width="101.678" height="101.678" viewBox="0 0 101.678 101.678">
       <title>Rocket Ship</title>
@@ -340,7 +340,7 @@
       <path id="Path_40" data-name="Path 40" d="M644.6,141S143.02,215.537,147.049,870.207s342.774,201.755,342.774,201.755S404.659,847.213,388.815,762.2c-27.116-145.51-11.551-384.124,271.9-609.1C671.15,139.365,644.6,141,644.6,141Z" transform="translate(-147.025 -140.939)" fill="#f5f5f5"/>
     </svg>
 
-  </div>
+  </div-->
 
   <!-- Resources -->
   <h2>Wypożyczalnia książek</h2>
@@ -388,44 +388,44 @@
     
     <button class="card card-small" (click)="selection.value = 'component'" tabindex="0">
       <span>Rodzina Monet.Skarb</span>
-      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+      <mat-icon>add_shopping_cart</mat-icon>
     </button>
 
     <button class="card card-small" (click)="selection.value = 'material'" tabindex="0">
       <span>It Ends with Us</span>
-      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+      <mat-icon>add_shopping_cart</mat-icon>
     </button>
 
     <button class="card card-small" (click)="selection.value = 'pwa'" tabindex="0">
       <span>Red Queen</span>
-      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+      <mat-icon>add_shopping_cart</mat-icon>
     </button>
 
     <button class="card card-small" (click)="selection.value = 'dependency'" tabindex="0">
       <span>Światło, którego nie widać</span>
-      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+      <mat-icon>add_shopping_cart</mat-icon>
     </button>
 
     <button class="card card-small" (click)="selection.value = 'test'" tabindex="0">
       <span>Piękna katastrofa</span>
-      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+      <mat-icon>add_shopping_cart</mat-icon>
     </button>
 
     <button class="card card-small" (click)="selection.value = 'build'" tabindex="0">
       <span>Dom pod drugiej stronie jeziora</span>
-      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+      <mat-icon>add_shopping_cart</mat-icon>
     </button>
   </div>
 
   <!-- Terminal -->
-  <div class="terminal" [ngSwitch]="selection.value">
+  <!--div class="terminal" [ngSwitch]="selection.value">
       <pre *ngSwitchDefault>ng generate component xyz</pre>
       <pre *ngSwitchCase="'material'">ng add @angular/material</pre>
       <pre *ngSwitchCase="'pwa'">ng add @angular/pwa</pre>
       <pre *ngSwitchCase="'dependency'">ng add _____</pre>
       <pre *ngSwitchCase="'test'">ng test</pre>
       <pre *ngSwitchCase="'build'">ng build</pre>
-  </div>
+  </div-->
 
   <!-- Links -->
   <div class="card-container">
