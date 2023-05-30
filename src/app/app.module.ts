@@ -6,12 +6,16 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginPageComponent } from './login-page/login-page.component';
 import {MatIconModule} from '@angular/material/icon';
-import { SecondpageComponent } from './secondpage/secondpage.component'
+import { SecondpageComponent } from './secondpage/secondpage.component';
+import { RegistrationPageComponent } from './registration-page/registration-page.component';
+import { FirstPageComponent } from './first-page/first-page.component'
 @NgModule({
   declarations: [
     AppComponent,
     LoginPageComponent,
-    SecondpageComponent
+    SecondpageComponent,
+    RegistrationPageComponent,
+    FirstPageComponent
   ],
   imports: [
     BrowserModule,

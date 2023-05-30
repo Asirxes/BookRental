@@ -1,0 +1,103 @@
+<div class="content" role="main">
+    <h2>Wypożyczalnia książek</h2>
+    <p>Sprawdz czy któraś kategoria Cię zainteresuje:</p>
+  
+    <div class="card-container">
+      <a class="card" routerLink="/Second" routerLinkActive="active" ariaCurrentWhenActive="page">
+        <mat-icon class="p3">spa</mat-icon>
+        <span>Fantastyka</span>
+        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>    </a>
+  
+      <a class="card" target="_blank" rel="noopener" href="https://www.empik.com/ksiazki/science-fiction">
+        <mat-icon class="p3">wifi_tethering</mat-icon>
+        <span>Sci–Fi</span>
+        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+      </a>
+  
+      <a class="card" target="_blank" rel="noopener" href="https://www.empik.com/ksiazki/romans">
+        <mat-icon class="p3">favorite</mat-icon>
+        <span>Romans</span>
+        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+      </a>
+  
+      <a class="card" target="_blank" rel="noopener" href="https://www.empik.com/szukaj/produkt?q=powie%C5%9B%C4%87+historyczna">
+        <mat-icon class="p3">timer</mat-icon>
+        <span>Powieść historyczna</span>
+        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+      </a>
+  
+      <a class="card" target="_blank" rel="noopener" href="https://www.empik.com/ksiazki/horror">
+        <mat-icon class="p3">remove_red_eye</mat-icon>
+        <span>Horror</span>
+        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+      </a>
+  
+      <a class="card" target="_blank" rel="noopener" href="https://www.empik.com/ksiazki/kryminal-sensacja-thriller">
+        <mat-icon class="p3"> person_pin_circle</mat-icon>
+        <span>Kryminał i thriller</span>
+        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+      </a>
+  
+      <a class="card" target="_blank" rel="noopener" href="https://www.empik.com/ksiazki/biografie-i-dokument">
+        <mat-icon class="p3">perm_identity</mat-icon>
+        <span>Biografia i reportaż</span>
+        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+      </a>
+  
+      <a class="card" target="_blank" rel="noopener" href="https://www.empik.com/ksiazki/dla-mlodziezy">
+        <mat-icon class="p3">headset</mat-icon>
+        <span>Powieść młodzieżowa</span>
+        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+      </a>
+  
+      <a class="card" target="_blank" rel="noopener" href="https://www.empik.com/ksiazki/dla-dzieci">
+        <mat-icon class="p3">child_friendly</mat-icon>
+        <span>Literatura dziecięca</span>
+        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+      </a>
+
+    </div>
+  
+    <h2>To również może Ci się spodobać!</h2>
+    <p>A może jeden z naszych bestsellerów?</p>
+  
+    <input type="hidden" #selection>
+  
+    <div class="card-container">
+      
+      <button class="card card-small" (click)="selection.value = ''" tabindex="0">
+        <span>Rodzina Monet.Skarb</span>
+        <mat-icon class="p3">add_shopping_cart</mat-icon>
+      </button>
+  
+      <button class="card card-small" (click)="selection.value = ''" tabindex="0">
+        <span>It Ends with Us</span>
+        <mat-icon class="p3">add_shopping_cart</mat-icon>
+      </button>
+  
+      <button class="card card-small" (click)="selection.value = ''" tabindex="0">
+        <span>Red Queen</span>
+        <mat-icon class="p3">add_shopping_cart</mat-icon>
+      </button>
+  
+      <button class="card card-small" (click)="selection.value = ''" tabindex="0">
+        <span>Światło, którego nie widać</span>
+        <mat-icon class="p3">add_shopping_cart</mat-icon>
+      </button>
+  
+      <button class="card card-small" (click)="selection.value = ''" tabindex="0">
+        <span>Piękna katastrofa</span>
+        <mat-icon class="p3">add_shopping_cart</mat-icon>
+      </button>
+  
+      <button class="card card-small" (click)="selection.value = ''" tabindex="0">
+        <span>Dom pod drugiej stronie jeziora</span>
+        <mat-icon class="p3">add_shopping_cart</mat-icon>
+      </button>
+    </div>
+  
+  </div>
+  
+  
+  <router-outlet></router-outlet>
+  
