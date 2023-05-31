@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import {Router} from "@angular/router";
+import { ILoginUserWithPasswordDto } from '../interfaces/ILoginUserWithPasswordDto';
+import { IUserInfoDto } from '../interfaces/IUserInfoDto';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-login-page',
@@ -10,6 +13,8 @@ import {Router} from "@angular/router";
 export class LoginPageComponent  implements OnInit{
   protected loginForm: FormGroup
   protected loginError: boolean = false;
+    authHttpService: any;
+    localStorageService: any;
 
   constructor(
     formBuilder: FormBuilder,
@@ -31,7 +36,7 @@ export class LoginPageComponent  implements OnInit{
     ngOnInit(): void {
         throw new Error('Metoda nie zaimplementowana.');
     }
-  /*protected loginUser() {
+  protected loginUser() {
     if (this.loginForm.valid) {
         const loginUserDto: ILoginUserWithPasswordDto = this.loginForm.value;
         this.authHttpService.loginUser(loginUserDto).subscribe({
@@ -57,6 +62,6 @@ export class LoginPageComponent  implements OnInit{
             }
         });
     }
-  }*/
+  }
 
 }

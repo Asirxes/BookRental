@@ -1,20 +1,34 @@
 <div class="container">
-    <div class="content">
-      <!--p *ngIf="loginError" class="has-text-danger">Incorrect login data!!</p-->
-      <!--form [formGroup]="loginForm" (ngSubmit)="loginUser()"-->
-      <label for="login">Wprowadz login</label>
-      <input class="input is-expanded mb-2" id="login" formControlName="login" type="text" required placeholder="Wprowadz login">
-      <!--p *ngIf="!loginForm.controls['email'].valid && loginForm.controls['email'].touched" class="has-text-danger is-fullwidth is-small mb-2">Incorrect email format.</p-->
-  
-      <label for="hasło">Hasło</label>
-      <input class="input is-expanded mb-2" id="hasło" formControlName="hasło" type="text" required placeholder="Wprowadz hasło">
-      <!--p *ngIf="!loginForm.controls['password'].valid && loginForm.controls['password'].touched" class="has-text-danger is-small is-fullwidth mb-2">Incorrect password format. Should be min 8 char length.</p-->
-    
-      <label for="hasło">Powtórz hasło</label>
-      <input class="input is-expanded mb-2" id="hasło" formControlName="hasło" type="text" required placeholder="Wprowadz ponownie hasło">
-      <!--p *ngIf="!loginForm.controls['password'].valid && loginForm.controls['password'].touched" class="has-text-danger is-small is-fullwidth mb-2">Incorrect password format. Should be min 8 char length.</p-->
-  
-      <button type="submit" class="button is-fullwidth is-success mt-5">Zarejestruj się</button>
-      <!--/form-->
-    </div>
+  <div class="content">
+    <form [formGroup]="registerForm" (ngSubmit)="registerUser()">
+      <div class="container">
+        <label for="login">Login</label>
+        <input class="input is-expanded mb-2" id="login" required formControlName="login" type="login" placeholder="Wpisz login">
+        <p *ngIf="!registerForm.controls['login'].valid && !registerForm.controls['login'].hasError('loginTaken')  && registerForm.controls['login'].touched" class="has-text-danger is-fullwidth is-small mb-2">Niepoprawny format loginu, podaj przynajmniej 5 znaków</p>
+        <p *ngIf="registerForm.controls['login'].hasError('loginTaken')" class="has-text-danger is-fullwidth is-small mb-2">Login w użytku</p>
+      </div>
+      <div class="container">
+        <label for="hasło">Hasło</label>
+        <input class="input is-expanded mb-2" id="hasło" required formControlName="hasło" type="hasło" placeholder="Wprowadż hasło">
+        <p *ngIf="!registerForm.controls['hasło'].valid && registerForm.controls['hasło'].touched" class="has-text-danger is-fullwidth is-small mb-2">Niepoprawny format hasła, wprowadż co najmniej 5 znaków</p>
+      </div>
+      <div class="container">
+        <label for="repeat-password">Powtórz hasło</label>
+        <input class="input is-expanded mb-2" id="powtórzhasło" formControlName="powtórzhasło" required type="hasło" placeholder="Powtórz hasło">
+        <p *ngIf="!registerForm.controls['powtórzhasło'].valid && registerForm.controls['powtórzhasło'].touched" class="has-text-danger is-fullwidth is-small mb-2">Niepoprawny format hasła, wprowadz co najmniej 5 znaków</p>
+        <p *ngIf="registerForm.hasError('incorrect') && registerForm.controls['powtórzhasło'].touched" class="has-text-danger is-fullwidth is-small mb-2">Hasła nie są identyczne</p>
+      </div>
+      <div class="container">
+        <button type="submit" class="button is-fullwidth is-primary mt-5">Zarejestruj</button>
+      </div>
+    </form>
   </div>
+</div>
+
+
+
+
+
+
+
+
