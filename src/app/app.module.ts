@@ -10,7 +10,8 @@ import {MatIconModule} from '@angular/material/icon';
 import { SecondpageComponent } from './secondpage/secondpage.component';
 import { RegistrationPageComponent } from './registration-page/registration-page.component';
 import { FirstPageComponent } from './first-page/first-page.component';
-import { LogoutComponent } from './logout/logout.component'
+import { LogoutComponent } from './logout/logout.component';
+import { KoszykComponent } from './koszyk/koszyk.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +19,8 @@ import { LogoutComponent } from './logout/logout.component'
     SecondpageComponent,
     RegistrationPageComponent,
     FirstPageComponent,
-    LogoutComponent
+    LogoutComponent,
+    KoszykComponent
   ],
   imports: [
     BrowserModule,

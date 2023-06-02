@@ -6,6 +6,7 @@ import { LoginPageComponent } from './login-page/login-page.component';
 import { RegistrationPageComponent } from './registration-page/registration-page.component';
 import { FirstPageComponent } from './first-page/first-page.component';
 import { LogoutComponent } from './logout/logout.component';
+import { KoszykComponent } from './koszyk/koszyk.component';
 const approutes: Routes = [
   { path: "", redirectTo: "/First", pathMatch: "full" },
   //{ path: '', component: AppComponent },
@@ -14,7 +15,8 @@ const approutes: Routes = [
   { path: 'Second', component: SecondpageComponent },
   { path: 'Logowanie', component: LoginPageComponent },
   { path: 'Rejestracja', component: RegistrationPageComponent },
-  { path: 'Wylogowanie', component: LogoutComponent}
+  { path: 'Wylogowanie', component: LogoutComponent},
+  { path: 'Koszyk', component: KoszykComponent}
 ];
 
 @NgModule({
