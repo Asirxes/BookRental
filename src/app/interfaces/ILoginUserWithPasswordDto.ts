@@ -1,4 +1,4 @@
 export interface ILoginUserWithPasswordDto {
-    email: string;
-    password: string;
+    login: string;
+    hasło: string;
 }

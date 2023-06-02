@@ -1,9 +1,5 @@
 export interface IRegisterUserWithPasswordDto {
-    email: string;
-    password: string;
-    repeatPassword: string;
-    dateOfBirth: Date;
-    firstName: string;
-    lastName: string;
-    role: string;
+    login: string;
+    hasło: string;
+    powtórzhasło: string;
 }
