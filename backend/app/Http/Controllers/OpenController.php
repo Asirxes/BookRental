@@ -45,11 +45,11 @@ class OpenController extends Controller
         }
         
         // Saving data to JSON file
-        $file = fopen("selected_data_books3.json", "w");
+        $file = fopen("selected_data_books8.json", "w");
         fwrite($file, json_encode($data_to_save, JSON_PRETTY_PRINT));
         fclose($file);
         
-        echo "Dane zostały zapisane do pliku 'selected_data_books3.json'.";
+        echo "Dane zostały zapisane do pliku 'selected_data_books8.json'.";
         
         
     }

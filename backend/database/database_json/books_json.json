@@ -1,0 +1,1824 @@
+[
+    {
+        "id": 1,
+        "title": "Frog (See How They Grow)",
+        "subjects": [],
+        "authors": [
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL30877A"
+                }
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Frog (Take-off!: Life Cycle Of...)",
+        "subjects": [],
+        "authors": [
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL30877A"
+                }
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Get Some Rest (Royston, Angela. Look After Yourself.)",
+        "subjects": [
+            "Health",
+            "Hygiene",
+            "Juvenile literature",
+            "Preparation for medical care",
+            "Children",
+            "Rest",
+            "Sleep",
+            "Health, juvenile literature",
+            "Children, preparation for medical care",
+            "Children, health and hygiene"
+        ],
+        "authors": [
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL30877A"
+                }
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "title": "Getting Better",
+        "subjects": [],
+        "authors": [
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL30877A"
+                }
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "title": "Glass",
+        "subjects": [
+            "Juvenile literature",
+            "Glass",
+            "Marbles (Game objects)",
+            "Glass, juvenile literature"
+        ],
+        "authors": [
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL30877A"
+                }
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "title": "Growing (My Amazing Body)",
+        "subjects": [
+            "Human growth",
+            "Growth",
+            "Juvenile literature",
+            "Human growth, juvenile literature"
+        ],
+        "authors": [
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL30877A"
+                }
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "title": "Guinea Pig (Life Cycle of a)",
+        "subjects": [
+            "Guinea pigs"
+        ],
+        "authors": [
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL30877A"
+                }
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "title": "Guinea Pig (Take-off!: Life Cycle Of...)",
+        "subjects": [
+            "Guinea pigs",
+            "Juvenile literature",
+            "Life cycles"
+        ],
+        "authors": [
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL30877A"
+                }
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "title": "Head Lice (Its Catching)",
+        "subjects": [
+            "Pediculosis",
+            "Lice Infestations",
+            "Juvenile literature",
+            "Prevention & control",
+            "Juvenile Literature",
+            "Lice",
+            "Pediculus"
+        ],
+        "authors": [
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL30877A"
+                }
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "title": "Healthy Eyes and Ears (Look After Yourself)",
+        "subjects": [],
+        "authors": [
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL30877A"
+                }
+            }
+        ]
+    },
+    {
+        "id": 11,
+        "title": "Healthy Food (Royston, Angela. Look After Yourself.)",
+        "subjects": [
+            "Nutrition",
+            "Juvenile literature",
+            "Nutrition, juvenile literature"
+        ],
+        "authors": [
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL30877A"
+                }
+            }
+        ]
+    },
+    {
+        "id": 12,
+        "title": "Hot and cold",
+        "subjects": [
+            "Juvenile literature",
+            "Heat",
+            "Cold",
+            "Temperature measurements",
+            "Temperature",
+            "Heat, juvenile literature",
+            "Cold, juvenile literature",
+            "Temperature, juvenile literature"
+        ],
+        "authors": [
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL30877A"
+                }
+            }
+        ]
+    },
+    {
+        "id": 13,
+        "title": "How Are Pencils Made (How Are Things Made)",
+        "subjects": [
+            "Pencils",
+            "Juvenile literature"
+        ],
+        "authors": [
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL30877A"
+                }
+            }
+        ]
+    },
+    {
+        "id": 14,
+        "title": "How Is A Pencil Made (How Are Things Made)",
+        "subjects": [
+            "Manufactures",
+            "Manufactures, juvenile literature"
+        ],
+        "authors": [
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL30877A"
+                }
+            }
+        ]
+    },
+    {
+        "id": 15,
+        "title": "How Plants Grow (Take-off!: Plants)",
+        "subjects": [
+            "Plants",
+            "Development",
+            "Growth (Plants)",
+            "Juvenile literature"
+        ],
+        "authors": [
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL30877A"
+                }
+            }
+        ]
+    },
+    {
+        "id": 16,
+        "title": "The human body & how it works",
+        "subjects": [
+            "Miscellanea",
+            "Juvenile literature",
+            "Human Body",
+            "Questions and answers",
+            "Human anatomy",
+            "Human physiology",
+            "Human body"
+        ],
+        "authors": [
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL30877A"
+                }
+            }
+        ]
+    },
+    {
+        "id": 17,
+        "title": "Human Growth",
+        "subjects": [
+            "Human growth",
+            "Juvenile literature",
+            "Human growth, juvenile literature",
+            "Growth"
+        ],
+        "authors": [
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL30877A"
+                }
+            }
+        ]
+    },
+    {
+        "id": 18,
+        "title": "Imanes / Magnets",
+        "subjects": [
+            "Magnets",
+            "Juvenile literature",
+            "Magnetism"
+        ],
+        "authors": [
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL30877A"
+                }
+            }
+        ]
+    },
+    {
+        "id": 19,
+        "title": "Insects",
+        "subjects": [
+            "Insects",
+            "Juvenile literature",
+            "Anatomy"
+        ],
+        "authors": [
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL30877A"
+                }
+            }
+        ]
+    },
+    {
+        "id": 20,
+        "title": "Inside and Out",
+        "subjects": [],
+        "authors": [
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL30877A"
+                }
+            }
+        ]
+    },
+    {
+        "id": 21,
+        "title": "Jungle animals",
+        "subjects": [
+            "Jungle animals",
+            "Juvenile literature",
+            "Animals",
+            "Picture books",
+            "Interactive Adventure",
+            "Children's Books/All Ages"
+        ],
+        "authors": [
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL30877A"
+                }
+            },
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL2623771A"
+                }
+            }
+        ]
+    },
+    {
+        "id": 22,
+        "title": "Keep Healthy! (Look After Yourself)",
+        "subjects": [],
+        "authors": [
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL30877A"
+                }
+            }
+        ]
+    },
+    {
+        "id": 23,
+        "title": "Kitten (See How They Grow)",
+        "subjects": [],
+        "authors": [
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL30877A"
+                }
+            }
+        ]
+    },
+    {
+        "id": 24,
+        "title": "LA Mariposa/Butterfly (Ciclos De La Vida De)",
+        "subjects": [],
+        "authors": [
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL30877A"
+                }
+            }
+        ]
+    },
+    {
+        "id": 25,
+        "title": "Levers (Machines in Action)",
+        "subjects": [
+            "Levers",
+            "Simple machines",
+            "Juvenile literature",
+            "Machinery",
+            "Machinery, juvenile literature"
+        ],
+        "authors": [
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL30877A"
+                }
+            }
+        ]
+    },
+    {
+        "id": 26,
+        "title": "Life Cycle of a ..",
+        "subjects": [],
+        "authors": [
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL30877A"
+                }
+            }
+        ]
+    },
+    {
+        "id": 27,
+        "title": "Life cycle of a bean",
+        "subjects": [
+            "Beans",
+            "Fava bean",
+            "Juvenile literature",
+            "Life cycles",
+            "Spanish language materials",
+            "Legumes",
+            "Food, juvenile literature"
+        ],
+        "authors": [
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL30877A"
+                }
+            }
+        ]
+    },
+    {
+        "id": 28,
+        "title": "Life cycle of a chicken",
+        "subjects": [
+            "Chickens",
+            "Juvenile literature",
+            "Life cycles",
+            "Spanish language materials",
+            "Leghorn chicken",
+            "Poultry, juvenile literature"
+        ],
+        "authors": [
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL30877A"
+                }
+            }
+        ]
+    },
+    {
+        "id": 29,
+        "title": "Life Cycle of a Dog (Life Cycle of a ...)",
+        "subjects": [
+            "Life cycles",
+            "Juvenile literature",
+            "Dogs",
+            "Dogs, juvenile literature"
+        ],
+        "authors": [
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL30877A"
+                }
+            }
+        ]
+    },
+    {
+        "id": 30,
+        "title": "Life cycle of a frog",
+        "subjects": [
+            "Frogs",
+            "Juvenile literature",
+            "Life cycles",
+            "Spanish language materials",
+            "Frogs, juvenile literature"
+        ],
+        "authors": [
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL30877A"
+                }
+            }
+        ]
+    },
+    {
+        "id": 31,
+        "title": "Life cycle of a guinea pig",
+        "subjects": [
+            "Guinea pigs",
+            "Juvenile literature",
+            "Life cycles",
+            "Spanish language materials"
+        ],
+        "authors": [
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL30877A"
+                }
+            }
+        ]
+    },
+    {
+        "id": 32,
+        "title": "Life Cycle of a Mushroom (Life Cycle of a ...)",
+        "subjects": [
+            "Mushrooms",
+            "Life cycles",
+            "Juvenile literature",
+            "Mushrooms, juvenile literature"
+        ],
+        "authors": [
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL30877A"
+                }
+            }
+        ]
+    },
+    {
+        "id": 33,
+        "title": "Life Cycle of a Salmon (Life Cycle of A...)",
+        "subjects": [
+            "Life cycles",
+            "Salmon",
+            "Juvenile literature",
+            "Sockeye salmon"
+        ],
+        "authors": [
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL30877A"
+                }
+            }
+        ]
+    },
+    {
+        "id": 34,
+        "title": "Life Cycles",
+        "subjects": [],
+        "authors": [
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL30877A"
+                }
+            }
+        ]
+    },
+    {
+        "id": 35,
+        "title": "Life Processes and Living Things",
+        "subjects": [
+            "Biology",
+            "Juvenile literature"
+        ],
+        "authors": [
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL30877A"
+                }
+            }
+        ]
+    },
+    {
+        "id": 36,
+        "title": "The Life And Times of a Drop of Water",
+        "subjects": [
+            "Juvenile literature",
+            "Hydrologic cycle",
+            "Water, juvenile literature",
+            "Water"
+        ],
+        "authors": [
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL30877A"
+                }
+            }
+        ]
+    },
+    {
+        "id": 37,
+        "title": "Living and Nonliving",
+        "subjects": [
+            "Life (Biology)",
+            "Death",
+            "Juvenile literature",
+            "Life (biology)",
+            "Life (biology), juvenile literature",
+            "Death, juvenile literature"
+        ],
+        "authors": [
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL30877A"
+                }
+            }
+        ]
+    },
+    {
+        "id": 38,
+        "title": "Luz Y Oscuridad/light And Dark",
+        "subjects": [
+            "Shadows",
+            "Light",
+            "Juvenile literature",
+            "Shades and shadows"
+        ],
+        "authors": [
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL30877A"
+                }
+            }
+        ]
+    },
+    {
+        "id": 39,
+        "title": "Magnetic and Non-Magnetic",
+        "subjects": [
+            "Magnetism",
+            "Juvenile literature",
+            "Magnets",
+            "Magnetism, juvenile literature",
+            "Magnets, juvenile literature"
+        ],
+        "authors": [
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL30877A"
+                }
+            }
+        ]
+    },
+    {
+        "id": 40,
+        "title": "Materials",
+        "subjects": [
+            "Materials science",
+            "Materials",
+            "Juvenile literature",
+            "Physics, juvenile literature"
+        ],
+        "authors": [
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL30877A"
+                }
+            }
+        ]
+    },
+    {
+        "id": 41,
+        "title": "Materials and Their Properties",
+        "subjects": [
+            "Matter",
+            "Materials",
+            "Juvenile literature",
+            "Properties"
+        ],
+        "authors": [
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL30877A"
+                }
+            }
+        ]
+    },
+    {
+        "id": 42,
+        "title": "Mini Beasts (Eye Openers)",
+        "subjects": [
+            "Invertebrates",
+            "Juvenile literature"
+        ],
+        "authors": [
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL30877A"
+                }
+            }
+        ]
+    },
+    {
+        "id": 43,
+        "title": "Monster building machines",
+        "subjects": [
+            "Construction equipment",
+            "Building",
+            "Juvenile literature",
+            "Machinery"
+        ],
+        "authors": [
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL30877A"
+                }
+            }
+        ]
+    },
+    {
+        "id": 44,
+        "title": "Monster road-builders",
+        "subjects": [
+            "Juvenile literature",
+            "Road machinery",
+            "Construction equipment",
+            "Machinery"
+        ],
+        "authors": [
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL30877A"
+                }
+            }
+        ]
+    },
+    {
+        "id": 45,
+        "title": "Moving (My Amazing Body)",
+        "subjects": [
+            "Human locomotion",
+            "Human body",
+            "Juvenile literature",
+            "Human body, juvenile literature",
+            "Walking"
+        ],
+        "authors": [
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL30877A"
+                }
+            }
+        ]
+    },
+    {
+        "id": 46,
+        "title": "Paper",
+        "subjects": [
+            "Paper",
+            "Juvenile literature",
+            "Comic books, strips",
+            "Comic books, strips, etc.",
+            "Paper making and trade, juvenile literature"
+        ],
+        "authors": [
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL30877A"
+                }
+            }
+        ]
+    },
+    {
+        "id": 47,
+        "title": "Physical Processes",
+        "subjects": [
+            "Physics",
+            "Juvenile literature"
+        ],
+        "authors": [
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL30877A"
+                }
+            }
+        ]
+    },
+    {
+        "id": 48,
+        "title": "The pig",
+        "subjects": [
+            "Cerdos",
+            "Pigs",
+            "Swine",
+            "Juvenile literature",
+            "Literatura juvenil"
+        ],
+        "authors": [
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL30877A"
+                }
+            }
+        ]
+    },
+    {
+        "id": 49,
+        "title": "Plants and Us (Take-off!: Plants)",
+        "subjects": [
+            "Useful Plants",
+            "Juvenile literature"
+        ],
+        "authors": [
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL30877A"
+                }
+            }
+        ]
+    },
+    {
+        "id": 50,
+        "title": "Polluted air",
+        "subjects": [
+            "Atmosphere",
+            "Pollution",
+            "Juvenile literature",
+            "Air",
+            "Aire",
+            "Contaminaci\u00f3n",
+            "Atm\u00f3sfera",
+            "Literatura juvenil",
+            "Air, pollution",
+            "Air, pollution, juvenile literature",
+            "Atmosphere, juvenile literature"
+        ],
+        "authors": [
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL30877A"
+                }
+            }
+        ]
+    },
+    {
+        "id": 51,
+        "title": "Proteins for a Healthy Body (Body Needs)",
+        "subjects": [
+            "Proteins in human nutrition",
+            "Juvenile literature",
+            "Proteins",
+            "Nutrition"
+        ],
+        "authors": [
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL30877A"
+                }
+            }
+        ]
+    },
+    {
+        "id": 73,
+        "title": "A little local murder",
+        "subjects": [
+            "Fiction, mystery & detective, traditional",
+            "England, fiction",
+            "Parrish, george (fictitious character), fiction",
+            "Large type books"
+        ],
+        "authors": [
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL4341435A"
+                }
+            }
+        ]
+    },
+    {
+        "id": 74,
+        "title": "Death on the High C's",
+        "subjects": [
+            "Fiction in English",
+            "Fiction, mystery & detective, general"
+        ],
+        "authors": [
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL4341435A"
+                }
+            }
+        ]
+    },
+    {
+        "id": 75,
+        "title": "Disposal of the living",
+        "subjects": [
+            "Detective and mystery stories",
+            "Clergy",
+            "Fiction",
+            "Church of England",
+            "Poetry (poetic works by one author)",
+            "Large type books",
+            "Fiction, mystery & detective, general"
+        ],
+        "authors": [
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL4341435A"
+                }
+            }
+        ]
+    },
+    {
+        "id": 76,
+        "title": "Policemen in the Precinct",
+        "subjects": [],
+        "authors": [
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL124990A"
+                }
+            }
+        ]
+    },
+    {
+        "id": 77,
+        "title": "When I Grow Rich",
+        "subjects": [
+            "Fiction, mystery & detective, general",
+            "English literature"
+        ],
+        "authors": [
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL2621898A"
+                }
+            }
+        ]
+    },
+    {
+        "id": 78,
+        "title": "Nothing Is the Number When You Die",
+        "subjects": [
+            "Fiction, general",
+            "Turkey, fiction",
+            "Large type books"
+        ],
+        "authors": [
+            {
+                "author": {
+                    "key": "/authors/OL2621898A"
+                },
+                "type": {
+                    "key": "/type/author_role"
+                }
+            }
+        ]
+    },
+    {
+        "id": 79,
+        "title": "Ben on the Job (Disappearing Detectives)",
+        "subjects": [
+            "Fiction, mystery & detective, general",
+            "Homeless persons",
+            "Fiction",
+            "Murder",
+            "Investigation",
+            "Sans-abri",
+            "Romans, nouvelles",
+            "Meurtre",
+            "Enqu\u00eates",
+            "English literature"
+        ],
+        "authors": [
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL4435794A"
+                }
+            }
+        ]
+    },
+    {
+        "id": 80,
+        "title": "Close Call",
+        "subjects": [],
+        "authors": [
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL1345245A"
+                }
+            }
+        ]
+    },
+    {
+        "id": 81,
+        "title": "Dead on Course",
+        "subjects": [],
+        "authors": [
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL2621900A"
+                }
+            }
+        ]
+    },
+    {
+        "id": 82,
+        "title": "For Sale with Corpse",
+        "subjects": [],
+        "authors": [
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL1345245A"
+                }
+            }
+        ]
+    },
+    {
+        "id": 83,
+        "title": "Murder at the Nineteenth",
+        "subjects": [
+            "Fiction, mystery & detective, general",
+            "Peach, percy (fictitious character), fiction",
+            "England, fiction"
+        ],
+        "authors": [
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL1345245A"
+                }
+            }
+        ]
+    },
+    {
+        "id": 84,
+        "title": "Stranglehold",
+        "subjects": [],
+        "authors": [
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL1345245A"
+                }
+            }
+        ]
+    },
+    {
+        "id": 85,
+        "title": "A Little Neighbourhood Murder",
+        "subjects": [],
+        "authors": [
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL18898A"
+                }
+            }
+        ]
+    },
+    {
+        "id": 86,
+        "title": "A Long Time Dead",
+        "subjects": [
+            "Large type books",
+            "Jason Lynx (Fictitious character)",
+            "Fiction",
+            "Private investigators",
+            "Detective and mystery stories",
+            "Colorado, fiction",
+            "Denver (colo.), fiction",
+            "Lynx, jason (fictitious character), fiction",
+            "Fiction, mystery & detective, general",
+            "Antique dealers, fiction"
+        ],
+        "authors": [
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL18898A"
+                }
+            }
+        ]
+    },
+    {
+        "id": 87,
+        "title": "The History of Persia",
+        "subjects": [],
+        "authors": [
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL2621903A"
+                }
+            }
+        ]
+    },
+    {
+        "id": 88,
+        "title": "The Life Of Robert, Lord Clive V3",
+        "subjects": [],
+        "authors": [
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL2621903A"
+                }
+            }
+        ]
+    },
+    {
+        "id": 89,
+        "title": "Manufacturing and service industries in inner cities",
+        "subjects": [
+            "Industries, Location of",
+            "Location of Industries"
+        ],
+        "authors": [
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL2621903A"
+                }
+            }
+        ]
+    },
+    {
+        "id": 90,
+        "title": "Sketches of Persia",
+        "subjects": [],
+        "authors": [
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL2621903A"
+                }
+            }
+        ]
+    },
+    {
+        "id": 91,
+        "title": "Mortal Instruments",
+        "subjects": [
+            "Fiction, suspense"
+        ],
+        "authors": [
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL2621903A"
+                }
+            }
+        ]
+    },
+    {
+        "id": 92,
+        "title": "Whistler in the Dark",
+        "subjects": [
+            "Art",
+            "Tim Simpson (Fictitious character)",
+            "Collectors and collecting",
+            "Fiction"
+        ],
+        "authors": [
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL2621903A"
+                }
+            }
+        ]
+    },
+    {
+        "id": 93,
+        "title": "Circles & Squares",
+        "subjects": [
+            "Fiction",
+            "Tim Simpson (Fictitious character)",
+            "Art historians",
+            "Simpson, tim (fictitious character), fiction",
+            "Fiction, mystery & detective, general"
+        ],
+        "authors": [
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL2621903A"
+                }
+            }
+        ]
+    },
+    {
+        "id": 94,
+        "title": "Sheep, Goats and Soap",
+        "subjects": [
+            "Art",
+            "Tim Simpson (Fictitious character)",
+            "Collectors and collecting",
+            "Fiction"
+        ],
+        "authors": [
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL2621903A"
+                }
+            }
+        ]
+    },
+    {
+        "id": 95,
+        "title": "The Resurrection Man",
+        "subjects": [],
+        "authors": [
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL218173A"
+                }
+            }
+        ]
+    },
+    {
+        "id": 96,
+        "title": "Dmitri and the One-legged Lady",
+        "subjects": [
+            "Legal stories",
+            "Russian Icons",
+            "Fiction",
+            "Lost articles",
+            "Fiction, romance, general"
+        ],
+        "authors": [
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL2621905A"
+                }
+            }
+        ]
+    },
+    {
+        "id": 97,
+        "title": "The Face in the Cemetery",
+        "subjects": [
+            "Politics and government",
+            "Police",
+            "Gareth Cadwallader Owen (Fictitious character)",
+            "Police chiefs",
+            "British",
+            "Fiction",
+            "Fiction, mystery & detective, general",
+            "Egypt, fiction"
+        ],
+        "authors": [
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL2621905A"
+                }
+            }
+        ]
+    },
+    {
+        "id": 98,
+        "title": "The Face in the Cemetery (A Mamur Zapt Mystery)",
+        "subjects": [
+            "Gareth Cadwallader Owen (Fictitious character)",
+            "Fiction",
+            "Murder",
+            "Investigation",
+            "Police chiefs",
+            "Fiction, mystery & detective, police procedural"
+        ],
+        "authors": [
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL2621905A"
+                }
+            }
+        ]
+    },
+    {
+        "id": 99,
+        "title": "The complete letters of Vincent van Gogh",
+        "subjects": [
+            "Correspondence",
+            "Correspondence, reminiscences",
+            "Painters",
+            "Modern Art",
+            "Artists",
+            "Gogh, Vincent van, 1853-1890",
+            "Artists, correspondence",
+            "Gogh, vincent van, 1853-1890",
+            "Painters, france"
+        ],
+        "authors": [
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL36119A"
+                }
+            }
+        ]
+    },
+    {
+        "id": 100,
+        "title": "Van Gogh",
+        "subjects": [
+            "Impressionnisme (Art)",
+            "Impressionism (Art)",
+            "Criticism and interpretation",
+            "Critique et interpretation",
+            "Starry night (Gogh, Vincent van)",
+            "Dutch Painting",
+            "Appreciation",
+            "Themes, motives",
+            "Artists",
+            "Correspondence, reminiscences",
+            "Painters",
+            "Biography",
+            "Catalogs",
+            "Exhibitions",
+            "Field crops in art",
+            "Art",
+            "Collectors and collecting",
+            "History",
+            "Kr\u00f6ller-M\u00fcller Museum",
+            "Correspondence",
+            "Art appreciation",
+            "Artists Europe Biography",
+            "Painting",
+            "Landscapes in art",
+            "Post-impressionism (art)",
+            "Art, catalogs",
+            "Painting, history",
+            "Postcards",
+            "Gogh, vincent van, 1853-1890"
+        ],
+        "authors": [
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL142211A"
+                }
+            }
+        ]
+    },
+    {
+        "id": 101,
+        "title": "Frotiers Peace Treaties, and International Organization",
+        "subjects": [
+            "Catalogues raisonn\u00e9s",
+            "Correspondence",
+            "Catalogs",
+            "Exhibitions",
+            "Dutch Painting",
+            "Painters",
+            "Art collections",
+            "Impressionism (Art)",
+            "Drawing",
+            "Biography",
+            "Law and legislation",
+            "Transportation",
+            "Drawing & drawings",
+            "Individual artists",
+            "Art",
+            "Art & Art Instruction",
+            "Collections, Catalogs, Exhibitions - General",
+            "History - General",
+            "Individual Artist",
+            "Art / Individual Artist",
+            "1853-1890",
+            "Gogh, Vincent van,",
+            "Impressionism",
+            "Painting & paintings",
+            "Post-Impressionism",
+            "Individual Painters - 19th Century",
+            "Architecture",
+            "Netherlands",
+            "General",
+            "c 1800 to c 1900",
+            "Gogh, vincent van, 1853-1890",
+            "Dutch Landscape painting",
+            "Drawing, exhibitions",
+            "Painters, netherlands",
+            "Landscapes in art"
+        ],
+        "authors": [
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL36119A"
+                }
+            },
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL2937773A"
+                }
+            },
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL81305A"
+                }
+            },
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL2916849A"
+                }
+            },
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL480054A"
+                }
+            },
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL413247A"
+                }
+            },
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL608215A"
+                }
+            },
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL2750291A"
+                }
+            },
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL28600A"
+                }
+            }
+        ]
+    },
+    {
+        "id": 102,
+        "title": "One island, many faiths",
+        "subjects": [
+            "Religious life and customs",
+            "Religion",
+            "Pictorial works"
+        ],
+        "authors": [
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL36120A"
+                }
+            }
+        ]
+    },
+    {
+        "id": 103,
+        "title": "An essential guide to Celtic sites and their saints",
+        "subjects": [
+            "Biography",
+            "Celtic Antiquities",
+            "Celtic Christian saints",
+            "Celtic Church",
+            "Guidebooks",
+            "Historic sites",
+            "History",
+            "Saints",
+            "Celtic church",
+            "Great britain, antiquities"
+        ],
+        "authors": [
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL36121A"
+                }
+            }
+        ]
+    },
+    {
+        "id": 104,
+        "title": "Celtic saints",
+        "subjects": [
+            "Biography",
+            "Celtic Christian saints",
+            "Church history",
+            "History",
+            "Sacred space"
+        ],
+        "authors": [
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL36121A"
+                }
+            }
+        ]
+    },
+    {
+        "id": 105,
+        "title": "Hard Characters",
+        "subjects": [],
+        "authors": [
+            {
+                "type": "/type/author_role",
+                "author": {
+                    "key": "/authors/OL36121A"
+                }
+            }
+        ]
+    },
+    {
+        "id": 106,
+        "title": "Penn in Old Photographs",
+        "subjects": [],
+        "authors": [
+            {
+                "type": "/type/author_role",
+                "author": {
+                    "key": "/authors/OL36121A"
+                }
+            }
+        ]
+    },
+    {
+        "id": 107,
+        "title": "\"Tales from the Brazilian jungle\", Antonio Rocha, storyteller",
+        "subjects": [
+            "Drama in education",
+            "Storytelling in literature"
+        ],
+        "authors": [
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL36121A"
+                }
+            }
+        ]
+    },
+    {
+        "id": 108,
+        "title": "Web Sight (So Weird)",
+        "subjects": [],
+        "authors": [
+            {
+                "type": "/type/author_role",
+                "author": {
+                    "key": "/authors/OL36121A"
+                }
+            }
+        ]
+    },
+    {
+        "id": 109,
+        "title": "Wolverhampton in the 1930's and '40's",
+        "subjects": [],
+        "authors": [
+            {
+                "type": "/type/author_role",
+                "author": {
+                    "key": "/authors/OL36121A"
+                }
+            }
+        ]
+    },
+    {
+        "id": 110,
+        "title": "Celtic saints in their landscape",
+        "subjects": [
+            "Celtic Christian saints",
+            "Christian saints",
+            "History",
+            "Sacred space",
+            "Saints, biography",
+            "Celtic church"
+        ],
+        "authors": [
+            {
+                "type": {
+                    "key": "/type/author_role"
+                },
+                "author": {
+                    "key": "/authors/OL36121A"
+                }
+            }
+        ]
+    }
+]
