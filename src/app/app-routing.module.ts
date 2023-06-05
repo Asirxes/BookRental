@@ -7,6 +7,7 @@ import { RegistrationPageComponent } from './registration-page/registration-page
 import { FirstPageComponent } from './first-page/first-page.component';
 import { LogoutComponent } from './logout/logout.component';
 import { KoszykComponent } from './koszyk/koszyk.component';
+
 const approutes: Routes = [
   { path: "", redirectTo: "/First", pathMatch: "full" },
   //{ path: '', component: AppComponent },
