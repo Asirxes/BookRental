@@ -34,7 +34,7 @@ import { XMLService } from './services/xmlService';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [ApiService,XMLService],
+  providers: [ApiService,XMLService,],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

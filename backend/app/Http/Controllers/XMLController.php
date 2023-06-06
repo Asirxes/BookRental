@@ -27,6 +27,7 @@ class XMLController extends Controller
     $ksiazka->addChild('author', $jsonKsiazka['author']);
     $ksiazka->addChild('description', $jsonKsiazka['description']);
     $ksiazka->addChild('coverImageUrl', $jsonKsiazka['coverImageUrl']);
+    $ksiazka->addChild('price', $jsonKsiazka['price']);
 
     $xml->asXML($this->xmlFile);
 }

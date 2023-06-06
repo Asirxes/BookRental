@@ -7,5 +7,13 @@ import { XMLService } from '../services/xmlService';
   styleUrls: ['./koszyk.component.css']
 })
 export class KoszykComponent {
-  
+  xmlService: XMLService;
+
+  constructor(xmlService: XMLService) {
+    this.xmlService = xmlService;
+  }
+
+  getKsiazki(){
+    this.xmlService.getBooks();
+  }
 }
