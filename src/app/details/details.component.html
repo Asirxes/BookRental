@@ -1,0 +1,12 @@
+<div *ngIf="genre">
+    <h2>Wybrany gatunek: {{ genre.name }}</h2>
+    <p>Opis: {{ genre.description }}</p>
+  </div>
+  
+  <div *ngIf="book">
+    <h2>Wybrana książka: {{ book.title }}</h2>
+    <p>Autor: {{ book.author }}</p>
+    <p>Rok wydania: {{ book.year }}</p>
+    <button (click)="addToCart(book)">Dodaj do koszyka</button>
+  </div>
+  

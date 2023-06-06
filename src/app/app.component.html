@@ -10,19 +10,29 @@
     <span>Nasza wypożyczalnia</span>
   </a>
 
-    <div class="spacer"></div>
-    <a class="p2" aria-label="Logowanie" routerLink="/Logowanie" routerLinkActive="active" ariaCurrentWhenActive="page">
-      <span>Logowanie</span>
-    </a>
-    <a class="p2" aria-label="Rejestracja" routerLink="/Rejestracja" routerLinkActive="active" ariaCurrentWhenActive="page">
-      <span>Rejestracja</span>
-    </a>
-    <a class="p2" aria-label="Koszyk" routerLink="/Koszyk" routerLinkActive="active" ariaCurrentWhenActive="page">
-      <mat-icon>shopping_basket</mat-icon>
-    </a>
+  <div class="spacer"></div>
+  <a class="p2" aria-label="Logowanie" routerLink="/Logowanie" routerLinkActive="active" ariaCurrentWhenActive="page">
+    <span>Logowanie</span>
+  </a>
+  <a class="p2" aria-label="Rejestracja" routerLink="/Rejestracja" routerLinkActive="active"ariaCurrentWhenActive="page">
+    <span>Rejestracja</span>
+  </a>
+  <a class="p2" aria-label="Koszyk" routerLink="/Koszyk" routerLinkActive="active" ariaCurrentWhenActive="page">
+    <mat-icon>shopping_basket</mat-icon>
+  </a>
 </div>
 
 <div class="content" role="main">
+  <nav>
+    <ul>
+      <li><a routerLink="">Home</a></li>
+      <li><a routerLink="/users">Użytkownicy</a></li>
+      <li><a routerLink="/login">Logowanie</a></li>
+      <li><a routerLink="/register">Register</a></li>
+      <li><a routerLink="/cart"></a>Cart</li>
+      <li><a routerLink="/account">Account</a></li>
+    </ul>
+  </nav>
   
   <!-- Highlight Card -->
   

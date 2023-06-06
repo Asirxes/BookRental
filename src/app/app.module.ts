@@ -15,6 +15,15 @@ import { KoszykComponent } from './koszyk/koszyk.component'
 import { ApiService } from './services/apiService';
 import { HttpClient, HttpClientModule, HttpHandler } from '@angular/common/http';
 import { XMLService } from './services/xmlService';
+import { HomeComponent } from './home/home-page.component';
+//import { DatailsPageComponent } from './datails-page/datails-page.component';
+import { CartComponent } from './cart/cart.component';
+import { DetailsComponent } from './details/details.component';
+import { UserListComponent } from './user-list/user-list.component';
+import { UserComponent } from './user/user.component';
+import { RegistrationComponent } from './registration/registration.component';
+import { LoginComponent } from './login/login.component';
+import { AccountComponent } from './account/account.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,6 +33,16 @@ import { XMLService } from './services/xmlService';
     FirstPageComponent,
     LogoutComponent,
     KoszykComponent,
+    AppComponent,
+    HomeComponent,
+ //   DatailsPageComponent,
+    CartComponent,
+    DetailsComponent,
+    UserListComponent,
+    UserComponent,
+    RegistrationComponent,
+    LoginComponent,
+    AccountComponent
     
   ],
   imports: [

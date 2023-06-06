@@ -1,0 +1,27 @@
+<div>
+    <h2>Koszyk</h2>
+    <table>
+      <tr>
+        <th>Tytuł</th>
+        <th>Autor</th>
+        <th>Cena</th>
+        <th></th>
+      </tr>
+      <tr *ngFor="let book of cartItems">
+        <td>{{ book.title }}</td>
+        <td>{{ book.author }}</td>
+        <td>{{ book.price }}</td>
+        <td><button (click)="removeCartItem(book)">Usuń</button></td>
+      </tr>
+      <tr>
+        <td colspan="2"></td>
+        <td><strong>Suma:</strong></td>
+        <td><strong>{{ totalPrice }}</strong></td>
+      </tr>
+    </table>
+  
+    <div *ngIf="cartItems.length > 0">
+      <button (click)="finalizePayment()">Finalizuj płatność</button>
+    </div>
+  </div>
+  
