@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BooksController;
 use App\Http\Controllers\OpenController;
 use App\Http\Controllers\XMLController;
+use App\Http\Controllers\JSONController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,3 +29,7 @@ Route::get('/open', [OpenController::class, 'index']);
 Route::get('/XML/getBooks', [XMLController::class, 'getBooks']);
 
 Route::post('/XML/addBooks', [XMLController::class, 'addBooks']);
+
+Route::get('/JSON/getBooks', [JSONController::class, 'getBooks']);
+
+Route::post('/JSON/addBooks', [JSONController::class, 'addBooks']);
