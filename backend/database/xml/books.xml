@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<books>
+  <book>
+    <title>The Great Gatsby</title>
+    <author>F. Scott Fitzgerald</author>
+    <description>A classic novel depicting the decadence and disillusionment of the Jazz Age.</description>
+    <coverImageUrl>https://example.com/book1.jpg</coverImageUrl>
+  </book>
+  <book>
+    <title>To Kill a Mockingbird</title>
+    <author>Harper Lee</author>
+    <description>A powerful story of racial injustice and the loss of innocence in the American South.</description>
+    <coverImageUrl>https://example.com/book2.jpg</coverImageUrl>
+  </book>
+  <book>
+    <title>1984</title>
+    <author>George Orwell</author>
+    <description>A dystopian novel depicting a totalitarian society where individualism is suppressed.</description>
+    <coverImageUrl>https://example.com/book3.jpg</coverImageUrl>
+  </book>
+  <book>
+    <title>Pride and Prejudice</title>
+    <author>Jane Austen</author>
+    <description>A classic love story featuring the independent-minded Elizabeth Bennet and the proud Mr. Darcy.</description>
+    <coverImageUrl>https://example.com/book4.jpg</coverImageUrl>
+  </book>
+  <book>
+    <title>The Catcher in the Rye</title>
+    <author>J.D. Salinger</author>
+    <description>A coming-of-age novel narrated by Holden Caulfield, a disaffected teenager.</description>
+    <coverImageUrl>https://example.com/book5.jpg</coverImageUrl>
+  </book>
+  <book>
+    <title>Brave New World</title>
+    <author>Aldous Huxley</author>
+    <description>A futuristic novel exploring a society where people are genetically engineered and controlled.</description>
+    <coverImageUrl>https://example.com/book6.jpg</coverImageUrl>
+  </book>
+  <book>
+    <title>The Lord of the Rings</title>
+    <author>J.R.R. Tolkien</author>
+    <description>An epic fantasy trilogy following the journey to destroy the One Ring and save Middle-earth.</description>
+    <coverImageUrl>https://example.com/book7.jpg</coverImageUrl>
+  </book>
+  <book>
+    <title>Crime and Punishment</title>
+    <author>Fyodor Dostoevsky</author>
+    <description>A psychological novel exploring the moral and psychological dilemmas faced by its protagonist.</description>
+    <coverImageUrl>https://example.com/book8.jpg</coverImageUrl>
+  </book>
+  <book>
+    <title>To the Lighthouse</title>
+    <author>Virginia Woolf</author>
+    <description>A modernist novel that delves into the inner thoughts and experiences of its characters.</description>
+    <coverImageUrl>https://example.com/book9.jpg</coverImageUrl>
+  </book>
+  <book>
+    <title>The Hobbit</title>
+    <author>J.R.R. Tolkien</author>
+    <description>A fantasy adventure novel featuring Bilbo Baggins and his journey to reclaim the Lonely Mountain.</description>
+    <coverImageUrl>https://example.com/book10.jpg</coverImageUrl>
+  </book>
+<book><title>Nowa ksi&#x105;&#x17C;ka</title><author>Autor</author><description>Opis nowej ksi&#x105;&#x17C;ki</description><coverImageUrl>https://example.com/new-book.jpg</coverImageUrl></book><book><title>Nowa ksi&#x105;&#x17C;ka</title><author>Autor</author><description>Opis nowej ksi&#x105;&#x17C;ki</description><coverImageUrl>https://example.com/new-book.jpg</coverImageUrl></book><book><title>Nowa ksi&#x105;&#x17C;ka</title><author>Autor</author><description>Opis nowej ksi&#x105;&#x17C;ki</description><coverImageUrl>https://example.com/new-book.jpg</coverImageUrl></book><book><title>TRAMPOLINA</title><author>Autor</author><description>Opis nowej ksi&#x105;&#x17C;ki</description><coverImageUrl>https://example.com/new-book.jpg</coverImageUrl></book><book><title>TRAMPOLINA</title><author>Autor</author><description>Opis nowej ksi&#x105;&#x17C;ki</description><coverImageUrl>https://example.com/new-book.jpg</coverImageUrl></book><book><title>TRAMPOLINA1</title><author>TRAMPOLINA2</author><description>Opis nowej ksi&#x105;&#x17C;ki</description><coverImageUrl>https://example.com/new-book.jpg</coverImageUrl></book></books>

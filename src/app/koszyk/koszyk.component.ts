@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { XMLService } from '../services/xmlService';
 
 @Component({
   selector: 'app-koszyk',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./koszyk.component.css']
 })
 export class KoszykComponent {
-
+  
 }

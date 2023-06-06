@@ -14,6 +14,7 @@ import { LogoutComponent } from './logout/logout.component';
 import { KoszykComponent } from './koszyk/koszyk.component'
 import { ApiService } from './services/apiService';
 import { HttpClient, HttpClientModule, HttpHandler } from '@angular/common/http';
+import { XMLService } from './services/xmlService';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +34,7 @@ import { HttpClient, HttpClientModule, HttpHandler } from '@angular/common/http'
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [ApiService],
+  providers: [ApiService,XMLService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

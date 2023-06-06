@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BooksController;
 use App\Http\Controllers\OpenController;
+use App\Http\Controllers\XMLController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,6 +20,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/books', [BooksController::class, 'index']);
+Route::get('/books/index', [BooksController::class, 'index']);
+Route::get('/books/test', [BooksController::class, 'test']);
 
 Route::get('/open', [OpenController::class, 'index']);
+
+Route::get('/XML/getBooks', [XMLController::class, 'getBooks']);
+
+Route::post('/XML/addBooks', [XMLController::class, 'addBooks']);
