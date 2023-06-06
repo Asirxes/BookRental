@@ -22,9 +22,19 @@ class BooksController extends Controller
         // Pobranie listy książek
         $books = $response->getItems();
 
-        // Wyświetlanie listy książek
+        // Utworzenie pustej tablicy na dane książek
+        $bookData = [];
+
+        // Dodawanie informacji o książkach do tablicy
         foreach ($books as $book) {
-            echo $book->getVolumeInfo()->getTitle() . '<br>';
+            $bookData[] = [
+                'title' => $book->getVolumeInfo()->getTitle(),
+                'author' => $book->getVolumeInfo()->getAuthors(),
+                // Dodaj inne potrzebne dane z obiektu książki
+            ];
         }
+
+        // Zwracanie listy książek jako odpowiedź JSON
+        return response()->json($bookData);
     }
 }
