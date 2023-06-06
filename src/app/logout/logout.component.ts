@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { EmptyUserInfoDto, IUserInfoDto } from '../interfaces/IUserInfoDto';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./logout.component.css']
 })
 export class LogoutComponent {
-  protected user: IUserInfoDto = EmptyUserInfoDto();
+  protected user: string | undefined;
   login: string;
   authHttpService: any;
   localStorageService: any;

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-
+import { ActivatedRoute ,Router} from '@angular/router';
+import { AuthService } from '../auth.service';
 @Component({
   selector: 'app-user',
   templateUrl: './user.component.html',
@@ -10,7 +10,9 @@ export class UserComponent implements OnInit {
   username?: string | null;
   email: string | undefined;
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute,
+    private authService: AuthService,
+    private router: Router) { }
 
   ngOnInit() {
     this.username = this.route.snapshot.paramMap.get('username');
@@ -21,5 +23,9 @@ export class UserComponent implements OnInit {
     } else if (this.username === 'user') {
       this.email = 'user@example.com';
     }
+  }
+  logout() {
+    this.authService.logout();
+    this.router.navigate(['/login']);
   }
 }
