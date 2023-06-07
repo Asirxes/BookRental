@@ -1,8 +1,9 @@
 export interface Book {
-    id: number;
+    //id: number;
     title: string;
     author: string;
     price: number;
     description:string;
+    coverImageUrl: string;
   }
   
