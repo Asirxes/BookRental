@@ -17,6 +17,7 @@ import { RegistrationComponent } from './registration/registration.component';
 import { AccountComponent } from './account/account.component';
 import { CartComponent } from './cart/cart.component';
 import { XmlPageComponent } from './xml-page/xml-page.component';
+import { JsonPageComponent } from './json-page/json-page.component';
 
 const approutes: Routes = [
  // { path: "", redirectTo: "/First", pathMatch: "full" },
@@ -38,7 +39,8 @@ const approutes: Routes = [
   { path: 'register', component: RegistrationComponent},
   { path: 'account', component:AccountComponent},
   { path: 'cart',component:CartComponent},
-  { path: 'xml', component:XmlPageComponent}
+  { path: 'xml', component:XmlPageComponent},
+  { path: 'json', component:JsonPageComponent}
 
 ];
 
