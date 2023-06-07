@@ -16,6 +16,7 @@ import { authGuard } from './auth.guard';
 import { RegistrationComponent } from './registration/registration.component';
 import { AccountComponent } from './account/account.component';
 import { CartComponent } from './cart/cart.component';
+import { XmlPageComponent } from './xml-page/xml-page.component';
 
 const approutes: Routes = [
  // { path: "", redirectTo: "/First", pathMatch: "full" },
@@ -27,7 +28,8 @@ const approutes: Routes = [
   //{ path: 'Rejestracja', component: RegistrationPageComponent },
   { path: 'Wylogowanie', component: LogoutComponent},
   { path: 'Koszyk', component: KoszykComponent},
-  { path: '', component: HomeComponent },
+  { path: 'home', component: HomeComponent },
+  { path: "", redirectTo:"/home",pathMatch:"full" },
   { path: 'details/genre/:genreId', component: DetailsComponent },
   { path: 'details/book/:bookId', component: DetailsComponent },
   { path: 'users', component: UserListComponent,canActivate:[authGuard] },
@@ -35,7 +37,8 @@ const approutes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegistrationComponent},
   { path: 'account', component:AccountComponent},
-  { path: 'cart',component:CartComponent}
+  { path: 'cart',component:CartComponent},
+  { path: 'xml', component:XmlPageComponent}
 
 ];
 

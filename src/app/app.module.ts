@@ -24,6 +24,7 @@ import { UserComponent } from './user/user.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { LoginComponent } from './login/login.component';
 import { AccountComponent } from './account/account.component';
+import { XmlPageComponent } from './xml-page/xml-page.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,7 +43,8 @@ import { AccountComponent } from './account/account.component';
     UserComponent,
     RegistrationComponent,
     LoginComponent,
-    AccountComponent
+    AccountComponent,
+    XmlPageComponent
     
   ],
   imports: [
