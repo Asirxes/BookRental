@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 //import { LoginPageComponent } from './login-page/login-page.component';
 //import { RegistrationPageComponent } from './registration-page/registration-page.component';
 import { FirstPageComponent } from './first-page/first-page.component';
-import { LogoutComponent } from './logout/logout.component';
+//import { LogoutComponent } from './logout1/logout.component';
 import { KoszykComponent } from './koszyk/koszyk.component';
 import { HomeComponent} from './home/home-page.component'
 import { DetailsComponent } from './details/details.component';
@@ -18,7 +18,7 @@ import { AccountComponent } from './account/account.component';
 import { CartComponent } from './cart/cart.component';
 import { XmlPageComponent } from './xml-page/xml-page.component';
 import { JsonPageComponent } from './json-page/json-page.component';
-
+import { LogoutComponent } from './logout/logout.component';
 const approutes: Routes = [
  // { path: "", redirectTo: "/First", pathMatch: "full" },
   //{ path: '', component: AppComponent },
@@ -27,7 +27,7 @@ const approutes: Routes = [
   //{ path: 'Second', component: SecondpageComponent },
  // { path: 'Logowanie', component: LoginPageComponent },
   //{ path: 'Rejestracja', component: RegistrationPageComponent },
-  { path: 'Wylogowanie', component: LogoutComponent},
+  //{ path: 'Wylogowanie', component: LogoutComponent},
   { path: 'Koszyk', component: KoszykComponent},
   { path: 'home', component: HomeComponent },
   { path: "", redirectTo:"/home",pathMatch:"full" },
@@ -40,7 +40,8 @@ const approutes: Routes = [
   { path: 'account', component:AccountComponent},
   { path: 'cart',component:CartComponent},
   { path: 'xml', component:XmlPageComponent},
-  { path: 'json', component:JsonPageComponent}
+  { path: 'json', component:JsonPageComponent},
+  { path: 'logout',component:LogoutComponent}
 
 ];
 
