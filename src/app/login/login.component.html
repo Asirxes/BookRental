@@ -1,0 +1,25 @@
+<h2>Logowanie</h2>
+
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="email">Email:</label>
+    <input type="email" id="email" formControlName="email">
+    <div *ngIf="loginForm.controls['email'].errors?.['required'] && loginForm.controls['email'].touched">
+      Email jest wymagany.
+    </div>
+    <div *ngIf="loginForm.controls['email'].errors?.['email'] && loginForm.controls['email'].touched">
+      Wprowadź prawidłowy adres email.
+    </div>
+  </div>
+
+  <div>
+    <label for="password">Hasło:</label>
+    <input type="password" id="password" formControlName="password">
+    <div *ngIf="loginForm.controls['password'].errors?.['required'] && loginForm.controls['password'].touched">
+      Hasło jest wymagane.
+    </div>
+  </div>
+
+  <button type="submit" [disabled]="loginForm.invalid">Zaloguj</button>
+  <a class="card" routerLink="/logout" routerLinkActive="active" ariaCurrentWhenActive="page"></a>
+</form>

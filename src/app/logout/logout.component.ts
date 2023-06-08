@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { EmptyUserInfoDto, IUserInfoDto } from '../interfaces/IUserInfoDto';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,39 +7,13 @@ import { Router } from '@angular/router';
   styleUrls: ['./logout.component.css']
 })
 export class LogoutComponent {
-  protected user: IUserInfoDto = EmptyUserInfoDto();
-  login: string;
-  authHttpService: any;
-  localStorageService: any;
+  constructor(private router: Router) {}
 
-  constructor(
-     // private authHttpService: AuthHttpService,
-      //private localStorageService: LocalStorageService,
-      private router: Router
-  ) {
-      this.login ="AsiaK"
+  logout() {
+    // Tutaj możesz zaimplementować logikę wylogowywania użytkownika
+    // Możesz zresetować dane użytkownika lub skorzystać z usługi autoryzacji
+
+    // Przykład: Przekierowanie użytkownika do strony logowania
+    this.router.navigate(['/login']);
   }
-
-  async ngOnInit() {
-
-  }
-
-  protected logout = () => {
-      this.authHttpService.logoutUser().subscribe({
-          next: async (result: boolean) => {
-              if(result) {
-                  this.localStorageService.removeUser();
-                  await this.router.navigateByUrl("/First");
-              }
-          },
-          error: async (error: any) => {
-              if(error.status === 401) {
-                  this.localStorageService.removeUser();
-                  await this.router.navigateByUrl("/First");
-              }
-          }
-      });
-  }
-
 }
-
