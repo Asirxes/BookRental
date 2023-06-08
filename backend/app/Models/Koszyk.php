@@ -4,18 +4,17 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-class User extends Model
+
+class Koszyk extends Model
 {
     use HasFactory;
 
-    protected $table = 'users';
+    protected $table = 'koszyks'; 
 
     protected $fillable = [
         'email',
-        'password',
+        'id_book',
     ];
 
     protected $primaryKey = 'email';
-
-    public $timestamps = false;
 }
