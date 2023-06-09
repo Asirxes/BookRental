@@ -36,13 +36,13 @@
       <div *ngFor="let item of cartItems">
         <h2>{{ item.title }}</h2>
         <p>{{ item.author }}</p>
-        <p>Cena: {{ item.price }}</p>
+        <p>Cena: {{ item.price }} zł</p>
         <button (click)="removeFromCart(item)">Usuń z koszyka</button>
         <input type="number" [(ngModel)]="item.quantity" min="1" (change)="updateQuantity(item)">
       </div>
       <div>
       <p></p>
-      <h1>Suma: {{ calculateTotalPrice() }}</h1>
+      <h1>Suma: {{ calculateTotalPrice() }} zł</h1>
     </div>
   </div>
     
