@@ -27,6 +27,7 @@ import { LoginComponent } from './login/login.component';
 import { AccountComponent } from './account/account.component';
 import { XmlPageComponent } from './xml-page/xml-page.component';
 import { JsonPageComponent } from './json-page/json-page.component';
+import { FormatPricePipe } from './format-price.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,8 +48,8 @@ import { JsonPageComponent } from './json-page/json-page.component';
     LoginComponent,
     AccountComponent,
     XmlPageComponent,
-    JsonPageComponent
-    
+    JsonPageComponent,
+    FormatPricePipe
   ],
   imports: [
     BrowserModule,

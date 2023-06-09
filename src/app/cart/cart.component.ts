@@ -106,11 +106,7 @@ export class CartComponent {
   }
 
   calculateTotalPrice(): number {
-    let total = 0;
-    for (const item of this.cartItems) {
-      total += item.price * item.quantity;
-    }
-    return total;
+    return this.cartItems.reduce((total, item) => total + (item.price * item.quantity), 0);
   }
 }
 
