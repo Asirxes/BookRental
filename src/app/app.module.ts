@@ -11,7 +11,7 @@ import {MatIconModule} from '@angular/material/icon';
 //import { SecondpageComponent } from './secondpage/secondpage.component';
 //import { RegistrationPageComponent } from './registration-page/registration-page.component';
 import { FirstPageComponent } from './first-page/first-page.component';
-import { LogoutComponent } from './logout/logout.component';
+//import { LogoutComponent } from './logout/logout.component';
 //import { KoszykComponent } from './koszyk/koszyk.component'
 import { ApiService } from './services/apiService';
 import { HttpClient, HttpClientModule, HttpHandler } from '@angular/common/http';
@@ -27,7 +27,8 @@ import { LoginComponent } from './login/login.component';
 import { AccountComponent } from './account/account.component';
 import { XmlPageComponent } from './xml-page/xml-page.component';
 import { JsonPageComponent } from './json-page/json-page.component';
-import { FormatPricePipe } from './format-price.pipe';
+import { FormatPricePipe } from './pipe/format-price.pipe';
+import { AuthService } from 'src/services/auth.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +36,7 @@ import { FormatPricePipe } from './format-price.pipe';
     //SecondpageComponent,
    // RegistrationPageComponent,
     FirstPageComponent,
-    LogoutComponent,
+    //LogoutComponent,
    //KoszykComponent,
     AppComponent,
     HomeComponent,
@@ -60,7 +61,7 @@ import { FormatPricePipe } from './format-price.pipe';
     HttpClientModule,
     FormsModule
   ],
-  providers: [ApiService,XMLService,],
+  providers: [ApiService,XMLService,AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

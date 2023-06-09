@@ -13,8 +13,6 @@ export class XmlPageComponent {
   }
 
   exportXML() {
-    // Implementacja eksportu pliku XML
-    // Przykład: Tworzenie pliku XML i zapis do niego danych
     const xmlData = '<root><element1>Value 1</element1><element2>Value 2</element2></root>';
     const xmlFile = new File([xmlData], 'exported.xml', { type: 'text/xml' });
     saveAs(xmlFile);

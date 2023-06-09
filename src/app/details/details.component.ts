@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { BookService } from '../book.service';
-import { GenreService } from '../genre.service';
-import { CartService } from '../cart.service';
+import { BookService } from '../../services/book.service';
+import { GenreService } from '../../services/genre.service';
+import { CartService } from '../../services/cart.service';
 
 @Component({
   selector: 'app-details',

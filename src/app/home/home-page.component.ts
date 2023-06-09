@@ -53,6 +53,7 @@
 //   }
 // }
 import { Component } from '@angular/core';
+import { AuthService } from 'src/services/auth.service';
 
 interface Book {
   title: string;
@@ -75,5 +76,10 @@ export class HomeComponent {
 
   addToCart(book: Book) {
     book.addedToCart = true;
+  }
+  constructor(public authService: AuthService) {}
+
+  logout(): void {
+    this.authService.logout();
   }
 }

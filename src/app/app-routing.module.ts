@@ -12,13 +12,13 @@ import { DetailsComponent } from './details/details.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { UserComponent } from './user/user.component';
 import { LoginComponent } from './login/login.component';
-import { authGuard } from './auth.guard';
+import { authGuard } from './guard/auth.guard';
 import { RegistrationComponent } from './registration/registration.component';
 import { AccountComponent } from './account/account.component';
 import { CartComponent } from './cart/cart.component';
 import { XmlPageComponent } from './xml-page/xml-page.component';
 import { JsonPageComponent } from './json-page/json-page.component';
-import { LogoutComponent } from './logout/logout.component';
+//import { LogoutComponent } from './logout/logout.component';
 const approutes: Routes = [
  // { path: "", redirectTo: "/First", pathMatch: "full" },
   //{ path: '', component: AppComponent },
@@ -41,7 +41,8 @@ const approutes: Routes = [
   { path: 'cart',component:CartComponent},
   { path: 'xml', component:XmlPageComponent},
   { path: 'json', component:JsonPageComponent},
-  { path: 'logout',component:LogoutComponent}
+  //{ path: 'logout',component:LogoutComponent}
+  {path: 'user', component: UserComponent}
 
 ];
 

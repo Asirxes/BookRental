@@ -16,9 +16,7 @@ export class LoginComponent implements OnInit {
     });
    }
 
-  ngOnInit() {
-    
-  }
+  ngOnInit() {}
 
   onSubmit() {
     if (this.loginForm.valid) {
@@ -33,4 +31,5 @@ export class LoginComponent implements OnInit {
       this.loginForm.reset();
     }
   }
+  
 }

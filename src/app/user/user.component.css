@@ -1,0 +1,21 @@
+.account-header {
+    text-align: center;
+    margin-bottom: 40px;
+    }
+    
+    .account-details {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    }
+    
+    .account-details p {
+    margin-bottom: 10px;
+    }
+    .o1{
+        background: rgba(255, 255, 255, 0.5);
+        padding: 10px 20px;
+        border-radius: 5px;
+    }

@@ -18,9 +18,7 @@ export class RegistrationComponent implements OnInit {
     }, { validator: this.passwordMatchValidator, asyncValidators:[], updateOn:'change'});
   }
 
-  ngOnInit() {
-    
-  }
+  ngOnInit() {}
 
   passwordMatchValidator(formGroup: FormGroup) {
     const password = formGroup.get('password')?.value;
@@ -35,14 +33,12 @@ export class RegistrationComponent implements OnInit {
 
   onSubmit() {
     if (this.registrationForm.valid) {
-      // Wykonaj logikę rejestracji użytkownika
+
       const email = this.registrationForm.get('email')?.value;
       const password = this.registrationForm.get('password')?.value;
 
-      // Przykładowa logika, tutaj możesz wysłać żądanie do serwera, zarejestrować użytkownika itp.
       console.log('Rejestracja użytkownika:', email, password);
 
-      // Zresetuj formularz po zakończeniu rejestracji
       this.registrationForm.reset();
     }
   }

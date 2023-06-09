@@ -3,3 +3,37 @@
     padding: 10px 20px;
     border-radius: 5px;
 }
+.login-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    }
+    
+    .login-form label {
+    display: block;
+    margin-bottom: 10px;
+    }
+    
+    .login-form input[type="email"],
+    .login-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    }
+    
+    .login-form button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    }
+    
+    .login-form button:hover {
+    background-color: #555;
+    }
