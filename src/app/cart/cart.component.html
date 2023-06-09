@@ -1,6 +1,6 @@
-<div>
+<div class="o1">
     <h2>Koszyk</h2>
-    <table>
+    <!-- <table>
       <tr>
         <th>Tytuł</th>
         <th>Autor</th>
@@ -22,6 +22,14 @@
   
     <div *ngIf="cartItems.length > 0">
       <button (click)="finalizePayment()">Finalizuj płatność</button>
+    </div> -->
+    <div *ngFor="let cartItem of cartItems">
+      <h2>{{ cartItem.book.title }}</h2>
+      <p>Autor: {{ cartItem.book.author }}</p>
+      <p>Cena: {{ cartItem.book.price }}</p>
+      <p>Ilość: <input type="number" [(ngModel)]="cartItem.quantity" (change)="updateQuantity(cartItem, cartItem.quantity)"></p>
+      <button (click)="removeFromCart(cartItem)">Usuń z koszyka</button>
     </div>
+    
   </div>
   

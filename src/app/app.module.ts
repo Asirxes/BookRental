@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,7 +12,7 @@ import {MatIconModule} from '@angular/material/icon';
 //import { RegistrationPageComponent } from './registration-page/registration-page.component';
 import { FirstPageComponent } from './first-page/first-page.component';
 import { LogoutComponent } from './logout/logout.component';
-import { KoszykComponent } from './koszyk/koszyk.component'
+//import { KoszykComponent } from './koszyk/koszyk.component'
 import { ApiService } from './services/apiService';
 import { HttpClient, HttpClientModule, HttpHandler } from '@angular/common/http';
 import { XMLService } from './services/xmlService';
@@ -34,7 +35,7 @@ import { JsonPageComponent } from './json-page/json-page.component';
    // RegistrationPageComponent,
     FirstPageComponent,
     LogoutComponent,
-    KoszykComponent,
+   //KoszykComponent,
     AppComponent,
     HomeComponent,
  //   DatailsPageComponent,
@@ -55,7 +56,8 @@ import { JsonPageComponent } from './json-page/json-page.component';
     BrowserAnimationsModule,
     MatIconModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [ApiService,XMLService,],
   bootstrap: [AppComponent]

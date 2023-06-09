@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 //import { RegistrationPageComponent } from './registration-page/registration-page.component';
 import { FirstPageComponent } from './first-page/first-page.component';
 //import { LogoutComponent } from './logout1/logout.component';
-import { KoszykComponent } from './koszyk/koszyk.component';
+//import { KoszykComponent } from './koszyk/koszyk.component';
 import { HomeComponent} from './home/home-page.component'
 import { DetailsComponent } from './details/details.component';
 import { UserListComponent } from './user-list/user-list.component';
@@ -28,7 +28,7 @@ const approutes: Routes = [
  // { path: 'Logowanie', component: LoginPageComponent },
   //{ path: 'Rejestracja', component: RegistrationPageComponent },
   //{ path: 'Wylogowanie', component: LogoutComponent},
-  { path: 'Koszyk', component: KoszykComponent},
+  //{ path: 'Koszyk', component: KoszykComponent},
   { path: 'home', component: HomeComponent },
   { path: "", redirectTo:"/home",pathMatch:"full" },
   { path: 'details/genre/:genreId', component: DetailsComponent },

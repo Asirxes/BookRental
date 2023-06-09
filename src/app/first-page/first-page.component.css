@@ -298,3 +298,8 @@
       visibility: hidden;
     }
   }
+  .o1{
+    background: rgba(255, 255, 255, 0.5);
+    padding: 10px 20px;
+    border-radius: 5px;
+}

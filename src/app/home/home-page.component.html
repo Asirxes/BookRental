@@ -1,16 +1,17 @@
+<div class="o1">
 <div class="content" role="main">
-    <h2>Dostępne gatunki:</h2>
-    <ul>
+    <!-- <h2>Dostępne gatunki:</h2> -->
+    <!-- <ul>
       <li *ngFor="let genre of genres" (click)="showGenreDetails(genre)">{{ genre.name }}</li>
-    </ul>
+    </ul> -->
   
-    <h2>Książki kupowane przez czytelników:</h2>
-    <ul>
+    <h2>Dostępne książki:</h2>
+    <!-- <ul>
       <li *ngFor="let book of books" (click)="showBookDetails(book)">{{ book.title }}</li>
-    </ul>
+    </ul> -->
   </div>
   
-  <div *ngIf="selectedGenre">
+  <!-- <div *ngIf="selectedGenre">
     <h2>Wybrany gatunek: {{ selectedGenre.name }}</h2>
     <p>Opis: {{ selectedGenre.description }}</p>
   </div>
@@ -19,5 +20,11 @@
     <h2>Wybrana książka: {{ selectedBook.title }}</h2>
     <p>Autor: {{ selectedBook.author }}</p>
     <p>Rok wydania: {{ selectedBook.year }}</p>
+  </div> -->
+  <div *ngFor="let book of books">
+    <h2>{{ book.title }}</h2>
+    <p>Autor: {{ book.author }}</p>
+    <p>Cena: {{ book.price }}</p>
+    <button (click)="addToCart(book)" [disabled]="book.addedToCart">Dodaj do koszyka</button>
   </div>
-  
+</div>
