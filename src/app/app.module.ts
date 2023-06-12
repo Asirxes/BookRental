@@ -29,6 +29,7 @@ import { XmlPageComponent } from './xml-page/xml-page.component';
 import { JsonPageComponent } from './json-page/json-page.component';
 import { FormatPricePipe } from './pipe/format-price.pipe';
 import { AuthService } from 'src/services/auth.service';
+import { dbService } from './services/dbService';
 @NgModule({
   declarations: [
     AppComponent,
@@ -61,7 +62,7 @@ import { AuthService } from 'src/services/auth.service';
     HttpClientModule,
     FormsModule
   ],
-  providers: [ApiService,XMLService,AuthService],
+  providers: [ApiService,XMLService,AuthService,dbService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

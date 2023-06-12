@@ -54,12 +54,15 @@
 // }
 import { Component } from '@angular/core';
 import { AuthService } from 'src/services/auth.service';
+import { dbService } from '../services/dbService';
 
 interface Book {
   title: string;
   author: string;
   price: number;
-  addedToCart: boolean;
+  coverImageUrl: string;
+  id: number;
+  description: string;
 }
 
 @Component({
@@ -69,15 +72,21 @@ interface Book {
 })
 export class HomeComponent {
   books: Book[] = [
-    { title: 'Duma i uprzedzenie', author: 'Jane Austen', price: 34.99, addedToCart: false },
-    { title: 'Książka 2', author: 'Autor 2', price: 29.99, addedToCart: false },
-    // Dodaj inne książki
+
   ];
 
+  
+
   addToCart(book: Book) {
-    book.addedToCart = true;
+    
   }
-  constructor(public authService: AuthService) {}
+  constructor(public authService: AuthService,private dbService: dbService) {
+    this.dbService.getDane().subscribe(result=> {
+      this.books = result as Book[];
+    }
+      
+      );
+  }
 
   logout(): void {
     this.authService.logout();

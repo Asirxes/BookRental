@@ -5,6 +5,7 @@ use App\Http\Controllers\BooksController;
 use App\Http\Controllers\OpenController;
 use App\Http\Controllers\XMLController;
 use App\Http\Controllers\JSONController;
+use App\Http\Controllers\DatabaseController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,3 +34,5 @@ Route::post('/XML/addBooks', [XMLController::class, 'addBooks']);
 Route::get('/JSON/getBooks', [JSONController::class, 'getBooks']);
 
 Route::post('/JSON/addBooks', [JSONController::class, 'addBooks']);
+
+Route::get('/DB/getAllBooks', [DatabaseController::class, 'getAllBooks']);

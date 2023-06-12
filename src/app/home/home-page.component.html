@@ -1,16 +1,19 @@
 <div class="o1">
-<div class="content" role="main">
+  <div class="content" role="main">
     <h2>Dostępne książki:</h2>
   </div>
   <div *ngFor="let book of books">
-    <h2>{{ book.title }}</h2>
-    <p>Autor: {{ book.author }}</p>
-    <p>Cena: {{ book.price }}</p>
-    <button (click)="addToCart(book)" [disabled]="book.addedToCart">Dodaj do koszyka</button>
+    <div class="book-details">
+      <div class="image-container">
+        <img [src]="book.coverImageUrl" alt="Okładka książki" width="125" height="200">
+      </div>
+      <div class="description-container">
+        <h2>{{ book.title }}</h2>
+        <p>Autor: {{ book.author }}</p>
+        <p>Opis: {{ book.description }}</p>
+        <p>Cena: {{ book.price }}$</p>
+        <button (click)="addToCart(book)" class="btn btn-secondary mb-4">Dodaj do koszyka</button>
+      </div>
+    </div>
   </div>
-  <!-- <div>
-  <p class="m1"></p>
-  <p>Zalogowany użytkownik: {{ authService.getCurrentUser() }}</p>
-  <button (click)="logout()">Wyloguj</button>
-  </div> -->
 </div>

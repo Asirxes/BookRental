@@ -1,49 +1,72 @@
-.o1{
-    background: rgba(255, 255, 255, 0.5);
-    padding: 10px 20px;
-    border-radius: 5px;
+.o1 {
+  background: rgba(255, 255, 255, 0.5);
+  padding: 10px 20px;
+  border-radius: 5px;
+  width: 500px;
+  height: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-.home-header {
-    text-align: center;
-    margin-bottom: 40px;
-    }
-    
-    .genre-list {
+
+.book-details {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
-    }
-    
-    .genre-item {
-    background-color: #fff;
-    border-radius: 5px;
-    padding: 10px;
-    margin: 10px;
-    width: 200px;
-    text-align: center;
-    }
-    
-    .genre-item:hover {
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-    }
-    
-    .book-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-gap: 20px;
-    }
-    
-    .book-item {
-    background-color: #fff;
-    border-radius: 5px;
-    padding: 10px;
-    text-align: center;
-    }
-    
-    .book-item:hover {
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-    }
-    .m1{
-        padding: 20px 30px;
-    }
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .image-container {
+    flex: 0 0 auto;
+    margin-right: 10px;
+  }
+  
+  .description-container {
+    flex: 1 1 auto;
+  }
+  
+.home-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.genre-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.genre-item {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  width: 200px;
+  text-align: center;
+}
+
+.genre-item:hover {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.book-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 20px;
+}
+
+.book-item {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+}
+
+.book-item:hover {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+.m1 {
+  padding: 20px 30px;
+}
