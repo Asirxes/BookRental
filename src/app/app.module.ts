@@ -30,6 +30,7 @@ import { JsonPageComponent } from './json-page/json-page.component';
 import { FormatPricePipe } from './pipe/format-price.pipe';
 import { AuthService } from 'src/services/auth.service';
 import { dbService } from './services/dbService';
+import { UsersService } from './services/usersService';
 @NgModule({
   declarations: [
     AppComponent,
@@ -62,7 +63,7 @@ import { dbService } from './services/dbService';
     HttpClientModule,
     FormsModule
   ],
-  providers: [ApiService,XMLService,AuthService,dbService],
+  providers: [ApiService,XMLService,AuthService,dbService,UsersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

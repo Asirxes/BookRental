@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { UsersService } from '../services/usersService';
 
 @Component({
   selector: 'app-registration',
@@ -10,7 +11,7 @@ export class RegistrationComponent implements OnInit {
   registrationForm: FormGroup;
   required: any;
 
-  constructor(formBuilder: FormBuilder) { 
+  constructor(formBuilder: FormBuilder,private usersService: UsersService) { 
     this.registrationForm = formBuilder.group({
       email: new FormControl('', [Validators.required, Validators.email]),
       password: new FormControl ('', [Validators.required, Validators.minLength(6)]),
@@ -37,9 +38,13 @@ export class RegistrationComponent implements OnInit {
       const email = this.registrationForm.get('email')?.value;
       const password = this.registrationForm.get('password')?.value;
 
-      console.log('Rejestracja użytkownika:', email, password);
+      //console.log('Rejestracja użytkownika:', email, password);
 
       this.registrationForm.reset();
+
+      this.usersService.zarejestruj(email,password).subscribe(response => {
+        console.log(response);
+      });
     }
   }
 }
