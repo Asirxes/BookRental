@@ -18,8 +18,11 @@
   <!-- <a class="p2" aria-label="Konto" routerLink="/user" routerLinkActive="active"ariaCurrentWhenActive="page" *ngIf="isLogged=='true'">
     <span>Konto</span>
   </a> -->
+  <button class="p2 btn btn-secondary" aria-label="Konto"ariaCurrentWhenActive="page" *ngIf="isLogged=='true'" [routerLink]="['/login', {name: 'changePassword'}]" routerLinkActive="active">
+    <span class="p2">Zmień hasło</span>
+  </button>
   <button class="p2 btn btn-secondary" aria-label="Konto"ariaCurrentWhenActive="page" *ngIf="isLogged=='true'" (click)="wyloguj()">
-    <span>Wyloguj</span>
+    <span class="p2">Wyloguj</span>
   </button>
   <a class="p2" aria-label="Koszyk" routerLink="/cart" routerLinkActive="active" ariaCurrentWhenActive="page" *ngIf="isLogged=='true'">
     <mat-icon>shopping_basket</mat-icon>
@@ -28,9 +31,9 @@
   <nav style="background-image: url('assets/panel.jpg'); background-size: cover; background-repeat: no-repeat;">
     <ul>
       <!-- <li><a routerLink="">Home</a></li>
-      <li><a routerLink="/account">Account</a></li>
+      <li><a routerLink="/account">Account</a></li> -->
       <li><a routerLink="/xml">Xml</a></li>
-      <li><a routerLink="/json">Json</a></li> -->
+      <li><a routerLink="/json">Json</a></li>
     </ul>
   </nav>
   <body style="background-image: url('assets/background.jpg'); background-size: cover; background-repeat: no-repeat; height: 1050px;">

@@ -2,7 +2,7 @@
 <h2>Rejestracja</h2>
 
 <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
-  <div>
+  <div class="mb-2">
     <label for="email">Email:</label>
     <input type="email" id="email" formControlName="email">
     <div *ngIf="registrationForm.controls['email'].errors?.['required'] && registrationForm.controls['email'].touched">
@@ -13,7 +13,7 @@
     </div>
   </div>
 
-  <div>
+  <div class="mb-2">
     <label for="password">Hasło:</label>
     <input type="password" id="password" formControlName="password">
     <div *ngIf="registrationForm.controls['password'].errors?.['required'] && registrationForm.controls['password'].touched">
@@ -24,7 +24,7 @@
     </div>
   </div>
 
-  <div>
+  <div class="mb-2">
     <label for="confirmPassword">Powtórz hasło:</label>
     <input type="password" id="confirmPassword" formControlName="confirmPassword">
     <div *ngIf="registrationForm.controls['confirmPassword'].errors?.['required'] && registrationForm.controls['confirmPassword'].touched">
@@ -35,6 +35,6 @@
     </div>
   </div>
 
-  <button type="submit" [disabled]="registrationForm.invalid">Zarejestruj</button>
+  <button type="submit" [disabled]="registrationForm.invalid" class="btn btn-warning">Zarejestruj</button>
 </form>
 </div>
