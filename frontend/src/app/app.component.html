@@ -1,5 +1,5 @@
 <div class="toolbar" role="banner" style="background-image: url('assets/panel.jpg'); background-size: cover; background-repeat: no-repeat;">
-  <a routerLink="/Home" routerLinkActive="active">
+  <a routerLink="" routerLinkActive="active">
   <mat-icon class="p2" routerLink=""> import_contacts</mat-icon>
 </a>
   <a class="p4" aria-label="First" routerLink="" routerLinkActive="active" ariaCurrentWhenActive="page">
@@ -9,16 +9,19 @@
 
    <div class="spacer"></div>
    
-  <a class="p2" aria-label="Logowanie" routerLink="/login" routerLinkActive="active" ariaCurrentWhenActive="page">
+  <a class="p2" aria-label="Logowanie" routerLink="/login" routerLinkActive="active" ariaCurrentWhenActive="page" *ngIf="isLogged=='false'">
     <span>Logowanie</span>
   </a>
-  <a class="p2" aria-label="Rejestracja" routerLink="/register" routerLinkActive="active"ariaCurrentWhenActive="page">
+  <a class="p2" aria-label="Rejestracja" routerLink="/register" routerLinkActive="active"ariaCurrentWhenActive="page" *ngIf="isLogged=='false'">
     <span>Rejestracja</span>
   </a>
-  <a class="p2" aria-label="Konto" routerLink="/user" routerLinkActive="active"ariaCurrentWhenActive="page">
+  <!-- <a class="p2" aria-label="Konto" routerLink="/user" routerLinkActive="active"ariaCurrentWhenActive="page" *ngIf="isLogged=='true'">
     <span>Konto</span>
-  </a>
-  <a class="p2" aria-label="Koszyk" routerLink="/cart" routerLinkActive="active" ariaCurrentWhenActive="page">
+  </a> -->
+  <button class="p2 btn btn-secondary" aria-label="Konto"ariaCurrentWhenActive="page" *ngIf="isLogged=='true'" (click)="wyloguj()">
+    <span>Wyloguj</span>
+  </button>
+  <a class="p2" aria-label="Koszyk" routerLink="/cart" routerLinkActive="active" ariaCurrentWhenActive="page" *ngIf="isLogged=='true'">
     <mat-icon>shopping_basket</mat-icon>
   </a>
 </div>

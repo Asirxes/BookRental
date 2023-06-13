@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { UsersService } from '../services/usersService';
+import { EventEmitter } from '@angular/core';
+import { Router } from '@angular/router';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-login',
@@ -10,7 +13,9 @@ import { UsersService } from '../services/usersService';
 export class LoginComponent implements OnInit {
   loginForm: FormGroup;
 
-  constructor(private formBuilder: FormBuilder,private usersService: UsersService) {
+  static myEventEmitter: EventEmitter<any> = new EventEmitter<any>();
+
+  constructor(private formBuilder: FormBuilder,private usersService: UsersService,private router: Router,private snackBar: MatSnackBar) {
     this.loginForm = this.formBuilder.group({
       email: ['', [Validators.required, Validators.email]],
       password: ['', Validators.required]
@@ -32,7 +37,17 @@ export class LoginComponent implements OnInit {
       this.loginForm.reset();
 
       this.usersService.login(email,password).subscribe(result=>{
-        console.log(result);
+        if(result==true){
+          localStorage.setItem('logged','true');
+          this.router.navigate(['']);
+        }else{
+          localStorage.setItem('logged','false');
+          this.snackBar.open('Złe dane logowania', 'Zamknij', {
+            duration: 2000, // Czas trwania alertu w milisekundach
+          });
+        }
+        LoginComponent.myEventEmitter.emit();
+        
       })
     }
   }

@@ -55,6 +55,8 @@
 import { Component } from '@angular/core';
 import { AuthService } from 'src/services/auth.service';
 import { dbService } from '../services/dbService';
+import { Router } from '@angular/router';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 interface Book {
   title: string;
@@ -68,24 +70,25 @@ interface Book {
 @Component({
   selector: 'app-home',
   templateUrl: './home-page.component.html',
-  styleUrls: ['./home-page.component.css']
+  styleUrls: ['./home-page.component.css'],
 })
 export class HomeComponent {
-  books: Book[] = [
-
-  ];
-
-  
+  books: Book[] = [];
 
   addToCart(book: Book) {
+    if(localStorage.getItem('logged')==null || localStorage.getItem('logged')=='false'){
+      this.snackBar.open('Musisz się zalogować', 'Zamknij', {
+        duration: 2000, // Czas trwania alertu w milisekundach
+      });
+      this.router.navigate(['/login']);
+    }
     
   }
-  constructor(public authService: AuthService,private dbService: dbService) {
-    this.dbService.getDane().subscribe(result=> {
+
+  constructor(public authService: AuthService, private dbService: dbService,private router: Router,private snackBar: MatSnackBar) {
+    this.dbService.getDane().subscribe((result) => {
       this.books = result as Book[];
-    }
-      
-      );
+    });
   }
 
   logout(): void {

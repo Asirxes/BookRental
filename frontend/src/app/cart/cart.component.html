@@ -1,0 +1,18 @@
+<div class="o1">
+    <h1>Koszyk</h1>
+      <div *ngFor="let item of cartItems">
+        <h2>{{ item.title }}</h2>
+        <p>{{ item.author }}</p>
+        <p>Cena: {{ item.price }} zł</p>
+        <button (click)="removeFromCart(item)">Usuń z koszyka</button>
+        <input type="number" [(ngModel)]="item.quantity" min="1" (change)="updateQuantity(item)">
+      </div>
+      <div>
+      <p></p>
+      <h1>Suma: {{ calculateTotalPrice() | formatPrice}}$</h1>
+      <button (click)="zakup()" class="btn btn-secondary mb-4" *ngIf="cartItems.length>0">Zakup książki</button>
+    </div>
+    
+  </div>
+    
+  

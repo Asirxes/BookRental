@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { UsersService } from '../services/usersService';
+import { LoginComponent } from '../login/login.component';
+import { Router } from '@angular/router';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-registration',
@@ -11,7 +14,7 @@ export class RegistrationComponent implements OnInit {
   registrationForm: FormGroup;
   required: any;
 
-  constructor(formBuilder: FormBuilder,private usersService: UsersService) { 
+  constructor(formBuilder: FormBuilder,private usersService: UsersService,private router: Router,private snackBar: MatSnackBar) { 
     this.registrationForm = formBuilder.group({
       email: new FormControl('', [Validators.required, Validators.email]),
       password: new FormControl ('', [Validators.required, Validators.minLength(6)]),
@@ -43,7 +46,17 @@ export class RegistrationComponent implements OnInit {
       this.registrationForm.reset();
 
       this.usersService.zarejestruj(email,password).subscribe(response => {
-        console.log(response);
+        if(response==true){
+          localStorage.setItem('logged','true');
+          this.router.navigate(['']);
+        }else{
+          localStorage.setItem('logged','false');
+          this.snackBar.open('Spróbuj ponownie', 'Zamknij', {
+            duration: 2000, // Czas trwania alertu w milisekundach
+          });
+        }
+        LoginComponent.myEventEmitter.emit();
+        
       });
     }
   }

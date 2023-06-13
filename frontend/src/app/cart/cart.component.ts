@@ -37,6 +37,7 @@
 
 import { Component } from '@angular/core';
 import { CartService } from '../../services/cart.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
      selector: 'app-cart',
@@ -47,7 +48,7 @@ import { CartService } from '../../services/cart.service';
 export class CartComponent {
   cartItems: any[] = [];
 
-  constructor(private cartService: CartService) {
+  constructor(private cartService: CartService,private snackBar: MatSnackBar) {
     this.cartItems = this.cartService.getCartItems(); // dorzucenie ksiązek na sztywno
   }
 
@@ -65,6 +66,13 @@ export class CartComponent {
 
   calculateTotalPrice(): number {
     return this.cartItems.reduce((total, item) => total + (item.price * item.quantity), 0);
+  }
+
+  zakup(){
+    this.snackBar.open('Zakupiono poprawnie książki!', 'Zamknij', {
+      duration: 2000,
+    });
+    this.cartItems = []
   }
 }
 

@@ -31,6 +31,7 @@ import { FormatPricePipe } from './pipe/format-price.pipe';
 import { AuthService } from 'src/services/auth.service';
 import { dbService } from './services/dbService';
 import { UsersService } from './services/usersService';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 @NgModule({
   declarations: [
     AppComponent,
@@ -61,7 +62,8 @@ import { UsersService } from './services/usersService';
     MatIconModule,
     ReactiveFormsModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    MatSnackBarModule 
   ],
   providers: [ApiService,XMLService,AuthService,dbService,UsersService],
   bootstrap: [AppComponent]
