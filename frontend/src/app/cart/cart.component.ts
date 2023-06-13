@@ -38,6 +38,9 @@
 import { Component } from '@angular/core';
 import { CartService } from '../../services/cart.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { CartsService } from '../services/cartService';
+import { Book } from '../book';
+
 
 @Component({
      selector: 'app-cart',
@@ -46,18 +49,29 @@ import { MatSnackBar } from '@angular/material/snack-bar';
    })
 
 export class CartComponent {
-  cartItems: any[] = [];
+  cartItems: Book[] = [];
 
-  constructor(private cartService: CartService,private snackBar: MatSnackBar) {
-    this.cartItems = this.cartService.getCartItems(); // dorzucenie ksiązek na sztywno
+  constructor(private cartService: CartService,private snackBar: MatSnackBar,private cartsService :CartsService) {
+    //this.cartItems = this.cartService.getCartItems(); // dorzucenie ksiązek na sztywno
+    this.refreshCart()
+  }
+
+  refreshCart(){
+    this.cartsService.getKoszyk().subscribe(response=>{
+      this.cartItems = response as Book[];
+    });
   }
 
   // ngOnInit() {
   //   this.cartItems = this.cartService.getCartItems(); //wcześniejszy dorzut książek
   // }
 
-  removeFromCart(item: any) {
-    this.cartService.removeFromCart(item);
+  removeFromCart(item: Book) {
+    //this.cartService.removeFromCart(item);
+    this.cartsService.removeFromKoszyk(item.id.toString()).subscribe(result=>{
+      this.refreshCart();
+    })
+    
   }
 
   updateQuantity(item: any) {
@@ -65,14 +79,17 @@ export class CartComponent {
   }
 
   calculateTotalPrice(): number {
-    return this.cartItems.reduce((total, item) => total + (item.price * item.quantity), 0);
+    return this.cartItems.reduce((total, item) => total + (item.price), 0);
   }
 
   zakup(){
-    this.snackBar.open('Zakupiono poprawnie książki!', 'Zamknij', {
-      duration: 2000,
-    });
-    this.cartItems = []
+    this.cartsService.zamow().subscribe(response=>{
+      this.snackBar.open('Zakupiono poprawnie książki!', 'Zamknij', {
+        duration: 2000,
+      });
+      this.refreshCart()  
+    })
+     
   }
 }
 

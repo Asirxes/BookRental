@@ -57,6 +57,7 @@ import { AuthService } from 'src/services/auth.service';
 import { dbService } from '../services/dbService';
 import { Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { CartsService } from '../services/cartService';
 
 interface Book {
   title: string;
@@ -81,11 +82,18 @@ export class HomeComponent {
         duration: 2000, // Czas trwania alertu w milisekundach
       });
       this.router.navigate(['/login']);
+    }else{
+      this.cartsService.dodajDoKoszyka(book.id.toString()).subscribe(result=>{
+        this.snackBar.open(`Dodano ${book.title} do koszyka`, 'Zamknij', {
+          duration: 2000, // Czas trwania alertu w milisekundach
+        });
+      });
     }
     
   }
 
-  constructor(public authService: AuthService, private dbService: dbService,private router: Router,private snackBar: MatSnackBar) {
+  constructor(public authService: AuthService, private dbService: dbService,private router: Router,private snackBar: MatSnackBar,
+    private cartsService: CartsService) {
     this.dbService.getDane().subscribe((result) => {
       this.books = result as Book[];
     });

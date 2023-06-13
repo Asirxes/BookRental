@@ -7,6 +7,7 @@ use App\Http\Controllers\XMLController;
 use App\Http\Controllers\JSONController;
 use App\Http\Controllers\DatabaseController;
 use App\Http\Controllers\UsersController;
+use App\Http\Controllers\CartController;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,3 +42,11 @@ Route::get('/DB/getAllBooks', [DatabaseController::class, 'getAllBooks']);
 Route::post('/USERS/login', [UsersController::class, 'login']);
 
 Route::post('/USERS/register', [UsersController::class, 'register']);
+
+Route::post('/Cart/addBookToCart', [CartController::class, 'addBookToCart']);
+
+Route::get('/Cart/getBooksFromCart', [CartController::class, 'getBooksFromCart']);
+
+Route::post('/Cart/removeBooksById', [CartController::class, 'removeBooksById']);
+
+Route::post('/Cart/removeAllTestEmailBooks', [CartController::class, 'removeAllTestEmailBooks']);

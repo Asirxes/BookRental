@@ -9,6 +9,8 @@ class Koszyk extends Model
 {
     use HasFactory;
 
+    public $timestamps = false;
+
     protected $table = 'koszyks'; 
 
     protected $fillable = [

@@ -32,6 +32,8 @@ import { AuthService } from 'src/services/auth.service';
 import { dbService } from './services/dbService';
 import { UsersService } from './services/usersService';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { CartService } from 'src/services/cart.service';
+import { CartsService } from './services/cartService';
 @NgModule({
   declarations: [
     AppComponent,
@@ -65,7 +67,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     FormsModule,
     MatSnackBarModule 
   ],
-  providers: [ApiService,XMLService,AuthService,dbService,UsersService],
+  providers: [ApiService,XMLService,AuthService,dbService,UsersService,CartsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

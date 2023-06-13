@@ -3,9 +3,10 @@
       <div *ngFor="let item of cartItems">
         <h2>{{ item.title }}</h2>
         <p>{{ item.author }}</p>
+        <img [src]="item.coverImageUrl" alt="Okładka książki" width="125" height="200">
         <p>Cena: {{ item.price }} zł</p>
-        <button (click)="removeFromCart(item)">Usuń z koszyka</button>
-        <input type="number" [(ngModel)]="item.quantity" min="1" (change)="updateQuantity(item)">
+        <button (click)="removeFromCart(item)" class="btn btn-danger">Usuń z koszyka</button>
+        <!-- <input type="number" [(ngModel)]="item.quantity" min="1" (change)="updateQuantity(item)"> -->
       </div>
       <div>
       <p></p>
