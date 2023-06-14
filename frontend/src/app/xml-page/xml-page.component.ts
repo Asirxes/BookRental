@@ -1,24 +1,33 @@
 import { Component } from '@angular/core';
+import { XMLService } from '../services/xmlService';
 
 @Component({
   selector: 'app-xml-page',
   templateUrl: './xml-page.component.html',
-  styleUrls: ['./xml-page.component.css']
+  styleUrls: ['./xml-page.component.css'],
 })
 export class XmlPageComponent {
-  selectedFile!: File;
+  selectedFile: File | null = null;
+
+  constructor(private xmlService: XMLService) {}
 
   onFileSelected(event: any) {
     this.selectedFile = event.target.files[0];
   }
 
   exportXML() {
-    const xmlData = '<root><element1>Value 1</element1><element2>Value 2</element2></root>';
-    const xmlFile = new File([xmlData], 'exported.xml', { type: 'text/xml' });
-    saveAs(xmlFile);
+    this.xmlService.exportXML();
+  }
+
+  importXML() {
+    if (this.selectedFile) {
+      const fileReader = new FileReader();
+      fileReader.onload = (e) => {
+        const xmlContent = fileReader.result;
+        this.xmlService.addXmlToXml(<string>xmlContent);
+        this.selectedFile = null;
+      };
+      fileReader.readAsText(this.selectedFile);
+    }
   }
 }
-function saveAs(xmlFile: File) {
-  throw new Error('Function not implemented.');
-}
-
