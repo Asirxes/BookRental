@@ -39,5 +39,10 @@ RUN curl -s https://getcomposer.org/installer | php -- --install-dir=/usr/local/
 # Set the port for the Laravel application
 ENV PORT=8000
 
+
+
 # Set the entrypoint script
-ENTRYPOINT ["backend/Docker/entrypoint.sh"]
+#ENTRYPOINT ["backend/Docker/entrypoint.sh"]
+
+#COPY backend/Docker/entrypoint.sh /backend/Docker/entrypoint.sh
+#RUN chmod +x /backend/Docker/entrypoint.sh
