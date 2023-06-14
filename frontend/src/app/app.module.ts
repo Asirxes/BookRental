@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
+import { NgChartsModule } from 'ng2-charts';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -34,6 +34,7 @@ import { UsersService } from './services/usersService';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { CartService } from 'src/services/cart.service';
 import { CartsService } from './services/cartService';
+import { ChartsComponent } from './charts/charts.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -55,7 +56,8 @@ import { CartsService } from './services/cartService';
     AccountComponent,
     XmlPageComponent,
     JsonPageComponent,
-    FormatPricePipe
+    FormatPricePipe,
+    ChartsComponent
   ],
   imports: [
     BrowserModule,
@@ -65,7 +67,8 @@ import { CartsService } from './services/cartService';
     ReactiveFormsModule,
     HttpClientModule,
     FormsModule,
-    MatSnackBarModule 
+    MatSnackBarModule,
+    NgChartsModule
   ],
   providers: [ApiService,XMLService,AuthService,dbService,UsersService,CartsService],
   bootstrap: [AppComponent]

@@ -1,12 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AppComponent } from './app.component';
-//import { SecondpageComponent } from './secondpage/secondpage.component';
-//import { LoginPageComponent } from './login-page/login-page.component';
-//import { RegistrationPageComponent } from './registration-page/registration-page.component';
 import { FirstPageComponent } from './first-page/first-page.component';
-//import { LogoutComponent } from './logout1/logout.component';
-//import { KoszykComponent } from './koszyk/koszyk.component';
 import { HomeComponent} from './home/home-page.component'
 import { DetailsComponent } from './details/details.component';
 import { UserListComponent } from './user-list/user-list.component';
@@ -18,17 +12,10 @@ import { AccountComponent } from './account/account.component';
 import { CartComponent } from './cart/cart.component';
 import { XmlPageComponent } from './xml-page/xml-page.component';
 import { JsonPageComponent } from './json-page/json-page.component';
-//import { LogoutComponent } from './logout/logout.component';
+import { ChartsComponent } from './charts/charts.component';
+import { NgChartsModule } from 'ng2-charts';
 const approutes: Routes = [
- // { path: "", redirectTo: "/First", pathMatch: "full" },
-  //{ path: '', component: AppComponent },
-  //{ path: 'Start', component: AppComponent },
   { path: 'First', component: FirstPageComponent },
-  //{ path: 'Second', component: SecondpageComponent },
- // { path: 'Logowanie', component: LoginPageComponent },
-  //{ path: 'Rejestracja', component: RegistrationPageComponent },
-  //{ path: 'Wylogowanie', component: LogoutComponent},
-  //{ path: 'Koszyk', component: KoszykComponent},
   { path: 'home', component: HomeComponent },
   { path: "", redirectTo:"/home",pathMatch:"full" },
   { path: 'details/genre/:genreId', component: DetailsComponent },
@@ -41,8 +28,9 @@ const approutes: Routes = [
   { path: 'cart',component:CartComponent},
   { path: 'xml', component:XmlPageComponent},
   { path: 'json', component:JsonPageComponent},
-  //{ path: 'logout',component:LogoutComponent}
-  {path: 'user', component: UserComponent}
+  {path: 'user', component: UserComponent},
+  {path: 'charts', component: ChartsComponent},
+  {path: 'chart', component: NgChartsModule}
 
 ];
 

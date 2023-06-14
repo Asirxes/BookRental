@@ -1,0 +1,10 @@
+<div>
+    <div *ngIf="chartData">
+      <canvas baseChart
+              [data]="chartData"
+              [type]="'bar'"
+              [options]="{ responsive: true }">
+      </canvas>
+    </div>
+  </div>
+  
