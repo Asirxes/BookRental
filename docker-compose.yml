@@ -3,42 +3,55 @@ version: '3.8'
 services:
 
   web:
-    build: frontend
+    build: 
+      context: ./frontend
+      dockerfile: dockerfile
     ports:
-      - 4200:4200
+      - "4200:4200"
     depends_on:
       - php
+    networks:
+      - frontend
+      - backend
+    volumes:
+      - ./:/var/www
 
   php:
+    tty: true
     container_name: laravel
     build: 
       context: ./backend
+      dockerfile: dockerfile
     ports:
       - "8000:8000"
     volumes:
       - ./:/var/www
     networks:
-      - movies_network
+      - backend
 
 
   database:
     container_name: mysql
     image: mysql:8.0
+    build: 
+      context: ./mysql
+      dockerfile: Dockerfile
     ports:
       - "${DB_PORT}:3306"
     environment:
-      - MYSQL_DATABASE=${DB_DATABASE}
-      - MYSQL_USER=${DB_USERNAME}
-      - MYSQL_PASSWORD=${DB_PASSWORD}
-      - MYSQL_ROOT_PASSWORD=${DB_PASSWORD}
+        MYSQL_ROOT_PASSWORD: root
+        MYSQL_DATABASE: database_name
+        MYSQL_USER: user_name
+        MYSQL_PASSWORD: user
+      #- MYSQL_DATABASE=${DB_DATABASE}
+      #- MYSQL_USER=${DB_USERNAME}
+      #- MYSQL_PASSWORD=${DB_PASSWORD}
+      #- MYSQL_ROOT_PASSWORD=${DB_PASSWORD}
     volumes:
-      - movie_volume:/var/lib/mysql
+      -  ./:/var/www
     networks:
-      - movies_network
-
-volumes:
-  movie_volume:
+      - backend
 
 networks:
-  movies_network:
-    driver: bridge
+  frontend:
+  backend:

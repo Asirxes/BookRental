@@ -1,14 +1,39 @@
+
 FROM php:8.1
 
-RUN apt-get update -y
-RUN docker-php-ext-install pdo pdo_mysql
-RUN apt-get install -y unzip libpq-dev libcurl4-gnutls-dev
+# Install system dependencies
+RUN apt-get update \
+    && apt-get install -y \
+        libonig-dev \
+        libzip-dev \
+        unzip \
+        libpq-dev \
+        libcurl4-gnutls-dev \
+    && rm -rf /var/lib/apt/lists/*
 
+#  RUN apt-get update -y
+#RUN docker-php-ext-install pdo pdo_mysql
+#RUN apt-get install -y unzip libpq-dev libcurl4-gnutls-dev
+
+
+# Install PHP extensions
+RUN docker-php-ext-install pdo pdo_mysql zip
+
+
+
+# Set working directory
 WORKDIR /var/www
-COPY . .
 
+# Copy the application files
+#COPY . .
+
+# Install Composer
 COPY --from=composer:2.5.7 /usr/bin/composer /usr/bin/composer
 
+#RUN composer install
+
+# Set the port for the Laravel application
 ENV PORT=8000
 
-ENTRYPOINT [ "backend/Docker/entrypoint.sh" ]
+# Set the entrypoint script
+ENTRYPOINT ["backend/Docker/entrypoint.sh"]
