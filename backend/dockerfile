@@ -19,18 +19,22 @@ RUN apt-get update \
 # Install PHP extensions
 RUN docker-php-ext-install pdo pdo_mysql zip
 
-
-
 # Set working directory
 WORKDIR /var/www
 
 # Copy the application files
-#COPY . .
+COPY . .
 
 # Install Composer
-COPY --from=composer:2.5.7 /usr/bin/composer /usr/bin/composer
+#COPY --from=composer:2.5.7 /usr/bin/composer /usr/bin/composer
 
 #RUN composer install
+ENV COMPOSER_HOME /composer
+ENV PATH ./vendor/bin:/composer/vendor/bin:$PATH
+ENV COMPOSER_ALLOW_SUPERUSER 1
+RUN curl -s https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin/
+
+#RUN composer global require "squizlabs/php_codesniffer=*"
 
 # Set the port for the Laravel application
 ENV PORT=8000
