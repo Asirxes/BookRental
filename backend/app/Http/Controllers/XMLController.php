@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use Illuminate\Http\Request;
 
 class XMLController extends Controller
@@ -17,19 +18,48 @@ class XMLController extends Controller
     }
 
     public function addBooks(Request $request)
+    {
+        $jsonKsiazka = $request->all();
+
+        $xml = simplexml_load_file($this->xmlFile);
+
+        $ksiazka = $xml->addChild('book');
+        $ksiazka->addChild('title', $jsonKsiazka['title']);
+        $ksiazka->addChild('author', $jsonKsiazka['author']);
+        $ksiazka->addChild('description', $jsonKsiazka['description']);
+        $ksiazka->addChild('coverImageUrl', $jsonKsiazka['coverImageUrl']);
+        $ksiazka->addChild('price', $jsonKsiazka['price']);
+
+        $xml->asXML($this->xmlFile);
+    }
+
+    public function addXMLtoXML(Request $request)
 {
-    $jsonKsiazka = $request->all();
+    echo $request;
+    $xmlString = file_get_contents('php://input');
+    $xml = simplexml_load_string($xmlString);
 
-    $xml = simplexml_load_file($this->xmlFile);
+    if ($xml) {
+        $existingXml = simplexml_load_file($this->xmlFile);
 
-    $ksiazka = $xml->addChild('book');
-    $ksiazka->addChild('title', $jsonKsiazka['title']);
-    $ksiazka->addChild('author', $jsonKsiazka['author']);
-    $ksiazka->addChild('description', $jsonKsiazka['description']);
-    $ksiazka->addChild('coverImageUrl', $jsonKsiazka['coverImageUrl']);
-    $ksiazka->addChild('price', $jsonKsiazka['price']);
+        foreach ($xml->children() as $child) {
+            $newChild = $existingXml->addChild($child->getName(), (string) $child);
+            foreach ($child->attributes() as $attrName => $attrValue) {
+                $newChild->addAttribute($attrName, (string) $attrValue);
+            }
+        }
 
-    $xml->asXML($this->xmlFile);
+        $existingXml->asXML($this->xmlFile);
+    }
 }
 
+
+
+    public function exportXML()
+    {
+        $xmlString = file_get_contents($this->xmlFile);
+
+        return response($xmlString)
+            ->header('Content-Type', 'text/xml');
+    }
 }

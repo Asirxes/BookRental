@@ -25,6 +25,7 @@ Route::get('/', function () {
 });
 
 Route::get('/books/index', [BooksController::class, 'index']);
+
 Route::get('/books/test', [BooksController::class, 'test']);
 
 Route::get('/open', [OpenController::class, 'index']);
@@ -32,6 +33,10 @@ Route::get('/open', [OpenController::class, 'index']);
 Route::get('/XML/getBooks', [XMLController::class, 'getBooks']);
 
 Route::post('/XML/addBooks', [XMLController::class, 'addBooks']);
+
+Route::post('/XML/addXMLtoXML', [XMLController::class, 'addXMLtoXML']);
+
+Route::get('/XML/exportXML', [XMLController::class, 'exportXML']);
 
 Route::get('/JSON/getBooks', [JSONController::class, 'getBooks']);
 

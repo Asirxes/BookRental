@@ -16,10 +16,43 @@ export class XMLService {
     //var newBook =
      // '{"title": "TRAMPOLINA1","author": "TRAMPOLINA2","description": "Opis nowej książki","coverImageUrl": "https://example.com/new-book.jpg","price":"19.99"}';
     const bookObject = JSON.parse(newBook);
-    console.log('Dziala to w ogole?');
     return this.http.post(`${this.apiUrl}/addBooks`, bookObject).subscribe(
       (response) => {
         console.log('Sukces:', response);
+      },
+      (error) => {
+        console.error('Błąd:', error);
+      }
+    );
+  }
+
+  addXmlToXml(content:string){
+    const body = {
+      xml: content
+    }
+    return this.http.post(`${this.apiUrl}/addXMLtoXML`, body).subscribe(
+      (response) => {
+        console.log('Sukces:', response);
+      },
+      (error) => {
+        console.error('Błąd:', error);
+      }
+    );
+  }
+
+  exportXML() {
+    return this.http.get(`${this.apiUrl}/exportXML`, { responseType: 'text' }).subscribe(
+      (response) => {
+        const xmlData = response;
+        const blob = new Blob([xmlData], { type: 'text/xml' });
+        const url = window.URL.createObjectURL(blob);
+  
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = 'exported.xml';
+        link.click();
+  
+        window.URL.revokeObjectURL(url);
       },
       (error) => {
         console.error('Błąd:', error);

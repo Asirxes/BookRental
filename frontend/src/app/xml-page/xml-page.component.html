@@ -1,6 +1,6 @@
 <div class="o1">
-    <h2>Import/Export XML</h2>
-    <input type="file" (change)="onFileSelected($event)" accept=".xml">
-    <button (click)="exportXML()">Export pliku XML</button>
-  </div>
-  
+  <h2>Import/Export XML</h2>
+  <input type="file" (change)="onFileSelected($event)" accept=".xml">
+  <button (click)="importXML()" class="m-4" [disabled]="!selectedFile">Import pliku XML</button>
+  <button (click)="exportXML()">Export pliku XML</button>
+</div>
