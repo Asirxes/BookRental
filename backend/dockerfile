@@ -1,14 +1,14 @@
 
-FROM php:8.1
+FROM  php:8.1
 
 # Install system dependencies
 RUN apt-get update \
     && apt-get install -y \
-        libonig-dev \
-        libzip-dev \
-        unzip \
-        libpq-dev \
-        libcurl4-gnutls-dev \
+    libonig-dev \
+    libzip-dev \
+    unzip \
+    libpq-dev \
+    libcurl4-gnutls-dev \
     && rm -rf /var/lib/apt/lists/*
 
 #  RUN apt-get update -y
@@ -20,25 +20,38 @@ RUN apt-get update \
 RUN docker-php-ext-install pdo pdo_mysql zip
 
 # Set working directory
-WORKDIR /var/www
+WORKDIR /var/www/html
 
 # Copy the application files
 COPY . .
 
 # Install Composer
-#COPY --from=composer:2.5.7 /usr/bin/composer /usr/bin/composer
+ ENV COMPOSER_ALLOW_SUPERUSER 1
 
-#RUN composer install
-ENV COMPOSER_HOME /composer
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+RUN docker-php-ext-install pdo mbstring
+RUN composer global require "laravel/installer"
+
+RUN composer install
+
+#RUN laravel new appName
+
+# ENV COMPOSER_HOME /composer
 ENV PATH ./vendor/bin:/composer/vendor/bin:$PATH
-ENV COMPOSER_ALLOW_SUPERUSER 1
-RUN curl -s https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin/
+# RUN curl -s https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin/
+
+
 
 #RUN composer global require "squizlabs/php_codesniffer=*"
 
 # Set the port for the Laravel application
 ENV PORT=8000
+EXPOSE 8000
+CMD [ "php", "artisan", "serve", "--host=0.0.0.0", "--port=8000" ]
 
+# TO JEST KOMENDA, ABY WŁĄCZYĆ LARAVELA I ŻEBY DZIAŁAŁ NA localhost:8000, ale trzeba mieć PHP ARTISAN!
+#CMD php artisan serve --host=0.0.0.0 --port=8000
+# CMD /bin/sh
 
 
 # Set the entrypoint script

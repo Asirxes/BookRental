@@ -24,9 +24,7 @@ services:
       context: ./backend
       dockerfile: dockerfile
     ports:
-      - "8000:8000"
-    volumes:
-      - ./:/var/www
+      - 8000:8000
     networks:
       - backend
 
@@ -38,7 +36,7 @@ services:
       context: ./mysql
       dockerfile: Dockerfile
     ports:
-      - "${DB_PORT}:3306"
+      - 3306:3306
     environment:
         MYSQL_ROOT_PASSWORD: root
         MYSQL_DATABASE: database_name
