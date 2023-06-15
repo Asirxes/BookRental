@@ -27,20 +27,28 @@ SET time_zone = "+00:00";
 -- Struktura tabeli dla tabeli `test1`
 --
 
+ CREATE USER 'user1'@'%' IDENTIFIED BY 'pass';
+ CREATE USER 'user2'@'%' IDENTIFIED BY 'pass';
+ GRANT ALL PRIVILEGES ON test1.* TO 'user1'@'%';
+ GRANT ALL PRIVILEGES ON test1.* TO 'user2'@'%';
+
+
+
 CREATE TABLE `test1` (
   `id` int(6) UNSIGNED NOT NULL,
-  `firstname` varchar(30) NOT NULL,
-  `lastname` varchar(30) NOT NULL
+  `email` varchar(30) NOT NULL,
+  `password` varchar(30) NOT NULL,
+  `text1` varchar(300) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Zrzut danych tabeli `test1`
 --
 
-INSERT INTO `test1` (`id`, `firstname`, `lastname`) VALUES
-(1, 'John', 'Doe'),
-(2, 'Rafal', 'Doew'),
-(3, 'Marcin', 'WW');
+INSERT INTO `test1` (`id`, `email`, `password`,`text1`) VALUES
+(1, 'John@gmail.com', 'Doe', 'Moje ulubione ksiazki'),
+(2, 'Rafal@gmail.com', 'Doew', 'najlepsza strona'),
+(3, 'Marcin@gmail.com', 'WW', 'usubiony sklep');
 
 --
 -- Indeksy dla zrzutów tabel

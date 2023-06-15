@@ -50,6 +50,9 @@ services:
       -  ./:/var/www
     networks:
       - backend
+    # backend:
+    #  ipv4_address: 172.0.0.2
+
 
 networks:
   frontend:
