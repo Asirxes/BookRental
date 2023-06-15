@@ -1,10 +1,7 @@
-<div>
-    <div *ngIf="chartData">
-      <canvas baseChart
-              [data]="chartData"
-              [type]="'bar'"
-              [options]="{ responsive: true }">
-      </canvas>
-    </div>
-  </div>
+<canvas class="o1" [data]="barChartData" [options]="barChartOptions"
+        [plugins]="barChartPlugins"
+        [type]="barChartType"
+        baseChart
+        class="chart my-chart">
+</canvas>
   

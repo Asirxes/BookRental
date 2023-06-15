@@ -30,7 +30,6 @@ const approutes: Routes = [
   { path: 'json', component:JsonPageComponent},
   {path: 'user', component: UserComponent},
   {path: 'charts', component: ChartsComponent},
-  {path: 'chart', component: NgChartsModule}
 
 ];
 

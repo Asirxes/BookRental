@@ -1,30 +1,20 @@
-import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import {Component, Input, OnInit} from '@angular/core';
+import {ChartConfiguration, ChartData, ChartType} from "chart.js";
+import DataLabelsPlugin from "chartjs-plugin-datalabels";
 
 @Component({
   selector: 'app-charts',
   templateUrl: './charts.component.html',
   styleUrls: ['./charts.component.css']
 })
-export class ChartsComponent implements OnInit {
-  chartData: any;
+export class ChartsComponent {
 
-  constructor(private http: HttpClient) { }
+  @Input() public barChartOptions: ChartConfiguration['options'];
+  @Input() public barChartData: ChartData<'bar'> = {
+      labels: [],
+      datasets: []
+  };
 
-  ngOnInit() {
-    this.fetchChartData();
-  }
-
-  fetchChartData() {
-    this.http.get('API_URL').subscribe((data: any) => {
-      // Przetwarzanie danych otrzymanych z API
-      this.chartData = data;
-      this.generateCharts();
-    });
-  }
-
-  generateCharts() {
-    // Generowanie wykresów na podstawie danych
-    // Skorzystaj z biblioteki Chart.js
-  }
+  protected barChartType: ChartType = 'bar';
+  protected barChartPlugins = [DataLabelsPlugin];
 }
