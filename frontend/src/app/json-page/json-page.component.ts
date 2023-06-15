@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { JSONService } from '../services/jsonService';
 
 @Component({
   selector: 'app-json-page',
@@ -8,24 +9,32 @@ import { Component } from '@angular/core';
 export class JsonPageComponent {
   selectedFile!: File;
 
+  constructor(private jsonService:JSONService){
+
+  }
+
   onFileSelected(event: any) {
     this.selectedFile = event.target.files[0];
   }
 
-  exportJSON() {
-    // Implementacja eksportu pliku JSON
-    // Przykład: Tworzenie obiektu JSON i zapis do pliku
-    const jsonData = {
-      name: 'John Doe',
-      age: 30,
-      email: 'johndoe@example.com'
+  importJSON() {
+    // Implementacja importu pliku JSON
+    const fileReader = new FileReader();
+    fileReader.onload = (e) => {
+      const result = fileReader.result;
+      if (typeof result === 'string') {
+        const jsonData = JSON.parse(result);
+        this.jsonService.addJSONtoJSON(jsonData);
+      }
     };
-    const jsonString = JSON.stringify(jsonData);
-    const jsonFile = new File([jsonString], 'exported.json', { type: 'application/json' });
-    saveAs(jsonFile);
+    fileReader.readAsText(this.selectedFile);
+  }
+
+  exportJSON() {
+    this.jsonService.downloadJSON()
   }
 }
+
 function saveAs(jsonFile: File) {
   throw new Error('Function not implemented.');
 }
-

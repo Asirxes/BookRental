@@ -35,23 +35,32 @@ class XMLController extends Controller
 
     public function addXMLtoXML(Request $request)
 {
-    echo $request;
-    $xmlString = file_get_contents('php://input');
-    $xml = simplexml_load_string($xmlString);
+    $xmlString = file_get_contents($this->xmlFile);
+    $content = $request->input('xml');
 
-    if ($xml) {
-        $existingXml = simplexml_load_file($this->xmlFile);
+    if ($xmlString && $content) {
+        $newXml = simplexml_load_string($content);
+        
+        if ($newXml) {
+            $existingXml = new \DOMDocument();
+            $existingXml->preserveWhiteSpace = false;
+            $existingXml->formatOutput = true;
+            $existingXml->loadXML($xmlString);
 
-        foreach ($xml->children() as $child) {
-            $newChild = $existingXml->addChild($child->getName(), (string) $child);
-            foreach ($child->attributes() as $attrName => $attrValue) {
-                $newChild->addAttribute($attrName, (string) $attrValue);
+            foreach ($newXml->children() as $child) {
+                $domChild = dom_import_simplexml($child);
+                $domChild = $existingXml->importNode($domChild, true);
+                $existingXml->documentElement->appendChild($domChild);
             }
-        }
 
-        $existingXml->asXML($this->xmlFile);
+            $xmlString = $existingXml->saveXML();
+            file_put_contents($this->xmlFile, $xmlString);
+        }
     }
 }
+
+
+
 
 
 

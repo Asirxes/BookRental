@@ -1,6 +1,7 @@
 <div class="o1">
     <h2>Import/Export JSON</h2>
     <input type="file" (change)="onFileSelected($event)" accept=".json">
+    <button (click)="importJSON()" class="m-4">Import plik JSON</button>
     <button (click)="exportJSON()">Export plik JSON</button>
   </div>
   

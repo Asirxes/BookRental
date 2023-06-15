@@ -1,0 +1,23 @@
+[
+  {
+    "title": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "description": "A classic novel depicting racial injustice in a small Southern town through the eyes of a young girl.",
+    "coverImageUrl": "https://m.media-amazon.com/images/I/81hk+5+HlhL._AC_UY218_.jpg",
+    "price": 19.99
+  },
+  {
+    "title": "The Catcher in the Rye",
+    "author": "J.D. Salinger",
+    "description": "A coming-of-age novel following the disillusioned teenage protagonist, Holden Caulfield, as he navigates life and society.",
+    "coverImageUrl": "https://m.media-amazon.com/images/I/91lZeAPtnYL._AC_UY218_.jpg",
+    "price": 17.99
+  },
+  {
+    "title": "Pride and Prejudice",
+    "author": "Jane Austen",
+    "description": "A romantic novel exploring societal norms, love, and marriage in 19th-century England.",
+    "coverImageUrl": "https://m.media-amazon.com/images/I/71P+8r+jvUL._AC_UY218_.jpg",
+    "price": 21.99
+  }
+]

@@ -31,4 +31,29 @@ class JSONController extends Controller
 
         return response()->json(['message' => 'Book added successfully']);
     }
+
+    public function downloadJSON()
+    {
+        $json = file_get_contents($this->jsonFile);
+
+        return response($json)->header('Content-Disposition', 'attachment; filename="books.json"');
+    }
+    public function addJSONtoJSON(Request $request)
+{
+    $json = file_get_contents($this->jsonFile);
+    $books = json_decode($json, true);
+
+    $newBooks = $request->json()->all();
+
+    foreach ($newBooks as $newBook) {
+        $books[] = $newBook;
+    }
+
+    $updatedJson = json_encode($books, JSON_PRETTY_PRINT);
+
+    file_put_contents($this->jsonFile, $updatedJson);
+
+    return response()->json(['message' => 'JSON added successfully']);
+}
+
 }

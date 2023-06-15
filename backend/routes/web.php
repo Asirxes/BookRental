@@ -8,6 +8,7 @@ use App\Http\Controllers\JSONController;
 use App\Http\Controllers\DatabaseController;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\SOAPController;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,7 +41,11 @@ Route::get('/XML/exportXML', [XMLController::class, 'exportXML']);
 
 Route::get('/JSON/getBooks', [JSONController::class, 'getBooks']);
 
+Route::get('/JSON/downloadJSON', [JSONController::class, 'downloadJSON']);
+
 Route::post('/JSON/addBooks', [JSONController::class, 'addBooks']);
+
+Route::post('/JSON/addJSONtoJSON', [JSONController::class, 'addJSONtoJSON']);
 
 Route::get('/DB/getAllBooks', [DatabaseController::class, 'getAllBooks']);
 
@@ -55,3 +60,5 @@ Route::get('/Cart/getBooksFromCart', [CartController::class, 'getBooksFromCart']
 Route::post('/Cart/removeBooksById', [CartController::class, 'removeBooksById']);
 
 Route::post('/Cart/removeAllTestEmailBooks', [CartController::class, 'removeAllTestEmailBooks']);
+
+Route::get('/SOAP/fetchData', [SOAPController::class, 'fetchData']);

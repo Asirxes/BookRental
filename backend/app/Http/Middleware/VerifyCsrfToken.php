@@ -20,6 +20,8 @@ class VerifyCsrfToken extends Middleware
         '/USERS/login',
         '/Cart/addBookToCart',
         '/Cart/removeBooksById',
-        '/Cart/removeAllTestEmailBooks'
+        '/Cart/removeAllTestEmailBooks',
+        '/JSON/addJSONtoJSON'
+
     ];
 }

@@ -29,6 +29,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { CartService } from 'src/services/cart.service';
 import { CartsService } from './services/cartService';
 import { ChartsComponent } from './charts/charts.component';
+import { JSONService } from './services/jsonService';
 @NgModule({
   declarations: [
     AppComponent,
@@ -58,7 +59,7 @@ import { ChartsComponent } from './charts/charts.component';
     MatSnackBarModule,
     NgChartsModule
   ],
-  providers: [ApiService,XMLService,AuthService,dbService,UsersService,CartsService],
+  providers: [ApiService,XMLService,AuthService,dbService,UsersService,CartsService,JSONService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

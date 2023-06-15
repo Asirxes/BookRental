@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable()
 export class JSONService {
@@ -12,18 +12,31 @@ export class JSONService {
   }
 
   addBooks(newBook: string) {
-    //PONIŻEJ PRZYKŁAD JAK MAJĄ WYGLĄDAĆ DANE
-    //var newBook =
-     // '{"title": "TRAMPOLINA1","author": "TRAMPOLINA2","description": "Opis nowej książki","coverImageUrl": "https://example.com/new-book.jpg","price":"19.99"}';
     const bookObject = JSON.parse(newBook);
-    console.log('Dziala to w ogole?');
-    return this.http.post(`${this.apiUrl}/addBooks`, bookObject).subscribe(
-      (response) => {
-        console.log('Sukces:', response);
-      },
-      (error) => {
-        console.error('Błąd:', error);
-      }
-    );
+    return this.http.post(`${this.apiUrl}/addBooks`, bookObject);
+  }
+
+  addJSONtoJSON(jsonData: any) {
+    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+  
+    return this.http.post(`${this.apiUrl}/addJSONtoJSON`, jsonData, { headers: headers }).subscribe(result=>{
+      console.log(result);
+    });
+  }
+  
+
+  downloadJSON() {
+    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+
+    this.http.get(`${this.apiUrl}/downloadJSON`, { responseType: 'blob', headers: headers }).subscribe((response: any) => {
+      const blob = new Blob([response], { type: 'application/json' });
+      const url = window.URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'books.json';
+      a.click();
+      window.URL.revokeObjectURL(url);
+      a.remove();
+    });
   }
 }
