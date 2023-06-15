@@ -24,6 +24,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class AuthService {
+  [x: string]: any;
   private currentUser: string | null;
 
   constructor() {
