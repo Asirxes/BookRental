@@ -53,6 +53,15 @@ services:
     # backend:
     #  ipv4_address: 172.0.0.2
 
+  phpMyAdmin:
+    image: phpmyadmin
+    environment:
+      PMA_ARBITRARY: 1
+    ports:
+      - '8080:80'
+    networks:
+      - backend
+
 
 networks:
   frontend:
