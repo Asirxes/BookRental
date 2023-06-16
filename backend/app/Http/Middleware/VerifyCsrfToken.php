@@ -21,7 +21,7 @@ class VerifyCsrfToken extends Middleware
         '/Cart/addBookToCart',
         '/Cart/removeBooksById',
         '/Cart/removeAllTestEmailBooks',
-        '/JSON/addJSONtoJSON'
-
+        '/JSON/addJSONtoJSON',
+        '/USERS/changePassword'
     ];
 }

@@ -19,7 +19,7 @@ export class ChangePasswordComponent implements OnInit {
     private snackBar: MatSnackBar
   ) {
     this.changePasswordForm = this.formBuilder.group({
-      currentPassword: new FormControl('', [Validators.required]),
+      // currentPassword: new FormControl('', [Validators.required]),
       newPassword: new FormControl('', [Validators.required, Validators.minLength(6)]),
       confirmNewPassword: new FormControl('', [Validators.required])
     }, { validator: this.passwordMatchValidator });
@@ -44,10 +44,10 @@ export class ChangePasswordComponent implements OnInit {
       const newPassword = this.changePasswordForm.get('newPassword')?.value;
 
       this.usersService.changePassword(currentPassword, newPassword).subscribe(response => {
-        if (response.success) {
+        if (response) {
           // Jeśli zmiana hasła powiodła się
-          this.router.navigate(['/login']);
-          this.snackBar.open('Hasło zostało zmienione. Zaloguj się przy użyciu nowego hasła.', 'Zamknij', {
+          this.router.navigate(['/']);
+          this.snackBar.open('Hasło zostało zmienione.', 'Zamknij', {
             duration: 2000
           });
         } else {

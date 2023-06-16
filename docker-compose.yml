@@ -27,6 +27,14 @@ services:
       - 8000:8000
     networks:
       - backend
+    depends_on:
+      - mysql
+     environment:
+        MYSQL_HOST:
+        MYSQL_ROOT_PASSWORD: root
+        MYSQL_DATABASE: projekt
+        MYSQL_USER: root2
+        MYSQL_PASSWORD: password
 
 
   database:
@@ -40,7 +48,7 @@ services:
     environment:
         MYSQL_ROOT_PASSWORD: root
         MYSQL_DATABASE: projekt
-        MYSQL_USER: root
+        MYSQL_USER: root2
         MYSQL_PASSWORD: password
       #- MYSQL_DATABASE=${DB_DATABASE}
       #- MYSQL_USER=${DB_USERNAME}
