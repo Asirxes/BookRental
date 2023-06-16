@@ -46,8 +46,10 @@ export class RegistrationComponent implements OnInit {
       this.registrationForm.reset();
 
       this.usersService.zarejestruj(email,password).subscribe(response => {
-        if(response==true){
+        let token = response as Config
+        if(token.token){
           localStorage.setItem('logged','true');
+          localStorage.setItem('token',token.token);
           this.router.navigate(['']);
         }else{
           localStorage.setItem('logged','false');
@@ -60,4 +62,8 @@ export class RegistrationComponent implements OnInit {
       });
     }
   }
+}
+
+export interface Config {
+  token: string;
 }

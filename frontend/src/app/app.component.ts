@@ -29,7 +29,8 @@ export class AppComponent {
   }
 
   wyloguj(){
-    localStorage.setItem('logged','false');
+    localStorage.removeItem('logged');
+    localStorage.removeItem('token');
     this.isLogged = 'false';
   }
 }
