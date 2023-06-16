@@ -20,7 +20,7 @@ class SOAPController extends Controller
         ]);
 
         // Wywołanie metody API SOAP
-        $response = $soapClient->getData();
+        $response = $soapClient->__doRequest();
 
         // Przetworzenie odpowiedzi
         $data = $this->processResponse($response);
@@ -31,9 +31,6 @@ class SOAPController extends Controller
 
     private function processResponse($response)
     {
-        // Przetwarzanie odpowiedzi z API SOAP i konwersja na format danych, który jest oczekiwany przez aplikację
-
-        // Przykładowe przetwarzanie odpowiedzi:
         $processedData = [];
 
         foreach ($response->items as $item) {

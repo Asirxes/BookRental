@@ -39,7 +39,7 @@ class UsersController extends Controller
     public function login(Request $request)
     {
         // Walidacja danych wejściowych
-        
+
         $user = new User();
         $user->email = $request->email;
         $user->password = $request->password;
@@ -62,4 +62,28 @@ class UsersController extends Controller
         // Zwracanie zalogowanego użytkownika
         return response()->json(compact('user'));
     }
+
+    public function changePassword(Request $request)
+{
+    // Walidacja danych wejściowych
+    $validator = Validator::make($request->all(), [
+        'newPassword' => 'required|string|min:6',
+    ]);
+
+    if ($validator->fails()) {
+        return response()->json($validator->errors(), 400);
+    }
+
+    try {
+        // Aktualizacja hasła użytkownika
+        User::where('email', 'test@gmail.com')->update(['password' => $request->newPassword]);
+
+        // Zwracanie odpowiedzi
+        return response()->json(['message' => 'Password changed successfully']);
+    } catch (\Exception $e) {
+        return response()->json(['error' => 'Failed to change password'], 500);
+    }
+}
+
+
 }

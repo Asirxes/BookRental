@@ -15,6 +15,7 @@ import { JsonPageComponent } from './json-page/json-page.component';
 import { ChartsComponent } from './charts/charts.component';
 import { NgChartsModule } from 'ng2-charts';
 import { ChangePasswordComponent } from './change-password/change-password.component';
+import { AdminpageComponent } from './adminpage/adminpage.component';
 const approutes: Routes = [
   { path: 'First', component: FirstPageComponent },
   { path: 'home', component: HomeComponent },
@@ -31,7 +32,8 @@ const approutes: Routes = [
   { path: 'json', component:JsonPageComponent},
   {path: 'user', component: UserComponent},
   {path: 'charts', component: ChartsComponent},
-  {path : 'change-password', component: ChangePasswordComponent}
+  {path : 'change-password', component: ChangePasswordComponent},
+  {path : 'admin', component: AdminpageComponent}
 
 ];
 

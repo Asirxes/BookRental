@@ -126,4 +126,25 @@
     <coverImageUrl>https://images-na.ssl-images-amazon.com/images/I/51Jt+d8GP9L._SX329_BO1,204,203,200_.jpg</coverImageUrl>
     <price>27.99</price>
   </book>
+  <book>
+    <title>The Alchemist</title>
+    <author>Paulo Coelho</author>
+    <description>A philosophical novel about a young shepherd's journey to discover his personal legend.</description>
+    <coverImageUrl>https://images-na.ssl-images-amazon.com/images/I/41mz6SbksCL._SX331_BO1,204,203,200_.jpg</coverImageUrl>
+    <price>19.99</price>
+  </book>
+  <book>
+    <title>The Silent Patient</title>
+    <author>Alex Michaelides</author>
+    <description>A psychological thriller about a famous painter who becomes a patient at a secure psychiatric facility.</description>
+    <coverImageUrl>https://images-na.ssl-images-amazon.com/images/I/41OZ5OKeM7L._SX329_BO1,204,203,200_.jpg</coverImageUrl>
+    <price>24.99</price>
+  </book>
+  <book>
+    <title>Sapiens: A Brief History of Humankind</title>
+    <author>Yuval Noah Harari</author>
+    <description>A thought-provoking book that explores the history and impact of Homo sapiens on the world.</description>
+    <coverImageUrl>https://images-na.ssl-images-amazon.com/images/I/51Jt+d8GP9L._SX329_BO1,204,203,200_.jpg</coverImageUrl>
+    <price>27.99</price>
+  </book>
 </books>

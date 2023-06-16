@@ -62,3 +62,5 @@ Route::post('/Cart/removeBooksById', [CartController::class, 'removeBooksById'])
 Route::post('/Cart/removeAllTestEmailBooks', [CartController::class, 'removeAllTestEmailBooks']);
 
 Route::get('/SOAP/fetchData', [SOAPController::class, 'fetchData']);
+
+Route::post('/USERS/changePassword', [UsersController::class, 'changePassword']);
