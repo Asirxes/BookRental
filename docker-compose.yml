@@ -32,22 +32,30 @@ services:
   database:
     container_name: mysql
     image: mysql:8.0
-    build: 
-      context: ./mysql
-      dockerfile: Dockerfile
+    # build: 
+    #   context: ./mysql
+    #   dockerfile: Dockerfile
+
     ports:
       - 3306:3306
     environment:
-        MYSQL_ROOT_PASSWORD: root3
-        MYSQL_DATABASE: projekt
-        MYSQL_USER: root2
-        MYSQL_PASSWORD: password2
-      #- MYSQL_DATABASE=${DB_DATABASE}
-      #- MYSQL_USER=${DB_USERNAME}
-      #- MYSQL_PASSWORD=${DB_PASSWORD}
-      #- MYSQL_ROOT_PASSWORD=${DB_PASSWORD}
+        # MYSQL_ROOT_PASSWORD: root3
+        # MYSQL_DATABASE: projekt
+        # MYSQL_USER: root2
+        # MYSQL_PASSWORD: password2
+      - MYSQL_DATABASE=laravel
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=secret
+      - MYSQL_ROOT_PASSWORD=secret
     volumes:
-      -  ./:/var/www
+      - ./mysql/baza:/var/lib/mysql
+      - ./mysql/projekt.sql:/projekt.sql
+
+    #command: docker exec -it mysql bash
+    #command: sekret
+    #command: cat /projekt.sql | mysql --user=root --password=secret laravel 
+
+    #  -  ./:/var/www
     networks:
       - backend
     # backend:
