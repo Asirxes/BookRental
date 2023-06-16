@@ -3,36 +3,63 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Validator;
 use App\Models\User;
+use Tymon\JWTAuth\Exceptions\JWTException;
+use JWTAuth;
 
 class UsersController extends Controller
 {
-    public function login(Request $request)
-    {
-        $email = $request->input('email');
-        $password = $request->input('password');
-        
-        $user = User::where('email', $email)
-                    ->where('password', $password)
-                    ->first();
-        
-        if ($user) {
-            return response()->json(true);
-        } else {
-            return response()->json(false);
-        }
-    }
-    
     public function register(Request $request)
     {
-        $email = $request->input('email');
-        $password = $request->input('password');
+        // Walidacja danych wejściowych
+        $validator = Validator::make($request->all(), [
+            'email' => 'required|string|email|max:255|unique:users',
+            'password' => 'required|string|min:6',
+        ]);
+
+        if ($validator->fails()) {
+            return response()->json($validator->errors(), 400);
+        }
+
+        // Tworzenie nowego użytkownika
+        $user = new User();
+        $user->email = $request->email;
+        $user->password = $request->password;
+        $user->save();
+
+        // Generowanie JWT tokena dla nowego użytkownika
+        $token = JWTAuth::fromUser($user);
+
+        // Zwracanie odpowiedzi
+        return response()->json(['token' => $token], 201);
+    }
+
+    public function login(Request $request)
+    {
+        // Walidacja danych wejściowych
         
         $user = new User();
-        $user->email = $email;
-        $user->password = $password;
-        $user->save();
-        
-        return response()->json(true);
+        $user->email = $request->email;
+        $user->password = $request->password;
+        $token = JWTAuth::fromUser($user);
+
+        return response()->json(['token' => $token]);
+    }
+
+    public function getAuthenticatedUser()
+    {
+        try {
+            // Pobranie zalogowanego użytkownika
+            if (!$user = JWTAuth::parseToken()->authenticate()) {
+                return response()->json(['user_not_found'], 404);
+            }
+        } catch (JWTException $e) {
+            return response()->json(['error' => 'Could not authenticate'], 500);
+        }
+
+        // Zwracanie zalogowanego użytkownika
+        return response()->json(compact('user'));
     }
 }

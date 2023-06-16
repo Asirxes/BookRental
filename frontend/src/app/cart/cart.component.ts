@@ -40,6 +40,7 @@ import { CartService } from '../../services/cart.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { CartsService } from '../services/cartService';
 import { Book } from '../book';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -51,8 +52,15 @@ import { Book } from '../book';
 export class CartComponent {
   cartItems: Book[] = [];
 
-  constructor(private cartService: CartService,private snackBar: MatSnackBar,private cartsService :CartsService) {
-    //this.cartItems = this.cartService.getCartItems(); // dorzucenie ksiązek na sztywno
+  constructor(private cartService: CartService,private snackBar: MatSnackBar,private cartsService :CartsService,private router: Router) {
+    if(localStorage.getItem('token')){
+
+    }else{
+      this.snackBar.open('Musisz być zalogowany', 'Zamknij', {
+        duration: 2000,
+      });
+      this.router.navigate(['']);
+    }
     this.refreshCart()
   }
 

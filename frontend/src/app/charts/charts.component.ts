@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {ChartConfiguration, ChartData, ChartType} from "chart.js";
-import DataLabelsPlugin from "chartjs-plugin-datalabels";
+//import DataLabelsPlugin from "chartjs-plugin-datalabels";
 
 @Component({
   selector: 'app-charts',
@@ -16,5 +16,5 @@ export class ChartsComponent {
   };
 
   protected barChartType: ChartType = 'bar';
-  protected barChartPlugins = [DataLabelsPlugin];
+  //protected barChartPlugins = [DataLabelsPlugin];
 }

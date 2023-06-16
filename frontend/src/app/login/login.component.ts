@@ -26,24 +26,20 @@ export class LoginComponent implements OnInit {
 
   onSubmit() {
     if (this.loginForm.valid) {
-      // Wykonaj logikę logowania użytkownika
       const email = this.loginForm.get('email')?.value;
       const password = this.loginForm.get('password')?.value;
-
-      // Przykładowa logika, tutaj możesz wysłać żądanie do serwera, uwierzytelnić użytkownika itp.
-      console.log('Logowanie użytkownika:', email, password);
-
-      // Zresetuj formularz po zakończeniu logowania
       this.loginForm.reset();
 
       this.usersService.login(email,password).subscribe(result=>{
-        if(result==true){
-          localStorage.setItem('logged','true');
+        let token = result as Config
+        if (token.token) {
+          localStorage.setItem('logged', 'true');
+          localStorage.setItem('token', token.token);
           this.router.navigate(['']);
         }else{
           localStorage.setItem('logged','false');
           this.snackBar.open('Złe dane logowania', 'Zamknij', {
-            duration: 2000, // Czas trwania alertu w milisekundach
+            duration: 2000, 
           });
         }
         LoginComponent.myEventEmitter.emit();
@@ -52,4 +48,8 @@ export class LoginComponent implements OnInit {
     }
   }
   
+}
+
+export interface Config {
+  token: string;
 }
