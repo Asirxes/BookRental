@@ -30,6 +30,7 @@ import { CartService } from 'src/services/cart.service';
 import { CartsService } from './services/cartService';
 import { ChartsComponent } from './charts/charts.component';
 import { JSONService } from './services/jsonService';
+import { ChangePasswordComponent } from './change-password/change-password.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,7 +47,8 @@ import { JSONService } from './services/jsonService';
     XmlPageComponent,
     JsonPageComponent,
     FormatPricePipe,
-    ChartsComponent
+    ChartsComponent,
+    ChangePasswordComponent
   ],
   imports: [
     BrowserModule,

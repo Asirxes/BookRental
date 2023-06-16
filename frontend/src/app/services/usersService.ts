@@ -1,8 +1,10 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs/internal/Observable';
 
 @Injectable()
 export class UsersService {
+  
   private apiUrl = 'http://127.0.0.1:8000/USERS';
 
   constructor(private http: HttpClient) {}
@@ -23,5 +25,10 @@ export class UsersService {
     };
 
     return this.http.post(`${this.apiUrl}/login`, body);
+  }
+
+  changePassword(currentPassword: string, newPassword: string): Observable<any> {
+
+    return this.http.post<any>('API_URL/changePassword', { currentPassword, newPassword });
   }
 }
