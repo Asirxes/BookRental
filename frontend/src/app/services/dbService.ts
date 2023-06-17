@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs/internal/Observable';
 
 @Injectable()
 export class dbService {
@@ -29,11 +30,10 @@ export class dbService {
     }
     return this.http.post(`${this.apiUrl}/addBooks`,body);
   }
-  removeBook(bookId: number) {
-    throw new Error('Method not implemented.');
+  removeBook(bookId: number): Observable<any> {
+    return this.http.delete(`${this.apiUrl}/removeBook/${bookId}`);
   }
-
-  updateBook(bookId: string, updatedBookData: any) {
-    throw new Error('Method not implemented.');
+  updateBook(bookId: string, updatedBookData: any): Observable<any> {
+    return this.http.put(`${this.apiUrl}/updateBook/${bookId}`, updatedBookData);
   }
 }

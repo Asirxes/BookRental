@@ -45,8 +45,8 @@ export class EditBookComponent implements OnInit {
     const bookId = this.route.snapshot.paramMap.get('id');
     if (bookId) {
       this.dbService.getBookDetails(bookId).subscribe(
-        (result: Book) => {
-          this.editBookForm.patchValue(result);
+        (result: Object) => {
+          this.editBookForm.patchValue(result as Book);
         },
         (error: any) => {
           console.log('Wystąpił błąd podczas pobierania szczegółów książki:', error);
