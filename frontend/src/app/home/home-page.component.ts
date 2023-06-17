@@ -98,7 +98,7 @@ export class HomeComponent {
       this.books = result as Book[];
     });
   }
-
+  
   logout(): void {
     this.authService.logout();
   }
