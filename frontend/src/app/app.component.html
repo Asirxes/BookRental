@@ -8,7 +8,9 @@
   </a>
 
    <div class="spacer"></div>
-   
+   <a class="p2" aria-label="Dodanie" routerLink="/add" routerLinkActive="active"ariaCurrentWhenActive="page" *ngIf="isLogged=='false'">
+    <span>Dodanie</span>
+  </a>
   <a class="p2" aria-label="Logowanie" routerLink="/login" routerLinkActive="active" ariaCurrentWhenActive="page" *ngIf="isLogged=='false'">
     <span>Logowanie</span>
   </a>
