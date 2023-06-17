@@ -24,5 +24,7 @@ class VerifyCsrfToken extends Middleware
         '/JSON/addJSONtoJSON',
         '/USERS/changePassword',
         '/Cart/getBooksFromCart'
+        ,'/DB/getBookDetails'
+        ,'/DB/addBooks'
     ];
 }

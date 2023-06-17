@@ -5,3 +5,24 @@
         class="chart my-chart">
 </canvas> -->
   
+<table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Email</th>
+            <th>Książki w koszyku</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of myData | keyvalue">
+            <td>{{ item.key }}</td>
+            <td>
+              <ul class="list-unstyled">
+                <li *ngFor="let book of item.value" (click)="redirect(book)" style="text-decoration: underline; color: blue; cursor: pointer;">{{ book }}</li>
+
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      
+      
