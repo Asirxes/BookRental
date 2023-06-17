@@ -10,7 +10,7 @@
       <div class="description-container">
         <h2><a [routerLink]="['/book', book.id]">{{ book.title }}</a></h2>
         <p>Autor: {{ book.author }}</p>
-        <p>Opis: {{ book.description }}</p>
+        <!-- <p>Opis: {{ book.description }}</p> -->
         <p>Cena: {{ book.price }}$</p>
         <button (click)="addToCart(book)" class="btn btn-primary mb-4">Dodaj do koszyka</button>
       </div>

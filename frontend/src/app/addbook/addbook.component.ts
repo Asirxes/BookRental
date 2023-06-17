@@ -23,7 +23,7 @@ export class AddBookComponent {
   onSubmit() {
     if (this.addBookForm.valid) {
       const bookData = this.addBookForm.value;
-      this.dbService.addBook(bookData).subscribe(
+      this.dbService.addBooks(bookData).subscribe(
         (response: any) => {
           console.log('Książka została dodana:', response);
           this.addBookForm.reset();

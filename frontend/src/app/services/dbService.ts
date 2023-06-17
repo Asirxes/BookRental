@@ -5,11 +5,6 @@ import { HttpClient } from '@angular/common/http';
 export class dbService {
   
   private apiUrl = 'http://127.0.0.1:8000/DB';
-<<<<<<< HEAD
-  getBookDetails: any;
-  addBook: any;
-=======
->>>>>>> 8c6eedbf5c1fb48c48483a20e10c24f24ac3ebcd
 
   constructor(private http: HttpClient) {}
 

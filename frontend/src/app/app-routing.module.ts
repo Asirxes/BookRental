@@ -17,6 +17,7 @@ import { NgChartsModule } from 'ng2-charts';
 import { ChangePasswordComponent } from './change-password/change-password.component';
 import { AdminpageComponent } from './adminpage/adminpage.component';
 import { BookDetailsComponent } from './book-details/book-details.component';
+import { AddBookComponent } from './addbook/addbook.component';
 const approutes: Routes = [
   { path: 'First', component: FirstPageComponent },
   { path: 'home', component: HomeComponent },
@@ -36,6 +37,7 @@ const approutes: Routes = [
   {path : 'change-password', component: ChangePasswordComponent},
   {path : 'admin', component: AdminpageComponent},
   { path: 'book/:id', component: BookDetailsComponent },
+  {path: 'add', component:AddBookComponent}
 
 ];
 
