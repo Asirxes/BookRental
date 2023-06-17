@@ -32,6 +32,7 @@ import { ChartsComponent } from './charts/charts.component';
 import { JSONService } from './services/jsonService';
 import { ChangePasswordComponent } from './change-password/change-password.component';
 import { AdminpageComponent } from './adminpage/adminpage.component';
+import { BookDetailsComponent } from './book-details/book-details.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,7 +51,8 @@ import { AdminpageComponent } from './adminpage/adminpage.component';
     FormatPricePipe,
     ChartsComponent,
     ChangePasswordComponent,
-    AdminpageComponent
+    AdminpageComponent,
+    BookDetailsComponent
   ],
   imports: [
     BrowserModule,

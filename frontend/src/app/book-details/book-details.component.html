@@ -1,0 +1,12 @@
+<div *ngIf="book" class="book-details" class="o1" >
+    <div class="image-container">
+      <img [src]="book.coverImageUrl" alt="Okładka książki" width="125" height="200">
+    </div>
+    <div class="description-container">
+      <h2>{{ book.title }}</h2>
+      <p>Autor: {{ book.author }}</p>
+      <p>Opis: {{ book.description }}</p>
+      <p>Cena: {{ book.price }}$</p>
+    </div>
+  </div>
+  

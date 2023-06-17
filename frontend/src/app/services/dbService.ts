@@ -3,7 +3,9 @@ import { HttpClient } from '@angular/common/http';
 
 @Injectable()
 export class dbService {
+  
   private apiUrl = 'http://127.0.0.1:8000/DB';
+  getBookDetails: any;
 
   constructor(private http: HttpClient) {}
 
