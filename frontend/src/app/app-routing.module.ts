@@ -18,6 +18,7 @@ import { ChangePasswordComponent } from './change-password/change-password.compo
 import { AdminpageComponent } from './adminpage/adminpage.component';
 import { BookDetailsComponent } from './book-details/book-details.component';
 import { AddBookComponent } from './addbook/addbook.component';
+import { EditBookComponent } from './edit-book/edit-book.component';
 const approutes: Routes = [
   { path: 'First', component: FirstPageComponent },
   { path: 'home', component: HomeComponent },
@@ -32,12 +33,13 @@ const approutes: Routes = [
   { path: 'cart',component:CartComponent},
   { path: 'xml', component:XmlPageComponent},
   { path: 'json', component:JsonPageComponent},
-  {path: 'user', component: UserComponent},
-  {path: 'charts', component: ChartsComponent},
-  {path : 'change-password', component: ChangePasswordComponent},
-  {path : 'admin', component: AdminpageComponent},
+  { path: 'user', component: UserComponent},
+  { path: 'charts', component: ChartsComponent},
+  { path : 'change-password', component: ChangePasswordComponent},
+  { path : 'admin', component: AdminpageComponent},
   { path: 'book/:id', component: BookDetailsComponent },
-  {path: 'add', component:AddBookComponent}
+  { path: 'add', component:AddBookComponent},
+  { path: 'edit-book/:id', component:EditBookComponent},
 
 ];
 

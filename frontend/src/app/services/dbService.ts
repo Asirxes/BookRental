@@ -29,4 +29,11 @@ export class dbService {
     }
     return this.http.post(`${this.apiUrl}/addBook`,body);
   }
+  removeBook(bookId: number) {
+    throw new Error('Method not implemented.');
+  }
+
+  updateBook(bookId: string, updatedBookData: any) {
+    throw new Error('Method not implemented.');
+  }
 }

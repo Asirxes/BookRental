@@ -103,4 +103,15 @@ export class HomeComponent {
   logout(): void {
     this.authService.logout();
   }
+
+  removeBook(bookId: number) {
+    this.dbService.removeBook(bookId).subscribe(
+      (response: any) => {
+        console.log('Książka została usunięta:', response);
+      },
+      (error: any) => {
+        console.log('Wystąpił błąd podczas usuwania książki:', error);
+      }
+    );
+  }
 }

@@ -13,6 +13,8 @@
         <!-- <p>Opis: {{ book.description }}</p> -->
         <p>Cena: {{ book.price }}$</p>
         <button (click)="addToCart(book)" class="btn btn-primary mb-4">Dodaj do koszyka</button>
+      <button (click)="removeBook(book.id)" class="btn btn-danger mb-4">Usuń</button>
+      <button [routerLink]="['/edit-book', book.id]" class="btn btn-primary mb-4">Edytuj</button>
       </div>
     </div>
   </div>

@@ -34,6 +34,7 @@ import { ChangePasswordComponent } from './change-password/change-password.compo
 import { AdminpageComponent } from './adminpage/adminpage.component';
 import { BookDetailsComponent } from './book-details/book-details.component';
 import { AddBookComponent } from './addbook/addbook.component';
+import { EditBookComponent } from './edit-book/edit-book.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -54,7 +55,8 @@ import { AddBookComponent } from './addbook/addbook.component';
     ChangePasswordComponent,
     AdminpageComponent,
     BookDetailsComponent,
-    AddBookComponent
+    AddBookComponent,
+    EditBookComponent
   ],
   imports: [
     BrowserModule,
