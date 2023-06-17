@@ -48,7 +48,7 @@ services:
       - MYSQL_PASSWORD=secret
       - MYSQL_ROOT_PASSWORD=secret
     volumes:
-      - ./mysql/baza:/var/lib/mysql
+      - ./mysql/baza1:/var/lib/mysql
       - ./mysql/projekt.sql:/projekt.sql
 
     #command: docker exec -it mysql bash

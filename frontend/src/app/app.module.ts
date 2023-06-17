@@ -33,7 +33,7 @@ import { JSONService } from './services/jsonService';
 import { ChangePasswordComponent } from './change-password/change-password.component';
 import { AdminpageComponent } from './adminpage/adminpage.component';
 import { BookDetailsComponent } from './book-details/book-details.component';
-import { AddbookComponent } from './addbook/addbook.component';
+import { AddBookComponent } from './addbook/addbook.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -54,7 +54,7 @@ import { AddbookComponent } from './addbook/addbook.component';
     ChangePasswordComponent,
     AdminpageComponent,
     BookDetailsComponent,
-    AddbookComponent
+    AddBookComponent
   ],
   imports: [
     BrowserModule,
