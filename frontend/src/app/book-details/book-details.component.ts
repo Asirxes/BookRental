@@ -29,7 +29,7 @@ export class BookDetailsComponent{
     const bookId = this.route.snapshot.paramMap.get('id');
     if (bookId) {
       this.dbService.getBookDetails(bookId).subscribe(
-        result => {
+        (result: Book) => {
           this.book = result as Book;
         },
         (error: any) => {
