@@ -8,12 +8,16 @@ export class CartsService {
   constructor(private http: HttpClient) {}
 
   getKoszyk() {
-    return this.http.get(`${this.apiUrl}/getBooksFromCart`);
+    const body = {
+      token: localStorage.getItem('token')
+    }
+    return this.http.post(`${this.apiUrl}/getBooksFromCart`,body);
   }
 
   dodajDoKoszyka(id:string){
     const body = {
-        id_book: id
+        id_book: id,
+        token: localStorage.getItem('token')
     };
     return this.http.post(`${this.apiUrl}/addBookToCart`,body);
   }

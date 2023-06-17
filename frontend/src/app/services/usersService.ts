@@ -30,7 +30,8 @@ export class UsersService {
   changePassword(currentPassword: string, newPassword: string): Observable<any> {
 
     const body = {
-      newPassword: newPassword
+      newPassword: newPassword,
+      token: localStorage.getItem('token')
     };
 
     return this.http.post(`${this.apiUrl}/changePassword`, body);

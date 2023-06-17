@@ -44,6 +44,11 @@ export class LoginComponent implements OnInit {
         }
         LoginComponent.myEventEmitter.emit();
         
+      },(error) => {
+        localStorage.setItem('logged','false');
+          this.snackBar.open('Złe dane logowania', 'Zamknij', {
+            duration: 2000, 
+          });
       })
     }
   }

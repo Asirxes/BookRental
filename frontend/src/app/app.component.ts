@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { LoginComponent } from './login/login.component';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -9,7 +10,7 @@ export class AppComponent {
   title = 'Szkielet';
   isLogged='false';
 
-  constructor(){
+  constructor(private router: Router){
     if(localStorage.getItem('logged')!=null){
       this.isLogged = <string>localStorage.getItem('logged');
     }else{
@@ -32,5 +33,6 @@ export class AppComponent {
     localStorage.removeItem('logged');
     localStorage.removeItem('token');
     this.isLogged = 'false';
+    this.router.navigate(['']);
   }
 }
