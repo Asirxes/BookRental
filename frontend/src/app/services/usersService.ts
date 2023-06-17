@@ -27,6 +27,10 @@ export class UsersService {
     return this.http.post(`${this.apiUrl}/login`, body);
   }
 
+  getAllUsersWithKoszyks(){
+    return this.http.get(`${this.apiUrl}/getAllUsersWithKoszyks`);
+  }
+
   changePassword(currentPassword: string, newPassword: string): Observable<any> {
 
     const body = {

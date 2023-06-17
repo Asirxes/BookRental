@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Tymon\JWTAuth\Facades\JWTAuth;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Response;
 
 class UsersController extends Controller
 {
@@ -73,4 +75,24 @@ class UsersController extends Controller
         // Zwracanie odpowiedzi z tokenem JWT
         return response()->json(['token' => $token], 200);
     }
+
+    public function getAllUsersWithKoszyks()
+{
+    $users = User::all(); // Pobranie wszystkich użytkowników
+
+    $result = []; // Tablica wynikowa
+
+    foreach ($users as $user) {
+        $email = $user->email;
+        $books = DB::table('koszyks')
+            ->join('books', 'koszyks.id_book', '=', 'books.id')
+            ->where('koszyks.email', $email)
+            ->pluck('books.title') // Pobranie nazw książek
+            ->toArray();
+
+        $result[$email] = $books; // Dodanie do tablicy wynikowej: email => lista nazw książek
+    }
+
+    return response()->json($result);
+}
 }
