@@ -33,6 +33,8 @@ import { JSONService } from './services/jsonService';
 import { ChangePasswordComponent } from './change-password/change-password.component';
 import { AdminpageComponent } from './adminpage/adminpage.component';
 import { BookDetailsComponent } from './book-details/book-details.component';
+import { NewbookComponent } from './newbook/newbook.component';
+import { AddbookComponent } from './addbook/addbook.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,7 +54,9 @@ import { BookDetailsComponent } from './book-details/book-details.component';
     ChartsComponent,
     ChangePasswordComponent,
     AdminpageComponent,
-    BookDetailsComponent
+    BookDetailsComponent,
+    NewbookComponent,
+    AddbookComponent
   ],
   imports: [
     BrowserModule,
