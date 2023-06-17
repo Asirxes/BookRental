@@ -16,20 +16,20 @@ interface Book {
   templateUrl: './book-details.component.html',
   styleUrls: ['./book-details.component.css'],
 })
-export class BookDetailsComponent implements OnInit {
+export class BookDetailsComponent{
   book: Book | undefined;
 
-  constructor(private route: ActivatedRoute, private dbService: dbService) {}
+  constructor(private route: ActivatedRoute, private dbService: dbService) {
 
-  ngOnInit() {
     this.getBookDetails();
   }
+
 
   getBookDetails() {
     const bookId = this.route.snapshot.paramMap.get('id');
     if (bookId) {
       this.dbService.getBookDetails(bookId).subscribe(
-        (result: Book) => {
+        result => {
           this.book = result as Book;
         },
         (error: any) => {

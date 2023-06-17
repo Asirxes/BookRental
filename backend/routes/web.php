@@ -49,6 +49,8 @@ Route::post('/JSON/addJSONtoJSON', [JSONController::class, 'addJSONtoJSON']);
 
 Route::get('/DB/getAllBooks', [DatabaseController::class, 'getAllBooks']);
 
+Route::post('/DB/getBookDetails', [DatabaseController::class, 'getBookDetails']);
+
 Route::post('/USERS/login', [UsersController::class, 'login']);
 
 Route::get('/USERS/getAllUsersWithKoszyks', [UsersController::class, 'getAllUsersWithKoszyks']);
