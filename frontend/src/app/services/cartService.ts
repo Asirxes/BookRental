@@ -31,7 +31,7 @@ export class CartsService {
 
   zamow(){
     const body = {
-      id_book: "temp"
+      token: localStorage.getItem('token')
   };
     return this.http.post(`${this.apiUrl}/removeAllTestEmailBooks`,body);
   }

@@ -27,7 +27,7 @@ export class dbService {
       coverImageUrl: cover,
       price:price
     }
-    return this.http.post(`${this.apiUrl}/addBook`,body);
+    return this.http.post(`${this.apiUrl}/addBooks`,body);
   }
   removeBook(bookId: number) {
     throw new Error('Method not implemented.');

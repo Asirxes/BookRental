@@ -36,6 +36,8 @@ class DatabaseController extends Controller
 
     public function addBooks(Request $request)
 {
+
+    
     // Walidacja danych wejściowych
     $validatedData = $request->validate([
         'title' => 'required',
@@ -44,22 +46,17 @@ class DatabaseController extends Controller
         'coverImageUrl' => 'required',
         'price' => 'required',
     ]);
-
-    try {
         // Tworzenie nowej książki
         $book = Book::create([
             'title' => $validatedData['title'],
             'author' => $validatedData['author'],
             'description' => $validatedData['description'],
-            'cover_image_url' => $validatedData['coverImageUrl'],
+            'coverImageUrl' => $validatedData['coverImageUrl'],
             'price' => $validatedData['price'],
         ]);
 
         // Zwracanie odpowiedzi z dodaną książką
         return response()->json($book, 201);
-    } catch (\Exception $e) {
-        // Obsługa błędu
-        return response()->json(['message' => 'Wystąpił błąd podczas dodawania książki'], 500);
-    }
+    
 }
 }

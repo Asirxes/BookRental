@@ -58,11 +58,23 @@ public function getBooksFromCart(Request $request)
         return response()->json(['message' => 'Usunięto książki z koszyka o podanym ID.']);
     }
 
-    public function removeAllTestEmailBooks()
-    {
-        Koszyk::where('email', 'test@gmail.com')->delete();
+    public function removeAllTestEmailBooks(Request $request)
+{
+    try {
+        // Dekodowanie tokenu JWT i pobranie użytkownika
+        $token = $request->input('token');
+        $user = JWTAuth::parseToken()->authenticate();
 
-        return response()->json(['message' => 'Usunięto wszystkie książki z koszyka dla adresu e-mail "test@gmail.com".']);
+        // Pobranie adresu e-mail użytkownika
+        $email = $user->email;
+
+        // Usunięcie wszystkich książek z koszyka dla danego adresu e-mail (z wyjątkiem "test@gmail.com")
+        Koszyk::where('email', $email)->delete();
+
+        return response()->json(['message' => 'Usunięto wszystkie książki z koszyka dla adresu e-mail "' . $email . '".']);
+    } catch (\Exception $e) {
+        return response()->json(['message' => 'Nieprawidłowy token'], 401);
     }
+}
 
 }
