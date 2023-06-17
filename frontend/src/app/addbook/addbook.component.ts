@@ -22,8 +22,8 @@ export class AddBookComponent {
 
   onSubmit() {
     if (this.addBookForm.valid) {
-      const bookData = this.addBookForm.value;
-      this.dbService.addBooks(bookData).subscribe(
+      const { title, author, description, coverImageUrl, price } = this.addBookForm.value;
+      this.dbService.addBooks(title, author, description, coverImageUrl, price).subscribe(
         (response: any) => {
           console.log('Książka została dodana:', response);
           this.addBookForm.reset();
@@ -34,4 +34,4 @@ export class AddBookComponent {
       );
     }
   }
-}
+}  
