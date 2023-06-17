@@ -17,7 +17,8 @@
             <td>{{ item.key }}</td>
             <td>
               <ul class="list-unstyled">
-                <li *ngFor="let book of item.value">{{ book }}</li>
+                <li *ngFor="let book of item.value" (click)="redirect(book)" style="text-decoration: underline; color: blue; cursor: pointer;">{{ book }}</li>
+
               </ul>
             </td>
           </tr>

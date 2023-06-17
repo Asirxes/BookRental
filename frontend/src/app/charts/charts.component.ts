@@ -1,6 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ChartConfiguration, ChartData, ChartType } from 'chart.js';
 import { UsersService } from '../services/usersService';
+import { dbService } from '../services/dbService';
+import { Book } from '../book';
+import { Router } from '@angular/router';
 //import DataLabelsPlugin from "chartjs-plugin-datalabels";
 
 @Component({
@@ -17,10 +20,21 @@ export class ChartsComponent {
 
   myData: KeyValueStringArray = {};
 
-  constructor(private usersService: UsersService) {
+  books: Book[] = []
+
+  constructor(private usersService: UsersService,private dbService: dbService,private router: Router) {
+    this.dbService.getDane().subscribe(result =>{
+      this.books = result as Book[]
+    })
     this.usersService.getAllUsersWithKoszyks().subscribe((result) => {
       this.myData = result as KeyValueStringArray;
     });
+    
+  }
+
+  redirect(data: any){
+    var item = this.books.find(item=>item.title==data);
+    this.router.navigateByUrl(`/book/${item?.id}`);
   }
 
   protected barChartType: ChartType = 'bar';
