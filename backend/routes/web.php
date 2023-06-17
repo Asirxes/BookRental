@@ -51,6 +51,8 @@ Route::get('/DB/getAllBooks', [DatabaseController::class, 'getAllBooks']);
 
 Route::post('/DB/getBookDetails', [DatabaseController::class, 'getBookDetails']);
 
+Route::post('/DB/addBooks', [DatabaseController::class, 'addBooks']);
+
 Route::post('/USERS/login', [UsersController::class, 'login']);
 
 Route::get('/USERS/getAllUsersWithKoszyks', [UsersController::class, 'getAllUsersWithKoszyks']);

@@ -18,4 +18,15 @@ export class dbService {
     }
     return this.http.post(`${this.apiUrl}/getBookDetails`,body);
   }
+
+  addBooks(title:string,autor:string,description:string,cover:string,price:string){
+    const body = {
+      title:title,
+      author: autor,
+      description: description,
+      coverImageUrl: cover,
+      price:price
+    }
+    return this.http.post(`${this.apiUrl}/addBook`,body);
+  }
 }
