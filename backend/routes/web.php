@@ -55,7 +55,7 @@ Route::post('/USERS/register', [UsersController::class, 'register']);
 
 Route::post('/Cart/addBookToCart', [CartController::class, 'addBookToCart']);
 
-Route::get('/Cart/getBooksFromCart', [CartController::class, 'getBooksFromCart']);
+Route::post('/Cart/getBooksFromCart', [CartController::class, 'getBooksFromCart']);
 
 Route::post('/Cart/removeBooksById', [CartController::class, 'removeBooksById']);
 

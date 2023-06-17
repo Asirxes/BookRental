@@ -15,12 +15,6 @@
   <a class="p2" aria-label="Rejestracja" routerLink="/register" routerLinkActive="active"ariaCurrentWhenActive="page" *ngIf="isLogged=='false'">
     <span>Rejestracja</span>
   </a>
-  <a class="p2" aria-label="Zmień hasło" routerLink="/change-password" routerLinkActive="active"ariaCurrentWhenActive="page" *ngIf="isLogged=='false'">
-    <span>Zmień hasło</span>
-  </a>
-  <!-- <a class="p2" aria-label="Konto" routerLink="/user" routerLinkActive="active"ariaCurrentWhenActive="page" *ngIf="isLogged=='true'">
-    <span>Konto</span>
-  </a> -->
   <button class="p2 btn btn-secondary" aria-label="Konto"ariaCurrentWhenActive="page" *ngIf="isLogged=='true'" routerLink="/change-password" routerLinkActive="active">
     <span class="p2">Zmień hasło</span>
   </button>

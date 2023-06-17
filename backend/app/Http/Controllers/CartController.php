@@ -4,30 +4,50 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
-use App\Models\Koszyk; // Załóżmy, że używasz modelu Koszyk
+use App\Models\Koszyk; 
+use Tymon\JWTAuth\Facades\JWTAuth;// Załóżmy, że używasz modelu Koszyk
 
 class CartController extends Controller
 {
     public function addBookToCart(Request $request)
-    {
-        $book = new Koszyk;
-        $book->email = "test@gmail.com";
-        $book->id_book = $request->input('id_book');
-        $book->save();
-
-        return response()->json(['message' => 'Książka została dodana do koszyka.']);
+{
+    // Weryfikacja i dekodowanie tokenu JWT
+    try {
+        $token = $request->input('token');
+        $user = JWTAuth::parseToken()->authenticate();
+        $email = $user->email;
+    } catch (\Exception $e) {
+        return response()->json(['message' => 'Nieprawidłowy token'], 401);
     }
 
-    public function getBooksFromCart(Request $request)
-    {
-        $books = DB::table('koszyks')
-            ->join('books', 'koszyks.id_book', '=', 'books.id')
-            ->where('koszyks.email', 'test@gmail.com')
-            ->select('books.*')
-            ->get();
+    // Tworzenie nowego rekordu w koszyku
+    $book = new Koszyk;
+    $book->email = $email;
+    $book->id_book = $request->input('id_book');
+    $book->save();
 
-        return response()->json($books);
+    return response()->json(['message' => 'Książka została dodana do koszyka.']);
+}
+
+public function getBooksFromCart(Request $request)
+{
+    try {
+        // Dekodowanie tokenu JWT i pobranie użytkownika
+        $token = $request->input('token');
+        $user = JWTAuth::parseToken()->authenticate();
+        $email = $user->email;
+    } catch (\Exception $e) {
+        return response()->json(['message' => 'Nieprawidłowy token'], 401);
     }
+
+    $books = DB::table('koszyks')
+        ->join('books', 'koszyks.id_book', '=', 'books.id')
+        ->where('koszyks.email', $email)
+        ->select('books.*')
+        ->get();
+
+    return response()->json($books);
+}
 
     public function removeBooksById(Request $request)
     {
