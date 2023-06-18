@@ -1,6 +1,28 @@
 <div class="o1">
   <h2>Import/Export XML</h2>
   <input type="file" (change)="onFileSelected($event)" accept=".xml">
-  <button (click)="importXML()" class="m-4" [disabled]="!selectedFile">Import pliku XML</button>
-  <button (click)="exportXML()">Export pliku XML</button>
+  <button (click)="importXML()" class="m-4">Import plik XML</button>
+  <button (click)="exportXML()">Export plik XML</button>
+
+  <h2>Dostępne książki:</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Tytuł</th>
+        <th>Autor</th>
+        <th>Cena</th>
+        <th>Okładka</th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngFor="let book of books">
+        <tr>
+          <td>{{ book.title }}</td>
+          <td>{{ book.author }}</td>
+          <td>{{ book.price }}$</td>
+          <td><img [src]="book.coverImageUrl" alt="Okładka książki" width="125" height="200"></td>
+        </tr>
+      </ng-container>
+    </tbody>
+  </table>
 </div>

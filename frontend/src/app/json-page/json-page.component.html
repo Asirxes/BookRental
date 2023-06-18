@@ -1,7 +1,28 @@
 <div class="o1">
-    <h2>Import/Export JSON</h2>
-    <input type="file" (change)="onFileSelected($event)" accept=".json">
-    <button (click)="importJSON()" class="m-4">Import plik JSON</button>
-    <button (click)="exportJSON()">Export plik JSON</button>
-  </div>
-  
+  <h2>Import/Export JSON</h2>
+  <input type="file" (change)="onFileSelected($event)" accept=".json">
+  <button (click)="importJSON()" class="m-4">Import plik JSON</button>
+  <button (click)="exportJSON()">Export plik JSON</button>
+
+  <h2>Dostępne książki:</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Tytuł</th>
+        <th>Autor</th>
+        <th>Cena</th>
+        <th>Okładka</th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngFor="let book of books">
+        <tr>
+          <td>{{ book.title }}</td>
+          <td>{{ book.author }}</td>
+          <td>{{ book.price }}$</td>
+          <td><img [src]="book.coverImageUrl" alt="Okładka książki" width="125" height="200"></td>
+        </tr>
+      </ng-container>
+    </tbody>
+  </table>
+</div>

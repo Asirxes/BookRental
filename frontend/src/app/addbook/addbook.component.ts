@@ -17,13 +17,14 @@ export class AddBookComponent {
       description: ['', Validators.required],
       coverImageUrl: ['', Validators.required],
       price: ['', Validators.required],
+      category: ['', Validators.required],
     });
   }
 
   onSubmit() {
     if (this.addBookForm.valid) {
-      const { title, author, description, coverImageUrl, price } = this.addBookForm.value;
-      this.dbService.addBooks(title, author, description, coverImageUrl, price).subscribe(
+      const { title, author, description, coverImageUrl, price, category } = this.addBookForm.value;
+      this.dbService.addBooks(title, author, description, coverImageUrl, price, category).subscribe(
         (response: any) => {
           console.log('Książka została dodana:', response);
           this.addBookForm.reset();
@@ -34,4 +35,4 @@ export class AddBookComponent {
       );
     }
   }
-}  
+}
