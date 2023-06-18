@@ -35,10 +35,10 @@ import { Component } from '@angular/core';
 import { XMLService } from '../services/xmlService';
 
 interface Book {
-  title: string;
-  author: string;
-  price: number;
-  coverImageUrl: string;
+  title: string | null;
+  author: string | null;
+  price: number | null;
+  coverImageUrl: string | null;
 }
 
 @Component({
@@ -67,10 +67,14 @@ export class XmlPageComponent {
         this.books = [];
         for (let i = 0; i < bookNodes.length; i++) {
           const bookNode = bookNodes[i];
-          const title = bookNode.getElementsByTagName('title')[0].textContent;
-          const author = bookNode.getElementsByTagName('author')[0].textContent;
-          const price = parseFloat(bookNode.getElementsByTagName('price')[0].textContent);
-          const coverImageUrl = bookNode.getElementsByTagName('coverImageUrl')[0].textContent;
+          const titleNode = bookNode.getElementsByTagName('title')[0];
+          const authorNode = bookNode.getElementsByTagName('author')[0];
+          const priceNode = bookNode.getElementsByTagName('price')[0];
+          const coverImageUrlNode = bookNode.getElementsByTagName('coverImageUrl')[0];
+          const title = titleNode ? titleNode.textContent : null;
+          const author = authorNode ? authorNode.textContent : null;
+          const price = priceNode ? parseFloat(priceNode.textContent || '0') : null;
+          const coverImageUrl = coverImageUrlNode ? coverImageUrlNode.textContent : null;
           this.books.push({ title, author, price, coverImageUrl });
         }
       };
@@ -79,6 +83,6 @@ export class XmlPageComponent {
   }
 
   exportXML() {
-    this.xmlService.exportXML(this.books);
+    this.xmlService.exportXML();
   }
 }
