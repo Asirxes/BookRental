@@ -48,18 +48,17 @@ services:
       - MYSQL_PASSWORD=secret
       - MYSQL_ROOT_PASSWORD=secret
     volumes:
-      - ./mysql/baza:/var/lib/mysql
+      - ./mysql/baza1:/var/lib/mysql
       - ./mysql/projekt.sql:/projekt.sql
 
     #command: docker exec -it mysql bash
-    #command: sekret
+    #command: secret
     #command: cat /projekt.sql | mysql --user=root --password=secret laravel 
 
-    #  -  ./:/var/www
+
     networks:
       - backend
-    # backend:
-    #  ipv4_address: 172.0.0.2
+
 
   phpMyAdmin:
     image: phpmyadmin
