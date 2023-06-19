@@ -34,35 +34,30 @@ class XMLController extends Controller
     }
 
     public function addXMLtoXML(Request $request)
-{
-    $xmlString = file_get_contents($this->xmlFile);
-    $content = $request->input('xml');
+    {
+        $xmlString = file_get_contents($this->xmlFile);
+        $content = $request->input('xml');
 
-    if ($xmlString && $content) {
-        $newXml = simplexml_load_string($content);
-        
-        if ($newXml) {
-            $existingXml = new \DOMDocument();
-            $existingXml->preserveWhiteSpace = false;
-            $existingXml->formatOutput = true;
-            $existingXml->loadXML($xmlString);
+        if ($xmlString && $content) {
+            $newXml = simplexml_load_string($content);
 
-            foreach ($newXml->children() as $child) {
-                $domChild = dom_import_simplexml($child);
-                $domChild = $existingXml->importNode($domChild, true);
-                $existingXml->documentElement->appendChild($domChild);
+            if ($newXml) {
+                $existingXml = new \DOMDocument();
+                $existingXml->preserveWhiteSpace = false;
+                $existingXml->formatOutput = true;
+                $existingXml->loadXML($xmlString);
+
+                foreach ($newXml->children() as $child) {
+                    $domChild = dom_import_simplexml($child);
+                    $domChild = $existingXml->importNode($domChild, true);
+                    $existingXml->documentElement->appendChild($domChild);
+                }
+
+                $xmlString = $existingXml->saveXML();
+                file_put_contents($this->xmlFile, $xmlString);
             }
-
-            $xmlString = $existingXml->saveXML();
-            file_put_contents($this->xmlFile, $xmlString);
         }
     }
-}
-
-
-
-
-
 
     public function exportXML()
     {

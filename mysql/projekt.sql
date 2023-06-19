@@ -78,17 +78,17 @@ CREATE TABLE `koszyks` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `users`
+-- Struktura tabeli dla tabeli `user`
 --
 
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `password` longtext NOT NULL
+  `password` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Zrzut danych tabeli `users`
+-- Zrzut danych tabeli `user`
 --
 
 INSERT INTO `users` (`id`, `email`, `password`) VALUES
