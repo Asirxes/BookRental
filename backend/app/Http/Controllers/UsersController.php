@@ -95,4 +95,20 @@ class UsersController extends Controller
 
     return response()->json($result);
 }
+
+function checkAdmin(Request $request)
+{
+    $token = $request->input('token');
+
+    try {
+        $user = JWTAuth::parseToken()->authenticate();
+
+        if ($user->isAdmin()) {
+            return true;
+        }
+    } catch (\Exception $e) {
+    }
+
+    return false;
+}
 }

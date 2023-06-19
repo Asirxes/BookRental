@@ -76,3 +76,5 @@ Route::post('/Cart/removeAllTestEmailBooks', [CartController::class, 'removeAllT
 Route::get('/SOAP/fetchData', [SOAPController::class, 'fetchData']);
 
 Route::post('/USERS/changePassword', [UsersController::class, 'changePassword']);
+
+Route::post('/USERS/checkAdmin', [UsersController::class, 'checkAdmin']);

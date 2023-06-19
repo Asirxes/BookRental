@@ -4,6 +4,7 @@ import { UsersService } from '../services/usersService';
 import { dbService } from '../services/dbService';
 import { Book } from '../book';
 import { Router } from '@angular/router';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-charts',
@@ -21,7 +22,16 @@ export class ChartsComponent {
 
   books: Book[] = []
 
-  constructor(private usersService: UsersService,private dbService: dbService,private router: Router) {
+  constructor(private usersService: UsersService,private dbService: dbService,private router: Router,private snackBar: MatSnackBar) {
+    this.usersService.checkAdmin().subscribe(result =>{
+      if(result!=1){
+        this.snackBar.open('Nie jesteś adminem', 'Zamknij', {
+          duration: 2000, // Czas trwania alertu w milisekundach
+        });
+        this.router.navigateByUrl(`/`);
+      }
+    })
+
     this.dbService.getDane().subscribe(result =>{
       this.books = result as Book[]
     })

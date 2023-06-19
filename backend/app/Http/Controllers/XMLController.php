@@ -14,7 +14,7 @@ class XMLController extends Controller
         $json = json_encode($xml);
         $array = json_decode($json, true);
 
-        return json_encode($array, JSON_PRETTY_PRINT);
+        return json_encode($array);
     }
 
     public function addBooks(Request $request)

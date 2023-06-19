@@ -17,7 +17,11 @@ export class JsonPageComponent {
   selectedFile!: File;
   books: Book[] = [];
 
-  constructor(private jsonService: JSONService) {}
+  constructor(private jsonService: JSONService) {
+    jsonService.getBooks().subscribe(response=>{
+      this.books = response as Book[]
+    })
+  }
 
   onFileSelected(event: any) {
     this.selectedFile = event.target.files[0];
@@ -29,7 +33,7 @@ export class JsonPageComponent {
       const result = fileReader.result;
       if (typeof result === 'string') {
         const jsonData = JSON.parse(result);
-        this.books = jsonData as Book[];
+         this.jsonService.addJSONtoJSON(jsonData);
       }
     };
     fileReader.readAsText(this.selectedFile);

@@ -9,6 +9,13 @@ export class UsersService {
 
   constructor(private http: HttpClient) {}
 
+  checkAdmin(){
+    const body = {
+      token: localStorage.getItem('token')
+    }
+    return this.http.post(`${this.apiUrl}/checkAdmin`, body);
+  }
+
   zarejestruj(login: string, haslo: string) {
     const body = {
       email: login,
