@@ -4,6 +4,7 @@ import { dbService } from '../services/dbService';
 import { Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { CartsService } from '../services/cartService';
+import { SoapService } from '../services/soapService';
 
 interface Book {
   title: string;
@@ -40,10 +41,13 @@ export class HomeComponent {
   }
 
   constructor(public authService: AuthService, private dbService: dbService,private router: Router,private snackBar: MatSnackBar,
-    private cartsService: CartsService) {
+    private cartsService: CartsService,private soapService: SoapService) {
     this.dbService.getDane().subscribe((result) => {
       this.books = result as Book[];
     });
+    this.soapService.fetchData().subscribe(result=>{
+      console.log(result)
+    })
   }
   
   logout(): void {

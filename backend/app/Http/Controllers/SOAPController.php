@@ -2,45 +2,57 @@
 
 namespace App\Http\Controllers;
 
+use DOMDocument;
 use Illuminate\Http\Request;
+use SimpleXMLElement;
 use SoapClient;
+use GuzzleHttp\Client;
 
 class SOAPController extends Controller
 {
-    public function fetchData()
+    function fetchData(Request $request)
     {
-        $soapUrl = 'http://webservices.daehosting.com/services/isbnservice.wso'; // Adres URL API SOAP
+        $operation = $request->input('operation'); //Add,Substract,Divide,Multiply
+    $intA = $request->input('intA');
+    $intB = $request->input('intB');
 
-        // Inicjalizacja klienta SOAP
-        $soapClient = new SoapClient(null, [
-            'location' => $soapUrl,
-            'uri' => $soapUrl,
-            'trace' => 1,
-            'cache_wsdl' => WSDL_CACHE_NONE
+
+        $client = new Client([
+            'base_uri' => 'http://www.dneonline.com',
+            'timeout' => 10,
+            'headers' => [
+                'Content-Type' => 'text/xml; charset=utf-8',
+                'SOAPAction' => "http://tempuri.org/$operation",
+            ],
         ]);
 
-        // Wywołanie metody API SOAP
-        $response = $soapClient->__doRequest();
 
-        // Przetworzenie odpowiedzi
-        $data = $this->processResponse($response);
+        $requestBody = <<<XML
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Body>
+    <$operation xmlns="http://tempuri.org/">
+      <intA>$intA</intA>
+      <intB>$intB</intB>
+    </$operation>
+  </soap:Body>
+</soap:Envelope>
+XML;
 
-        // Zwrócenie danych jako odpowiedź JSON
-        return response()->json($data);
+        $response = $client->post('/calculator.asmx', ['body' => $requestBody]);
+
+        $statusCode = $response->getStatusCode();
+        $responseBody = $response->getBody()->getContents();
+
+        $dom = new DOMDocument();
+        $dom->loadXML($responseBody);
+
+        $combinedString = $operation."Result";
+        
+        $addResult = $dom->getElementsByTagNameNS('http://tempuri.org/', $combinedString)->item(0)->nodeValue;
+        
+        return $addResult;
     }
 
-    private function processResponse($response)
-    {
-        $processedData = [];
 
-        foreach ($response->items as $item) {
-            $processedData[] = [
-                'id' => $item->id,
-                'name' => $item->name,
-                'price' => $item->price
-            ];
-        }
-
-        return $processedData;
-    }
 }

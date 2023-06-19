@@ -35,6 +35,7 @@ import { ChartsComponent } from './charts/charts.component';
 import { UserComponent } from './user/user.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { CalculatorComponent } from './calculator/calculator.component';
+import { SoapService } from './services/soapService';
 @NgModule({
   declarations: [
     AppComponent,
@@ -69,7 +70,7 @@ import { CalculatorComponent } from './calculator/calculator.component';
     MatSnackBarModule,
     NgChartsModule
   ],
-  providers: [ApiService,XMLService,AuthService,dbService,UsersService,CartsService,JSONService],
+  providers: [ApiService,XMLService,AuthService,dbService,UsersService,CartsService,JSONService,SoapService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
