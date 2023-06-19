@@ -27,39 +27,24 @@ services:
       - 8000:8000
     networks:
       - backend
-
+    depends_on:
+      - database
 
   database:
     container_name: mysql
     image: mysql:8.0
-    # build: 
-    #   context: ./mysql
-    #   dockerfile: Dockerfile
-
     ports:
       - 3306:3306
     environment:
-        # MYSQL_ROOT_PASSWORD: root3
-        # MYSQL_DATABASE: projekt
-        # MYSQL_USER: root2
-        # MYSQL_PASSWORD: password2
       - MYSQL_DATABASE=laravel
       - MYSQL_USER=user
       - MYSQL_PASSWORD=secret
       - MYSQL_ROOT_PASSWORD=secret
     volumes:
-      - ./mysql/baza1:/var/lib/mysql
-      - ./mysql/projekt.sql:/projekt.sql
-
-    #command: docker exec -it mysql bash
-    #command: sekret
-    #command: cat /projekt.sql | mysql --user=root --password=secret laravel 
-
-    #  -  ./:/var/www
+      - "./mysql/projekt.sql:/docker-entrypoint-initdb.d/1.sql"
     networks:
       - backend
-    # backend:
-    #  ipv4_address: 172.0.0.2
+
 
   phpMyAdmin:
     image: phpmyadmin

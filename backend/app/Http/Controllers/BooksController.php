@@ -40,8 +40,8 @@ class BooksController extends Controller
         return response()->json($bookData);
     }
 
-    public function test(){
+    public function test()
+    {
         return "bbb";
     }
-
 }

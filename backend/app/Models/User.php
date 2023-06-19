@@ -20,6 +20,8 @@ class User extends Authenticatable implements JWTSubject
         'remember_token',
     ];
 
+    protected $table = 'users';
+
     public $timestamps = false;
 
     public function getJWTIdentifier()
