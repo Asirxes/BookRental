@@ -34,6 +34,7 @@ import { EditBookComponent } from './edit-book/edit-book.component';
 import { ChartsComponent } from './charts/charts.component';
 import { UserComponent } from './user/user.component';
 import { UserListComponent } from './user-list/user-list.component';
+import { CalculatorComponent } from './calculator/calculator.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -54,7 +55,8 @@ import { UserListComponent } from './user-list/user-list.component';
     EditBookComponent,
     ChartsComponent,
     UserComponent,
-    UserListComponent
+    UserListComponent,
+    CalculatorComponent
   ],
   imports: [
     BrowserModule,

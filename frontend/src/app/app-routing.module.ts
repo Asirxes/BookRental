@@ -18,6 +18,7 @@ import { AddBookComponent } from './addbook/addbook.component';
 import { EditBookComponent } from './edit-book/edit-book.component';
 import { UserComponent } from './user/user.component';
 import { UserListComponent } from './user-list/user-list.component';
+import { CalculatorComponent } from './calculator/calculator.component';
 const approutes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: "", redirectTo:"/home",pathMatch:"full" },
@@ -38,6 +39,7 @@ const approutes: Routes = [
   { path: 'book/:id', component: BookDetailsComponent },
   { path: 'add', component:AddBookComponent},
   { path: 'edit-book/:id', component:EditBookComponent},
+  { path: 'calculator', component:CalculatorComponent}
 
 ];
 

@@ -1,0 +1,16 @@
+<div class="calculator" class="o1">
+    <input type="number" [(ngModel)]="number1" placeholder="Liczba 1">
+    <input type="number" [(ngModel)]="number2" placeholder="Liczba 2">
+    <div class="buttons">
+      <button (click)="add()">+</button>
+      <button (click)="subtract()">-</button>
+      <button (click)="multiply()">*</button>
+      <button (click)="divide()">/</button>
+    </div>
+    <div class="result">
+      <button (click)="calculate()">=</button>
+      <h2>Wynik:</h2>
+      <p>{{ result }}</p>
+    </div>
+  </div>
+  
