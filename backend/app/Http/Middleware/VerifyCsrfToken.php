@@ -28,6 +28,7 @@ class VerifyCsrfToken extends Middleware
         ,'/DB/addBooks',
         '/DB/editBook',
         '/DB/deleteBook',
-        '/USERS/checkAdmin'
+        '/USERS/checkAdmin',
+        '/SOAP/fetchData'
     ];
 }
