@@ -19,7 +19,6 @@ export class ChangePasswordComponent implements OnInit {
     private snackBar: MatSnackBar
   ) {
     this.changePasswordForm = this.formBuilder.group({
-      // currentPassword: new FormControl('', [Validators.required]),
       newPassword: new FormControl('', [Validators.required, Validators.minLength(6)]),
       confirmNewPassword: new FormControl('', [Validators.required])
     }, { validator: this.passwordMatchValidator });

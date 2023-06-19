@@ -1,47 +1,9 @@
-// import { Component } from '@angular/core';
-// import { CartService } from '../cart.service';
-// import { Book } from '../book';
-// interface CartItem {
-//   book: Book;
-//   quantity: number;
-// }
-
-// @Component({
-//   selector: 'app-cart',
-//   templateUrl: './cart.component.html',
-//   styleUrls: ['./cart.component.css']
-// })
-// export class CartComponent {
-//   cartItems: CartItem[] = [];
-
-//   addToCart(book: Book) {
-//     const existingCartItem = this.cartItems.find(item => item.book === book);
-//     if (existingCartItem) {
-//       existingCartItem.quantity++;
-//     } else {
-//       this.cartItems.push({ book, quantity: 1 });
-//     }
-//   }
-
-//   removeFromCart(cartItem: CartItem) {
-//     const index = this.cartItems.indexOf(cartItem);
-//     if (index !== -1) {
-//       this.cartItems.splice(index, 1);
-//     }
-//   }
-
-//   updateQuantity(cartItem: CartItem, newQuantity: number) {
-//     cartItem.quantity = newQuantity;
-//   }
-// }
-
 import { Component } from '@angular/core';
 import { CartService } from '../../services/cart.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { CartsService } from '../services/cartService';
 import { Book } from '../book';
 import { Router } from '@angular/router';
-
 
 @Component({
      selector: 'app-cart',
@@ -70,16 +32,10 @@ export class CartComponent {
     });
   }
 
-  // ngOnInit() {
-  //   this.cartItems = this.cartService.getCartItems(); //wcześniejszy dorzut książek
-  // }
-
   removeFromCart(item: Book) {
-    //this.cartService.removeFromCart(item);
     this.cartsService.removeFromKoszyk(item.id.toString()).subscribe(result=>{
       this.refreshCart();
     })
-    
   }
 
   updateQuantity(item: any) {

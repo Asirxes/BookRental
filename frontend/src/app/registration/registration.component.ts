@@ -41,8 +41,6 @@ export class RegistrationComponent implements OnInit {
       const email = this.registrationForm.get('email')?.value;
       const password = this.registrationForm.get('password')?.value;
 
-      //console.log('Rejestracja użytkownika:', email, password);
-
       this.registrationForm.reset();
 
       this.usersService.zarejestruj(email,password).subscribe(response => {

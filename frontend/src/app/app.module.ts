@@ -7,14 +7,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatIconModule} from '@angular/material/icon';
-import { FirstPageComponent } from './first-page/first-page.component';
 import { ApiService } from './services/apiService';
 import { HttpClient, HttpClientModule, HttpHandler } from '@angular/common/http';
 import { XMLService } from './services/xmlService';
 import { HomeComponent } from './home/home-page.component';
 import { CartComponent } from './cart/cart.component';
 import { DetailsComponent } from './details/details.component';
-import { UserListComponent } from './user-list/user-list.component';
 import { UserComponent } from './user/user.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { LoginComponent } from './login/login.component';
@@ -28,7 +26,6 @@ import { UsersService } from './services/usersService';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { CartService } from 'src/services/cart.service';
 import { CartsService } from './services/cartService';
-import { ChartsComponent } from './charts/charts.component';
 import { JSONService } from './services/jsonService';
 import { ChangePasswordComponent } from './change-password/change-password.component';
 import { AdminpageComponent } from './adminpage/adminpage.component';
@@ -38,12 +35,10 @@ import { EditBookComponent } from './edit-book/edit-book.component';
 @NgModule({
   declarations: [
     AppComponent,
-    FirstPageComponent,
     AppComponent,
     HomeComponent,
     CartComponent,
     DetailsComponent,
-    UserListComponent,
     UserComponent,
     RegistrationComponent,
     LoginComponent,
@@ -51,7 +46,6 @@ import { EditBookComponent } from './edit-book/edit-book.component';
     XmlPageComponent,
     JsonPageComponent,
     FormatPricePipe,
-    ChartsComponent,
     ChangePasswordComponent,
     AdminpageComponent,
     BookDetailsComponent,
