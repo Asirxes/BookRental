@@ -21,14 +21,7 @@
         <label for="price">Cena:</label>
         <input type="number" id="price" formControlName="price" class="form-control">
       </div>
-      <div class="form-group">
-        <label for="genre">Gatunek:</label>
-        <select id="genre" formControlName="genre" class="form-control">
-          <option value="">Wybierz gatunek</option>
-          <option *ngFor="let option of genreOptions" [value]="option">{{ option }}</option>
-        </select>
-      </div>
-      <button type="submit" [disabled]="addBookForm.invalid" class="btn btn-primary m-4">Dodaj książkę</button>
+      <button type="submit" [disabled]="addBookForm.invalid" class="btn btn-primary">Dodaj książkę</button>
     </form>
   </div>
   

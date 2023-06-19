@@ -25,13 +25,14 @@ export class dbService {
     return this.http.post(`${this.apiUrl}/getBookDetails`,body);
   }
 
-  addBooks(title:string,autor:string,description:string,cover:string,price:string){
+  addBooks(title:string,autor:string,description:string,cover:string,price:string, category:string){
     const body = {
       title:title,
       author: autor,
       description: description,
       coverImageUrl: cover,
-      price:price
+      price:price,
+      category: category
     }
     return this.http.post(`${this.apiUrl}/addBooks`,body);
   }
