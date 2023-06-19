@@ -54,6 +54,7 @@ export class HomeComponent {
     this.dbService.removeBook(bookId).subscribe(
       (response: any) => {
         console.log('Książka została usunięta:', response);
+        location.reload();
       },
       (error: any) => {
         console.log('Wystąpił błąd podczas usuwania książki:', error);

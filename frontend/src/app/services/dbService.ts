@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/internal/Observable';
+import { Book } from '../book';
 
 @Injectable()
 export class dbService {
@@ -11,6 +12,10 @@ export class dbService {
 
   getDane() {
     return this.http.get(`${this.apiUrl}/getAllBooks`);
+  }
+
+  getGenres(){
+    return this.http.get(`${this.apiUrl}/getGenres`);
   }
 
   getBookDetails(id:string){
@@ -31,9 +36,22 @@ export class dbService {
     return this.http.post(`${this.apiUrl}/addBooks`,body);
   }
   removeBook(bookId: number): Observable<any> {
-    return this.http.delete(`${this.apiUrl}/removeBook/${bookId}`);
+    const body = {
+      id: bookId
+    }
+    return this.http.post(`${this.apiUrl}/deleteBook`,body);
   }
   updateBook(bookId: string, updatedBookData: any): Observable<any> {
-    return this.http.put(`${this.apiUrl}/updateBook/${bookId}`, updatedBookData);
+    console.log(bookId)
+    const body = {
+      id: bookId,
+      title: updatedBookData.title,
+      author: updatedBookData.author,
+      coverImageUrl: updatedBookData.coverImageUrl,
+      price: updatedBookData.price,
+      description: updatedBookData.description
+    }
+
+    return this.http.post(`${this.apiUrl}/editBook`, body);
   }
 }

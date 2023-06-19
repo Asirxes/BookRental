@@ -25,6 +25,8 @@ class VerifyCsrfToken extends Middleware
         '/USERS/changePassword',
         '/Cart/getBooksFromCart'
         ,'/DB/getBookDetails'
-        ,'/DB/addBooks'
+        ,'/DB/addBooks',
+        '/DB/editBook',
+        '/DB/deleteBook'
     ];
 }

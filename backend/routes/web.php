@@ -49,9 +49,15 @@ Route::post('/JSON/addJSONtoJSON', [JSONController::class, 'addJSONtoJSON']);
 
 Route::get('/DB/getAllBooks', [DatabaseController::class, 'getAllBooks']);
 
+Route::get('/DB/getGenres', [DatabaseController::class, 'getGenres']);
+
 Route::post('/DB/getBookDetails', [DatabaseController::class, 'getBookDetails']);
 
+Route::post('/DB/editBook', [DatabaseController::class, 'editBook']);
+
 Route::post('/DB/addBooks', [DatabaseController::class, 'addBooks']);
+
+Route::post('/DB/deleteBook', [DatabaseController::class, 'deleteBook']);
 
 Route::post('/USERS/login', [UsersController::class, 'login']);
 

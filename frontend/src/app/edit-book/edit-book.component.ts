@@ -66,7 +66,7 @@ export class EditBookComponent implements OnInit {
             this.snackBar.open('Książka została zaktualizowana', 'Zamknij', {
               duration: 2000, // Czas trwania alertu w milisekundach
             });
-            this.router.navigate(['/books']);
+            this.router.navigate(['']);
           },
           (error: any) => {
             console.log('Wystąpił błąd podczas aktualizowania książki:', error);

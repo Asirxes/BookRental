@@ -10,6 +10,8 @@ import { dbService } from '../services/dbService';
 export class AddBookComponent {
   addBookForm: FormGroup;
 
+  genreOptions: string[] = ["bb", "aa"];
+
   constructor(private formBuilder: FormBuilder, private dbService: dbService) {
     this.addBookForm = this.formBuilder.group({
       title: ['', Validators.required],
@@ -17,12 +19,17 @@ export class AddBookComponent {
       description: ['', Validators.required],
       coverImageUrl: ['', Validators.required],
       price: ['', Validators.required],
+      genre: ['', Validators.required], // Dodaj pole 'genre' do formularza
     });
+
+    this.dbService.getGenres().subscribe(result => {
+      this.genreOptions = result as string[];
+    })
   }
 
   onSubmit() {
     if (this.addBookForm.valid) {
-      const { title, author, description, coverImageUrl, price } = this.addBookForm.value;
+      const { title, author, description, coverImageUrl, price, genre } = this.addBookForm.value; // Dodaj 'genre' do destrukturyzacji
       this.dbService.addBooks(title, author, description, coverImageUrl, price).subscribe(
         (response: any) => {
           console.log('Książka została dodana:', response);
@@ -34,4 +41,4 @@ export class AddBookComponent {
       );
     }
   }
-}  
+}
