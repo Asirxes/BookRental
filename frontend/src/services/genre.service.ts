@@ -8,7 +8,7 @@ export class GenreService {
   getGenreById(genreId: string) {
     throw new Error('Method not implemented.');
   }
-  private apiUrl = 'https://openlibrary.org/dev/docs/api/books'; //TODO: Zmień na właściwe URL API
+  private apiUrl = 'https://openlibrary.org/dev/docs/api/books';
 
   constructor(private http: HttpClient) { }
 

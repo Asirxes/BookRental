@@ -13,7 +13,6 @@ import { XMLService } from './services/xmlService';
 import { HomeComponent } from './home/home-page.component';
 import { CartComponent } from './cart/cart.component';
 import { DetailsComponent } from './details/details.component';
-import { UserComponent } from './user/user.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { LoginComponent } from './login/login.component';
 import { AccountComponent } from './account/account.component';
@@ -32,6 +31,9 @@ import { AdminpageComponent } from './adminpage/adminpage.component';
 import { BookDetailsComponent } from './book-details/book-details.component';
 import { AddBookComponent } from './addbook/addbook.component';
 import { EditBookComponent } from './edit-book/edit-book.component';
+import { ChartsComponent } from './charts/charts.component';
+import { UserComponent } from './user/user.component';
+import { UserListComponent } from './user-list/user-list.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,7 +41,6 @@ import { EditBookComponent } from './edit-book/edit-book.component';
     HomeComponent,
     CartComponent,
     DetailsComponent,
-    UserComponent,
     RegistrationComponent,
     LoginComponent,
     AccountComponent,
@@ -50,7 +51,10 @@ import { EditBookComponent } from './edit-book/edit-book.component';
     AdminpageComponent,
     BookDetailsComponent,
     AddBookComponent,
-    EditBookComponent
+    EditBookComponent,
+    ChartsComponent,
+    UserComponent,
+    UserListComponent
   ],
   imports: [
     BrowserModule,

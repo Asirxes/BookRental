@@ -32,7 +32,7 @@ export class HomeComponent {
       this.cartsService.dodajDoKoszyka(book.id.toString()).subscribe(result=>{
         console.log(result)
         this.snackBar.open(`Dodano ${book.title} do koszyka`, 'Zamknij', {
-          duration: 2000, // Czas trwania alertu w milisekundach
+          duration: 2000, 
         });
       });
     }

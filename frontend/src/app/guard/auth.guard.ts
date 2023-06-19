@@ -3,9 +3,9 @@ import { inject } from '@angular/core';
 
 export const authGuard: CanActivateFn = (route, state) => {
   const router=inject(Router);
-  const isLoggedIn = true; // Przykładowe sprawdzenie, czy użytkownik jest zalogowany
+  const isLoggedIn = true;
     if (!isLoggedIn) {
-      router.navigate(['/login']); // Przekieruj niezalogowanego użytkownika na stronę logowania
+      router.navigate(['/login']);
       return false;
     }
 
