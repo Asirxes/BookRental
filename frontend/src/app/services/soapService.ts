@@ -7,11 +7,11 @@ export class SoapService {
 
     constructor(private http: HttpClient) {}
 
-    fetchData(){
+    fetchData(operation: string,intA: number,intB: number){
         const body = {
-            operation: "Add",
-            intA: 1,
-            intB: 1
+            operation: operation,
+            intA: intA,
+            intB: intB
         }
         return this.http.post(`${this.apiUrl}/fetchData`, body);
     }

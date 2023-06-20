@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SoapService } from '../services/soapService';
 
 @Component({
   selector: 'app-calculator',
@@ -10,27 +11,32 @@ export class CalculatorComponent {
   number2: number = 0;
   result: number | undefined;
 
+  constructor(private saopService:SoapService){
+
+  }
+
   add() {
-    this.result = this.number1 + this.number2;
+    this.saopService.fetchData("Add",this.number1,this.number2).subscribe(wynik=>{
+      this.result = wynik as number
+    })
   }
 
   subtract() {
-    this.result = this.number1 - this.number2;
+    this.saopService.fetchData("Subtract",this.number1,this.number2).subscribe(wynik=>{
+      this.result = wynik as number
+    })
   }
 
   multiply() {
-    this.result = this.number1 * this.number2;
+    this.saopService.fetchData("Multiply",this.number1,this.number2).subscribe(wynik=>{
+      this.result = wynik as number
+    })
   }
 
   divide() {
-    if (this.number2 !== 0) {
-      this.result = this.number1 / this.number2;
-    } else {
-      this.result = undefined;
-    }
+    this.saopService.fetchData("Divide",this.number1,this.number2).subscribe(wynik=>{
+      this.result = wynik as number
+    })
   }
 
-  calculate() {
-    // Additional calculations or logic can be added here if needed
-  }
 }

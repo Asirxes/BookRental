@@ -45,9 +45,6 @@ export class HomeComponent {
     this.dbService.getDane().subscribe((result) => {
       this.books = result as Book[];
     });
-    this.soapService.fetchData().subscribe(result=>{
-      console.log(result)
-    })
   }
   
   logout(): void {
