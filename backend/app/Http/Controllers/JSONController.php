@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class JSONController extends Controller
 {
-    private $jsonFile = '..\..\backend\database\json\books.json';
+    private $jsonFile = "/var/www/html/database/json/books.json";
 
     public function getBooks()
     {

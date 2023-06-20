@@ -45,17 +45,6 @@ services:
     networks:
       - backend
 
-
-  phpMyAdmin:
-    image: phpmyadmin
-    environment:
-      PMA_ARBITRARY: 1
-    ports:
-      - '8080:80'
-    networks:
-      - backend
-
-
 networks:
   frontend:
   backend:

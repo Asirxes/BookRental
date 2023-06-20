@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class XMLController extends Controller
 {
-    private $xmlFile = '..\..\backend\database\xml\books.xml';
+    private $xmlFile = "/var/www/html/database/xml/books.xml";
 
     public function getBooks()
     {
