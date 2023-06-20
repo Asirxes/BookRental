@@ -35,9 +35,13 @@ class JSONController extends Controller
 
     public function downloadJSON()
     {
-        $json = file_get_contents($this->jsonFile);
+        $books = Book::all();
 
-        return response($json)->header('Content-Disposition', 'attachment; filename="books.json"');
+    $jsonData = json_encode($books, JSON_PRETTY_PRINT);
+
+    return response($jsonData)
+        ->header('Content-Disposition', 'attachment; filename="books.json"')
+        ->header('Content-Type', 'application/json');
     }
     public function addJSONtoJSON(Request $request)
 {

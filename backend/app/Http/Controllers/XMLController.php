@@ -80,9 +80,27 @@ class XMLController extends Controller
 
     public function exportXML()
     {
-        $xmlString = file_get_contents($this->xmlFile);
+        // $xmlString = file_get_contents($this->xmlFile);
 
-        return response($xmlString)
-            ->header('Content-Type', 'text/xml');
+        // return response($xmlString)
+        //     ->header('Content-Type', 'text/xml');
+
+        $books = Book::all();
+
+    $xml = new \SimpleXMLElement('<books></books>');
+
+    foreach ($books as $book) {
+        $bookElement = $xml->addChild('book');
+        $bookElement->addChild('title', $book->title);
+        $bookElement->addChild('author', $book->author);
+        $bookElement->addChild('description', $book->description);
+        $bookElement->addChild('coverImageUrl', $book->cover_image_url);
+        $bookElement->addChild('price', $book->price);
+    }
+
+    $xmlString = $xml->asXML();
+
+    return response($xmlString)
+        ->header('Content-Type', 'text/xml');
     }
 }
