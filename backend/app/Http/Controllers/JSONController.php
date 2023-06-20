@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Book;
 use Illuminate\Http\Request;
 
 class JSONController extends Controller
@@ -40,20 +41,42 @@ class JSONController extends Controller
     }
     public function addJSONtoJSON(Request $request)
 {
+    // $json = file_get_contents($this->jsonFile);
+    // $books = json_decode($json, true);
+
+    // $newBooks = $request->json()->all();
+
+    // foreach ($newBooks as $newBook) {
+    //     $books[] = $newBook;
+    // }
+
+    // $updatedJson = json_encode($books, JSON_PRETTY_PRINT);
+
+    // file_put_contents($this->jsonFile, $updatedJson);
+
+    // return response()->json(['message' => 'JSON added successfully']);
     $json = file_get_contents($this->jsonFile);
-    $books = json_decode($json, true);
+    $booksData = json_decode($json, true);
 
-    $newBooks = $request->json()->all();
+    $newBooksData = $request->json()->all();
 
-    foreach ($newBooks as $newBook) {
-        $books[] = $newBook;
+    foreach ($newBooksData as $newBookData) {
+        $booksData[] = $newBookData;
+
+        $book = new Book();
+        $book->title = $newBookData['title'];
+        $book->author = $newBookData['author'];
+        $book->description = $newBookData['description'];
+        $book->coverImageUrl = $newBookData['coverImageUrl'];
+        $book->price = $newBookData['price'];
+        $book->save();
     }
 
-    $updatedJson = json_encode($books, JSON_PRETTY_PRINT);
+    $updatedJson = json_encode($booksData, JSON_PRETTY_PRINT);
 
     file_put_contents($this->jsonFile, $updatedJson);
 
-    return response()->json(['message' => 'JSON added successfully']);
+    return response()->json(['message' => 'Data added to database and JSON successfully']);
 }
 
 }

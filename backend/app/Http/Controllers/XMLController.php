@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Book;
 use Illuminate\Http\Request;
 
 class XMLController extends Controller
@@ -35,26 +36,44 @@ class XMLController extends Controller
 
     public function addXMLtoXML(Request $request)
     {
+        // $xmlString = file_get_contents($this->xmlFile);
+        // $content = $request->input('xml');
+
+        // if ($xmlString && $content) {
+        //     $newXml = simplexml_load_string($content);
+
+        //     if ($newXml) {
+        //         $existingXml = new \DOMDocument();
+        //         $existingXml->preserveWhiteSpace = false;
+        //         $existingXml->formatOutput = true;
+        //         $existingXml->loadXML($xmlString);
+
+        //         foreach ($newXml->children() as $child) {
+        //             $domChild = dom_import_simplexml($child);
+        //             $domChild = $existingXml->importNode($domChild, true);
+        //             $existingXml->documentElement->appendChild($domChild);
+        //         }
+
+        //         $xmlString = $existingXml->saveXML();
+        //         file_put_contents($this->xmlFile, $xmlString);
+        //     }
+        // }
         $xmlString = file_get_contents($this->xmlFile);
         $content = $request->input('xml');
-
+    
         if ($xmlString && $content) {
             $newXml = simplexml_load_string($content);
-
+    
             if ($newXml) {
-                $existingXml = new \DOMDocument();
-                $existingXml->preserveWhiteSpace = false;
-                $existingXml->formatOutput = true;
-                $existingXml->loadXML($xmlString);
-
-                foreach ($newXml->children() as $child) {
-                    $domChild = dom_import_simplexml($child);
-                    $domChild = $existingXml->importNode($domChild, true);
-                    $existingXml->documentElement->appendChild($domChild);
+                foreach ($newXml->book as $bookData) {
+                    $book = new Book();
+                    $book->title = (string)$bookData->title;
+                    $book->author = (string)$bookData->author;
+                    $book->description = (string)$bookData->description;
+                    $book->coverImageUrl = (string)$bookData->coverImageUrl;
+                    $book->price = (float)$bookData->price;
+                    $book->save();
                 }
-
-                $xmlString = $existingXml->saveXML();
-                file_put_contents($this->xmlFile, $xmlString);
             }
         }
     }
